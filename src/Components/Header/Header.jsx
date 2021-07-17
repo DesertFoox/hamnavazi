@@ -1,105 +1,77 @@
-import React from "react";
+import React, { Fragment } from "react";
 import style from "./Header.module.css";
+import { Link } from "react-router-dom";
+import { List } from "react-feather";
+import { Input, Label } from "reactstrap";
+
 const Header = () => {
   const accessToken = "nott found";
   const profile = "mohsen";
   const setting = null;
   return (
-    <div className={style["container-fluid"]}>
+    <div className={` container-fluid ${style["nav-container"]} `}>
       <header className={style.header}>
         <div className={style["header-container"]}>
-          {accessToken && accessToken !== "not found" ? (
-            profile ? (
-              <Fragment>
-                <div className={style["header-logo"]}>
-                  <Link className={style.a} to="/home">
-                    <img
-                      className={style.img}
-                      alt="logo"
-                      src={require("../../assets/images/logo.png")}
-                    />
-                  </Link>
-                </div>
+          <Fragment>
+            {/* header-logo */}
+            <div className={style["header-logo"]}>
+              <Link className={style.a} to="/home">
+                <img
+                  className={style.logoImg}
+                  alt="logo"
+                  src={require("../../Assets/Images/header/logo.png").default}
+                />
+              </Link>
+            </div>
 
-                <div className={style["header-options"]}>
-                  <div
-                    className={`${style.setting} ${
-                      setting ? style["enabled"] : ""
-                    }`}
-                  ></div>
-                  {/* <SearchBox /> */}
-                </div>
-              </Fragment>
-            ) : (
-              <Fragment>
-                <div className={style["header-logo"]}>
-                  <Link className={style.a} to="/home">
-                    <img
-                      className={style.img}
-                      alt="logo"
-                      src={require("../../../assets/images/logo.png")}
-                    />
-                  </Link>
-                </div>
-
-                <div className={style["header-options"]}>
-                  <Link className={style.menu} to={"/profile?id="}>
-                    <img
-                      src={require("../../../assets/images/header/profile-icon.png")}
-                      alt="Profile"
-                      className={style["header-icon"]}
-                    />
-                    <span
-                      className={`${style["profile-title"]} ${style["user-full-name"]}`}
-                    >
-                      {/* {loggedUser.firstName ? usrerName : "User Name"} */}
-                    </span>
-                  </Link>
-                  {/* <SearchBox /> */}
-                </div>
-              </Fragment>
-            )
-          ) : (
-            <Fragment>
-              <div className={style["header-logo"]}>
-                <Link className={style.a} to="/home">
-                  <img
-                    className={style.img}
-                    alt="logo"
-                    src={require("../../../assets/images/logo.png")}
-                  />
-                </Link>
+            <div className={style["header-options"]}>
+              <div className={style["menu-iconBox"]}>
+                {/* <List className={`${style["menu-icon"]}`} /> */}
               </div>
-
-              <div className={style["header-options"]}>
+              <div className={`${style["header-auth-box"]}`}>
                 <Link
                   to="/auth/registration"
-                  className={style["header-signup"]}
+                  className={`${style["header-auth-icon"]} `}
+                >
+                  <img
+                    className={`${style.img}`}
+                    src={
+                      require("../../Assets/Images/header/signUp.jpg").default
+                    }
+                    alt="logo"
+                  />
+                </Link>
+                <Link
+                  to="/auth/login"
+                  className={`ml-1 mr-ssm ${style["header-auth-icon"]} `}
                 >
                   <img
                     alt="logo"
-                    className={style.image}
-                    src={require("../../../assets/images/sign-up-icon.jpg")}
+                    className={style.img}
+                    src={
+                      require("../../Assets/Images/header/login-icon.png")
+                        .default
+                    }
                   />
-                  <span className={style["header-signup-hover"]}>
-                    ثبت نام | Sign up
-                  </span>
                 </Link>
-                <Link to="/auth/login" className={style["header-login"]}>
-                  <img
-                    alt="logo"
-                    className={style.image}
-                    src={require("../../../assets/images/login-icon.png")}
-                  />
-                  <span className={style["header-login-hover"]}>
-                    {" "}
-                    ورود | Login
-                  </span>
-                </Link>
-                <SearchBox />
               </div>
-            </Fragment>
-          )}
+              <div className={`${style["search-box"]}`}>
+                <Label className={`${style["search-box-icon"]}`}>
+                  <img
+                    className={`${style.image}`}
+                    src={
+                      require("../../Assets/Images/header/search-icon.png")
+                        .default
+                    }
+                    alt=""
+                  />
+                </Label>
+                <Input
+                  className={`form-control form-control-sm  mr-ssm ${style["search-box-input"]}`}
+                />
+              </div>
+            </div>
+          </Fragment>
         </div>
       </header>
     </div>

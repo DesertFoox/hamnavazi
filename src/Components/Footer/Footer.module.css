@@ -1,0 +1,47 @@
+.footer {
+    padding: 20px 10px;
+
+    background-color: #c79c69;
+    text-align: center;
+}
+
+.icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    margin: 0px 4px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.img:hover {
+    opacity: 0.5;
+}
+
+.footer-link {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.a {
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0px 5px;
+}
+
+.a:hover {
+    opacity: 0.5;
+}
+
+
+.copyright {
+    font-size: 12px;
+    direction: ltr;
+    margin: 0px !important;
+    font-weight: bold;
+}

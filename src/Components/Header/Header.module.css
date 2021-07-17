@@ -1,6 +1,10 @@
+.nav-container {
+    padding: 0;
+}
+
 .header {
-    height: 70px;
-    padding: 10px 40px;
+    height: 55px;
+    padding: 7px 15px;
     background: #fff;
     z-index: 20;
     position: relative;
@@ -10,22 +14,25 @@
 }
 
 .header-container {
-    height: 50px;
+    /* border: 1px solid red; */
+    height: 40px;
     position: relative;
 }
 
 .container-fluid {
+    /* border: 1px solid red; */
     padding: 0 !important;
 }
 
 
 .header-options {
-    width: 70%;
-    height: 100%;
+    width: 75%;
+    /* height: 100%; */
     float: right;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    /* border: 1px solid rgb(25, 0, 255); */
 }
+
 
 .menu {
     float: right;
@@ -35,9 +42,86 @@
     opacity: 0.5;
 }
 
+.menu-iconBox {
+    /* border: 1px solid rgb(0, 255, 34); */
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+    /* margin-top: 1%; */
+    text-align: center;
+
+    float: right;
+}
+
+.menu-icon {
+    margin: auto;
+}
+
 a {
     vertical-align: middle;
 }
+
+.header-auth-box {
+    /* border: 1px solid red; */
+
+    margin-right: 15px;
+    width: 10%;
+    float: right;
+}
+
+.header-auth-icon {
+    float: right;
+
+}
+
+.img {
+    width: 35px;
+    height: 35px;
+}
+
+
+.search-box {
+    /* border: 1px solid rgb(129, 87, 87); */
+    float: right;
+    width: 55%;
+}
+
+.search-box-input {
+    margin-top: 2px;
+    width: 80%;
+    height: 30px;
+    float: right;
+    border-radius: 100px;
+    background-color: #f5f5f5;
+}
+
+.search-box-input:focus {
+    border-color: rgb(219, 219, 219) !important;
+}
+
+.search-box-icon {
+    float: right;
+}
+
+.image {
+
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .header-icon {
     text-align: right;
@@ -65,9 +149,15 @@ a {
 
 
 .header-logo {
+    /* border: 1px solid red; */
     width: 132.5px;
-    height: 50px;
+    height: 40px;
     float: left;
+}
+
+.logoImg {
+    width: 100%;
+    height: 100%;
 }
 
 .a {
@@ -81,26 +171,18 @@ a {
     opacity: 0.5;
 }
 
-.img {
-    width: 100%;
-    height: 100%;
-}
 
 
 
-.header-options {
-    width: 70%;
-    height: 100%;
-    float: right;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-}
+
+
 
 .setting {
+    border: 1px solid red;
     float: right;
     width: 40px !important;
     height: 40px !important;
-    background: url(../../../assets/images/setting.png) no-repeat 50% 50%;
+    background: url('../../Assets/Images/header/setting.png') no-repeat 50% 50%;
     background-size: 35px;
     margin: 5px 0 0 -3px;
     display: block;
@@ -132,23 +214,12 @@ a {
     }
 
     .header-container {
-        height: auto !important;
+        height: 150px !important;
         box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.4);
     }
 
-    .header-options {
-        z-index: 55;
-        position: relative !important;
-        width: 100% !important;
-        float: none !important;
-        min-height: 70px;
-        padding: 10px 10px 0px 10px;
-        height: auto !important;
-        background-color: #e6e6e6;
-        text-align: right;
-    }
-
     .header-logo {
+        height: 80px;
         float: none !important;
         width: 100% !important;
         display: flex;
@@ -166,16 +237,31 @@ a {
     }
 
     .header-options {
-        z-index: 55;
-        position: relative !important;
-        width: 100% !important;
-        float: none !important;
-        min-height: 70px;
-        padding: 10px 10px 0px 10px;
-        height: auto !important;
-        background-color: #e6e6e6;
-        text-align: right;
+        margin: 2% 4%;
+        /* border: 1px solid red; */
+        width: 95%;
     }
+
+    .header-auth-box {
+        width: 18%;
+    }
+
+    .search-box {
+        width: 70%;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .header-auth-box {
+        width: 22%;
+    }
+
+    .search-box {
+        width: 65%;
+    }
+
 }
 
 @keyframes infiniteRotate {
@@ -187,3 +273,29 @@ a {
         transform: rotate(360deg);
     }
 }
+
+/* .header-options {
+        z-index: 55;
+        position: relative !important;
+        width: 100% !important;
+        float: none !important;
+        min-height: 70px;
+        padding: 10px 10px 0px 10px;
+        height: auto !important;
+        background-color: #e6e6e6;
+        text-align: right;
+    } */
+
+/* .header-options {
+        z-index: 55;
+        position: relative !important;
+        width: 100% !important;
+        float: none !important;
+        min-height: 70px;
+        padding: 10px 10px 0px 10px;
+        height: auto !important;
+        background-color: #e6e6e6;
+        text-align: right;
+    }
+
+    */
