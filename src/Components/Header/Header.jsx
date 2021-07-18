@@ -15,7 +15,7 @@ const Header = () => {
           <Fragment>
             {/* header-logo */}
             <div className={style["header-logo"]}>
-              <Link className={style.a} to="/home">
+              <Link className={style.a} to="/">
                 <img
                   className={style.logoImg}
                   alt="logo"
