@@ -159,9 +159,32 @@ const Landing = () => {
       <div className="about-us h-md">
         <section className="abt-us h-zero container">
           <div className="flex flex-nowrap justify-content-center">
-            <p className="md:mr-md text-white fs-5 text-center mt-sm">Instruction | راهـنمــا</p>
-            <p className="md:mr-md text-white fs-5 text-center mt-sm">Rules | قـوانیـن</p>
-            <p className="md:mr-md text-white fs-5 text-center mt-sm">About Us | دربـاره مـا</p>
+            <div className="about-us-box md:mr-md text-white fs-5 text-center mt-ssm justify-content-center">
+              <img
+                className={`about-us-icons `}
+                src={
+                  require("../Assets/Images/landing/instruction.png").default
+                }
+                alt=""
+              />
+              راهـنمــا | Instruction
+            </div>
+            <div className="about-us-box md:mr-md text-white fs-5 text-center mt-ssm justify-content-center">
+              <img
+                className={`about-us-icons `}
+                src={require("../Assets/Images/landing/rules.png").default}
+                alt=""
+              />
+              قـوانیـن | Rules
+            </div>
+            <div className="about-us-box md:mr-md text-white fs-5 text-center mt-ssm justify-content-center">
+              <img
+                className={`about-us-icons `}
+                src={require("../Assets/Images/landing/aboutUs.png").default}
+                alt=""
+              />
+              دربـاره مـا | About Us
+            </div>
           </div>
         </section>
       </div>
