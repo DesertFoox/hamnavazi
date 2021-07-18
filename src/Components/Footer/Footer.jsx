@@ -41,24 +41,24 @@ const Footer = () => {
           HOME
         </Link>
         |
-        <a className={style.a} href="#">
+        <Link className={style.a} href="#">
           ABOUT US
-        </a>
+        </Link>
         |
-        <a className={style.a} href="#">
+        <Link className={style.a} href="#">
           GALLERY
-        </a>
-        <a className={style.a} href="#">
+        </Link>
+        <Link className={style.a} href="#">
           SHORT CODES
-        </a>
+        </Link>
         |
-        <a className={style.a} href="#">
+        <Link className={style.a} href="#">
           SERVICES
-        </a>
+        </Link>
         |
-        <a className={style.a} href="#">
+        <Link className={style.a} href="#">
           CONTACT
-        </a>
+        </Link>
       </div>
       <p className={style.copyright}>© 2020 . All rights reserved </p>
     </footer>
