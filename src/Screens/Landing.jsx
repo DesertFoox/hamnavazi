@@ -106,7 +106,7 @@ const Landing = () => {
       <div className="Chosemsi h-md">
         <section className="choseyourmusi h-zero container">
           <div className="grid justify-items-center">
-            <h2 className="text-white mt-sm ">
+            <h2 className="text-black mt-sm text-md md:text-lg">
               موزیسین مورد علاقه خود را پیدا کنید | Find your desired musician
             </h2>
           </div>
@@ -115,51 +115,104 @@ const Landing = () => {
       <div className="main-content">
         <section className="content container-fluid ">
           <div className="category-holder row">
-            <div className="col-lg-9">
+            <div className="col-lg-9 col-9 col-sm-9 secol">
               <img
                 className="fullimage"
                 src={require("../Assets/Images/landing/melodi.jpg").default}
                 alt=""
               />
             </div>
-            <div className="col-lg-3"></div>
+            <div className="col-lg-3 col-3 col-sm-3 firstcol shape grid justify-items-center">
+              <div className="grid justify-items-center services">
+                <div className="projects">
+                  <img
+                    src={
+                      require("../Assets/Images/landing/projects.svg").default
+                    }
+                    alt=""
+                  />
+                </div>
+                <h4 className="text-center text-white projectss">
+                  پـروژه‌هــا Projects
+                </h4>
+              </div>
+            </div>
           </div>
-          <div className="category-holder">
-            <div className="col-lg-9">
+          <div className="category-holder row">
+            <div className="col-lg-9 col-9 col-sm-9 secol">
               <img
                 className="fullimage"
                 src={require("../Assets/Images/landing/mic.jpg").default}
                 alt=""
               />
             </div>
-            <div className="col-lg-3"></div>
+            <div className="col-lg-3 col-sm-3 col-3  secondcol  grid justify-items-center">
+              <div className=" grid justify-items-center services">
+                <div className="jobs">
+                  <img
+                    src={require("../Assets/Images/landing/job.svg").default}
+                    alt=""
+                  />
+                </div>
+                <h4 className="text-center text-white  services">
+                  فـرصت‌هـای شغـلی Job Opportunities
+                </h4>
+              </div>
+            </div>
           </div>
-          <div className="category-holder">
-            <div className="col-lg-9">
+          <div className="category-holder row">
+            <div className="col-lg-9 col-9  col-sm-9 secol">
               <img
                 className="fullimage"
                 src={require("../Assets/Images/landing/band.jpg").default}
                 alt=""
               />
             </div>
-            <div className="col-lg-3"></div>
+            <div className="col-lg-3 col-3 col-sm-3 thirdcol shape ">
+              <div className=" grid justify-items-center">
+                <div className="markte">
+                  <img
+                    src={require("../Assets/Images/landing/market.svg").default}
+                    alt=""
+                  />
+                </div>
+                <h4 className="text-center services text-white">
+                  بازار Market
+                </h4>
+              </div>
+            </div>
           </div>
-          <div className="category-holder">
-            <div className="col-lg-9">
+          <div className="category-holder row">
+            <div
+              className="col-lg-9  
+            col-9 col-sm-9 secol"
+            >
               <img
                 className="fullimage"
                 src={require("../Assets/Images/landing/saz.jpg").default}
                 alt=""
               />
             </div>
-            <div className="col-lg-3"></div>
+            <div className="col-lg-3  col-3 col-sm-3 col-3 fourthcol ">
+              <div className="grid justify-items-center ">
+                <div className="servs">
+                  <img
+                    src={require("../Assets/Images/landing/serv.svg").default}
+                    alt=""
+                  />
+                </div>
+                <h4 className="text-white text-center services ">
+                  خـدمـات ویــژه Special Services
+                </h4>
+              </div>
+            </div>
           </div>
         </section>
       </div>
       <div className="about-us h-md">
         <section className="abt-us h-zero container">
           <div className="flex flex-nowrap justify-content-center">
-            <div className="about-us-box md:mr-md text-white fs-5 text-center mt-ssm justify-content-center">
+            <div className="about-us-box md:mr-md text-black fs-5 text-center mt-ssm justify-content-center">
               <img
                 className={`about-us-icons `}
                 src={
@@ -169,7 +222,7 @@ const Landing = () => {
               />
               راهـنمــا | Instruction
             </div>
-            <div className="about-us-box md:mr-md text-white fs-5 text-center mt-ssm justify-content-center">
+            <div className="about-us-box md:mr-md text-black fs-5 text-center mt-ssm justify-content-center">
               <img
                 className={`about-us-icons `}
                 src={require("../Assets/Images/landing/rules.png").default}
@@ -177,7 +230,7 @@ const Landing = () => {
               />
               قـوانیـن | Rules
             </div>
-            <div className="about-us-box md:mr-md text-white fs-5 text-center mt-ssm justify-content-center">
+            <div className="about-us-box md:mr-md text-black fs-5 text-center mt-ssm justify-content-center">
               <img
                 className={`about-us-icons `}
                 src={require("../Assets/Images/landing/aboutUs.png").default}
