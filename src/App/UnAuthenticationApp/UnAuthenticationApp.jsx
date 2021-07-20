@@ -4,6 +4,7 @@ import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 
 import Landing from "../../Screens/Landing";
+import Profile from '../../Screens/Profile'
 
 const UnAuthenticationApp = () => {
   return (
@@ -11,6 +12,7 @@ const UnAuthenticationApp = () => {
       <Header />
       <Switch>
         <Route exact path="/" component={Landing} />
+        <Route exact path="/profile" component={Profile} />
       </Switch>
       <Footer />
     </Router>

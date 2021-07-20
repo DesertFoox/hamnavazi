@@ -6,6 +6,7 @@ module.exports = {
     colors: {
       buttonbrown:'#8A6B41 !important',
       selectbrown:'#A88355 !important',
+      white:'#fff'
     },
     spacing: {
       zero:'0',
