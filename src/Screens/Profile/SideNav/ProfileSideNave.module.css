@@ -1,0 +1,75 @@
+.profile-card {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.profile-image {
+    border: none !important;
+    width: 180px;
+    height: 180px;
+}
+
+.profile-personality {
+    width: 270px;
+    padding: 10px;
+}
+
+.close-icon-box {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 25px;
+}
+
+.sideNave-close-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.profile-userName {
+    font-weight: bold;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 25px;
+}
+
+.profile-activity-time {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 25px;
+    font-size: small;
+    font-weight: bold;
+    color: #707070;
+}
+
+.profile-fallow-box {
+    border-bottom: 1px solid #cacbcd;
+    padding: 5px;
+
+}
+
+.fallow-col {
+    /* border: 1px solid red; */
+}
+
+.profile-fallow-icon {
+    height: 25px;
+    width: 25px;
+    /* float: right; */
+    /* border: 1px solid red; */
+    /* display: block !important; */
+}
+
+.profile-fallow-number {
+    /* border: 1px solid red; */
+    font-size: small;
+
+    /* float: right; */
+}
+
+.proflie-options-box {
+    /* border: 1px solid red; */
+}
+
+.proflie-options-icon {
+    width: 30px;
+    height: 30px;
+}
