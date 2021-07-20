@@ -25,8 +25,14 @@ const Header = () => {
             </div>
 
             <div className={style["header-options"]}>
-              <div className={style["menu-iconBox"]}>
-                {/* <List className={`${style["menu-icon"]}`} /> */}
+              <div
+                className={`${style["menu-iconBox"]} grid text-center justify-items-center`}
+              >
+                <img
+                  className={style["menu-icon"]}
+                  src={require("../../Assets/Images/header/menu.png").default}
+                  alt=""
+                />
               </div>
               <div className={`${style["header-auth-box"]}`}>
                 <Link
@@ -36,7 +42,7 @@ const Header = () => {
                   <img
                     className={`${style.img}`}
                     src={
-                      require("../../Assets/Images/header/signUp.jpg").default
+                      require("../../Assets/Images/header/signUp.PNG").default
                     }
                     alt="logo"
                   />
@@ -58,7 +64,7 @@ const Header = () => {
               <div className={`${style["search-box"]}`}>
                 <Label className={`${style["search-box-icon"]}`}>
                   <img
-                    className={`${style.image}`}
+                    className={`${style.img}`}
                     src={
                       require("../../Assets/Images/header/search-icon.png")
                         .default
@@ -67,7 +73,8 @@ const Header = () => {
                   />
                 </Label>
                 <Input
-                  className={`form-control form-control-sm  mr-ssm ${style["search-box-input"]}`}
+                  className={`form-control form-control-sm  mr-ssm  ${style["search-box-input"]}`}
+                  placeholder={"جست‌وجو سریع"}
                 />
               </div>
             </div>
