@@ -1,0 +1,9 @@
+.event-image-holder {
+  width: 224px;
+  height: 224px;
+}
+.event-image {
+  width: 159px;
+  height: 224px;
+  object-fit: contain;
+}
