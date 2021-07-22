@@ -3,10 +3,17 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    backgroundColor: (theme) => ({
+      ...theme('colors'),
+
+      fafafa: '#fafafa',
+      zereshki: '#572a47',
+    }),
     colors: {
       buttonbrown: '#8A6B41 !important',
       selectbrown: '#A88355 !important',
       white: '#fff',
+      Color929396: '929396',
     },
     spacing: {
       zero: '0',
