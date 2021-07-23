@@ -6,7 +6,7 @@ import { Input, Label } from "reactstrap";
 
 const Header = () => {
   const accessToken = "nott found";
-  const profile = "mohsen";
+  const profile = false;
   const setting = null;
   return (
     <div className={` container-fluid ${style["nav-container"]} `}>
@@ -34,33 +34,75 @@ const Header = () => {
                   alt=""
                 />
               </div>
-              <div className={`${style["header-auth-box"]}`}>
-                <Link
-                  to="/auth/registration"
-                  className={`${style["header-auth-icon"]} `}
-                >
-                  <img
-                    className={`${style.img}`}
-                    src={
-                      require("../../Assets/Images/header/signUp.PNG").default
-                    }
-                    alt="logo"
-                  />
-                </Link>
-                <Link
-                  to="/auth/login"
-                  className={`ml-1 mr-ssm ${style["header-auth-icon"]} `}
-                >
-                  <img
-                    alt="logo"
-                    className={style.img}
-                    src={
-                      require("../../Assets/Images/header/login-icon.png")
-                        .default
-                    }
-                  />
-                </Link>
-              </div>
+              {profile ? (
+                <div className={`${style["header-profile-box"]}`}>
+                  <Link to="/" className={`${style["header-auth-icon"]} `}>
+                    <img
+                      className={`${style.img}`}
+                      src={
+                        require("../../Assets/Images/header/tar-icon.png")
+                          .default
+                      }
+                      alt="logo"
+                    />
+                  </Link>
+                  <Link
+                    to="/"
+                    className={`ml-1 mr-ssm ${style["header-auth-icon"]} `}
+                  >
+                    <img
+                      alt="logo"
+                      className={style.img}
+                      src={
+                        require("../../Assets/Images/header/aux-icon.png")
+                          .default
+                      }
+                    />
+                  </Link>
+                  <Link
+                    to="/"
+                    className={`ml-1 mr-ssm ${style["header-auth-icon"]} `}
+                  >
+                    <img
+                      alt="logo"
+                      className={style.img}
+                      src={
+                        require("../../Assets/Images/header/favorite-icon.png")
+                          .default
+                      }
+                    />
+                  </Link>
+                </div>
+              ) : (
+                <div className={`${style["header-auth-box"]}`}>
+                  <Link
+                    to="/auth/registration"
+                    className={`${style["header-auth-icon"]} `}
+                  >
+                    <img
+                      className={`${style.img}`}
+                      src={
+                        require("../../Assets/Images/header/signUp.PNG").default
+                      }
+                      alt="logo"
+                    />
+                  </Link>
+                  <Link
+                    to="/auth/login"
+                    className={`ml-1 mr-ssm ${style["header-auth-icon"]} `}
+                  >
+                    <img
+                      alt="logo"
+                      className={style.img}
+                      src={
+                        require("../../Assets/Images/header/login-icon.png")
+                          .default
+                      }
+                    />
+                  </Link>
+                </div>
+              )}
+
               <div className={`${style["search-box"]}`}>
                 <Label className={`${style["search-box-icon"]}`}>
                   <img
