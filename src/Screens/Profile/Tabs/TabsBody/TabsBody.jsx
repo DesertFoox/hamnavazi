@@ -132,8 +132,9 @@ const TabsBody = ({ activeTab }) => {
         </TabPane>
         <TabPane tabId="3">
           <NaveBar naveBarData={NaveBarTitles.Tab3} />
-
-          <Gallery />
+          <div className="container mt-ssm">
+            <Gallery />
+          </div>
         </TabPane>
       </TabContent>
     </Fragment>

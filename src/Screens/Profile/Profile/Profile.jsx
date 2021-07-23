@@ -56,7 +56,7 @@ const Profile = () => {
         >
           <ProfileSideNave isOpen={setsidebarOpen} />
         </div>
-        <div className="col-lg-8 bg-selectbrown p-0">
+        <div className="col-lg-8 p-0">
           <TabsNave screenWidth={windowWidth} isOpen={setsidebarOpen} />
         </div>
       </div>
