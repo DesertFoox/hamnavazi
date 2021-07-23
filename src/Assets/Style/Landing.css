@@ -223,7 +223,7 @@
   right: 81.7%;
   top: 6%; */
   position: absolute;
-  top: 4%;
+  top: 8%;
   left: 0;
   transform: rotate(-90deg) translateX(-100%);
   transform-origin: top left;
@@ -275,6 +275,18 @@
     top: 4.9%;
   }
 }*/
+
+@media screen and (min-width: 1370px) {
+  .baner-box {
+    top: 4%;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .baner-box {
+    top: 4%;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .baner-box {
