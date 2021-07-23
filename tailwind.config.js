@@ -1,13 +1,13 @@
 // tailwind.config.js
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     backgroundColor: (theme) => ({
-      ...theme('colors'),
+      ...theme("colors"),
 
-      fafafa: '#fafafa',
-      zereshki: '#572a47',
+      fafafa: "#fafafa",
+      zereshki: "#572a47",
     }),
     colors: {
       buttonbrown: "#8A6B41 !important",
@@ -16,6 +16,8 @@ module.exports = {
       textcolor: "#CCA679",
       white: "#fff",
       gold: "#FCBE4A",
+      "797a7c": "#797a7c",
+      '413f40':'#413f40',
       "572a47": "#572a47 !important",
       e8e8e9: "#e8e8e9",
       b6b8bb: "#b6b8bb",
@@ -53,36 +55,38 @@ module.exports = {
       "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       none: "none",
+      img_shadow:" 0 3px 10px 0 rgba(0, 0, 0, 0.45)"
     },
-    borderColor: theme => ({
-       DEFAULT: theme('colors.gray.300', 'currentColor'),
-      'primary': '#3490dc',
-      'secondary': '#ffed4a',
-      'danger': '#e3342f',
-      gh:'#6b522d !important'
-     }),
+    borderColor: (theme) => ({
+      DEFAULT: theme("colors.gray.300", "currentColor"),
+      primary: "#3490dc",
+      secondary: "#ffed4a",
+      danger: "#e3342f",
+      gh: "#6b522d !important",
+    }),
     borderWidth: {
-      DEFAULT: '1px',
-      0: '0',
-      2: '2px',
-      3: '3px',
-      4: '4px',
-      6: '6px',
-      8: '8px',
+      DEFAULT: "1px",
+      0: "0",
+      2: "2px",
+      3: "3px",
+      4: "4px",
+      6: "6px",
+      8: "8px",
     },
     spacing: {
-      zero: '0',
-      sssm: '.5rem',
-      '2rm': '2rem ',
-      ssm: '1rem',
-      sm: '3rem ',
-      md: '9rem',
-      lg: '16rem',
-      xl: '22rem',
-      '34rm': '34rem !important',
-      xxl: '27rem',
-      60: '60rem',
-      '33rm': '33rem !important',
+      zero: "0",
+      sssm: ".5rem",
+      "2rm": "2rem ",
+      ssm: "1rem",
+      sm: "3rem ",
+      md: "9rem",
+      lg: "16rem",
+      xl: "22rem",
+      "34rm": "34rem !important",
+      xxl: "27rem",
+      60: "60rem",
+      13:'13rem !important',
+      "33rm": "33rem !important",
     },
     borderRadius: {
       none: "0",
@@ -93,6 +97,7 @@ module.exports = {
       lg: "0.7rem !important",
       full: "9999px !important",
       large: "12px",
+
     },
     extend: {},
   },
@@ -100,4 +105,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};

@@ -123,7 +123,7 @@ const Landing = () => {
       <div className="Chosemsi h-md">
         <section className="choseyourmusi h-zero container">
           <div className="grid justify-items-center">
-            <h2 className="text-black mt-sm text-md md:text-lg">
+            <h2 className="text-797a7c  mt-sm text-md md:text-lg">
               موزیسین مورد علاقه خود را پیدا کنید | Find your desired musician
             </h2>
           </div>
@@ -131,17 +131,17 @@ const Landing = () => {
       </div>
       <div className="main-content">
         <section className="content container-fluid ">
-          <div className="category-holder row">
-            <div className="col-lg-9 col-9 col-sm-9 secol">
+          <div className="category-holder shadow-img_shadow row">
+            <div className="col-lg-9 col-9  col-sm-9 secol">
               <img
                 className="fullimage"
                 src={require("../Assets/Images/landing/melodi.jpg").default}
                 alt=""
               />
             </div>
-            <div className="col-lg-3 col-3 col-sm-3 firstcol shape grid justify-items-center">
-              <div className="grid justify-items-center services">
-                <div className="projects">
+            <div className="col-lg-3 col-3 col-sm-3 firstcol shape  grid justify-items-center">
+              <div className="grid justify-items-center services ">
+                <div className="projects ">
                   <img
                     src={
                       require("../Assets/Images/landing/projects.svg").default
@@ -149,13 +149,14 @@ const Landing = () => {
                     alt=""
                   />
                 </div>
-                <h4 className="text-center text-white projectss">
-                  پـروژه‌هــا Projects
-                </h4>
+                <div className="text-center text-white projectss">
+                  <h4>پـروژه‌هــا</h4>
+                  <h4>Projects</h4>
+                </div>
               </div>
             </div>
           </div>
-          <div className="category-holder row">
+          <div className="category-holder shadow-img_shadow row">
             <div className="col-lg-9 col-9 col-sm-9 secol">
               <img
                 className="fullimage"
@@ -171,13 +172,14 @@ const Landing = () => {
                     alt=""
                   />
                 </div>
-                <h4 className="text-center text-white  services">
-                  فـرصت‌هـای شغـلی Job Opportunities
-                </h4>
+                <div className="text-center  text-white  services">
+                  <h4>فـرصت‌هـای شغـلی </h4>
+                  <h4> Job Opportunities</h4>
+                </div>
               </div>
             </div>
           </div>
-          <div className="category-holder row">
+          <div className="category-holder shadow-img_shadow row">
             <div className="col-lg-9 col-9  col-sm-9 secol">
               <img
                 className="fullimage"
@@ -194,12 +196,13 @@ const Landing = () => {
                   />
                 </div>
                 <h4 className="text-center services text-white">
-                  بازار Market
+                  <h4>بازار</h4>
+                  <h4>Market</h4>
                 </h4>
               </div>
             </div>
           </div>
-          <div className="category-holder row">
+          <div className="category-holder shadow-img_shadow row">
             <div
               className="col-lg-9  
             col-9 col-sm-9 secol"
@@ -219,7 +222,8 @@ const Landing = () => {
                   />
                 </div>
                 <h4 className="text-white text-center services ">
-                  خـدمـات ویــژه Special Services
+                  <h4> خـدمـات ویــژه</h4>
+                  <h4>Special Services</h4>
                 </h4>
               </div>
             </div>
@@ -229,7 +233,7 @@ const Landing = () => {
       <div className="about-us h-md">
         <section className="abt-us h-zero container">
           <div className="grid grid-cols-3">
-            <div className="about-us-box  text-black fs-5 text-center mt-ssm justify-content-center">
+            <div className="about-us-box sh  text-black fs-5 text-center mt-ssm justify-content-center">
               <img
                 className={`about-us-icons `}
                 src={
