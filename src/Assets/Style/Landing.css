@@ -17,7 +17,7 @@
   margin-top: 0;
 }
 
-.border-none{
+.border-none {
   border: none;
 }
 
@@ -49,6 +49,7 @@
   /* border: 1px solid red; */
   text-align: center;
 }
+
 .about-us-icons {
   /* border: 1px solid red; */
   display: grid;
@@ -61,12 +62,15 @@
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
   padding: 10px;
 }
+
 .firstcol {
   background: #c79c69;
 }
+
 .secol {
   padding: 0;
 }
+
 /* .firstcol::after {
   position: relative;
   content: "";
@@ -88,12 +92,15 @@
     border-bottom-width: 70px;
   } */
 }
+
 .secondcol {
   background: #b38758;
 }
+
 .thirdcol {
   background: #9e6f43;
 }
+
 .fourthcol {
   background: #8c5c34;
 }
@@ -138,6 +145,7 @@
   width: 13rem;
   overflow-wrap: break-word;
 }
+
 .markte {
   background: #fff;
   border-radius: 88px;
@@ -149,12 +157,13 @@
   justify-items: center;
   display: grid;
 }
-.markte > img{
+
+.markte>img {
   width: 100%;
   height: 100%;
 }
 
-.servs{
+.servs {
   background: #fff;
   border-radius: 88px;
   width: 7rem;
@@ -165,11 +174,13 @@
   justify-items: center;
   display: grid;
 }
-.servs > img {
+
+.servs>img {
   width: 100%;
   height: 100%;
 }
-.jobs{
+
+.jobs {
   background: #fff;
   border-radius: 88px;
   width: 7rem;
@@ -180,10 +191,12 @@
   justify-items: center;
   display: grid;
 }
-.jobs > img {
+
+.jobs>img {
   width: 100%;
   height: 100%;
 }
+
 .projects {
   background: #fff;
   border-radius: 88px;
@@ -195,7 +208,76 @@
   justify-items: center;
   display: grid;
 }
-.projects > img {
+
+.projects>img {
   width: 100%;
   height: 100%;
+}
+
+.baner-box {
+  display: grid;
+  width: 300px;
+  /* transform: rotatez(270deg);
+
+  position: relative;
+  right: 81.7%;
+  top: 6%; */
+  position: absolute;
+  top: 4%;
+  left: 0;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: top left;
+}
+
+.baner-box-item {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.baner-box-item:hover {
+  box-shadow: inset 0 15px 100px -10px rgba(0, 0, 0, 0.4), 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.baner-musice-box {
+  background: #898989;
+  width: 100%;
+  z-index: 10;
+}
+
+.baner-service-box {
+  background: #276e95;
+  width: 85%;
+  z-index: 8;
+}
+
+.baner-bands-box {
+  background: #58b04a;
+  width: 70%;
+  z-index: 5;
+}
+
+/* @media screen and (max-width: 1200px) {
+  .baner-box {
+    width: 300px;
+    transform: rotatez(270deg);
+    position: relative;
+    right: 79.6%;
+    top: 5.9%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .baner-box {
+    width: 280px;
+    transform: rotatez(270deg);
+    position: relative;
+    right: 76.3%;
+    top: 4.9%;
+  }
+}*/
+
+@media screen and (max-width: 768px) {
+  .baner-box {
+    top: 12%;
+  }
 }
