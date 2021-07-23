@@ -1,8 +1,14 @@
 // tailwind.config.js
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    backgroundColor: (theme) => ({
+      ...theme('colors'),
+
+      fafafa: '#fafafa',
+      zereshki: '#572a47',
+    }),
     colors: {
       buttonbrown: "#8A6B41 !important",
       selectbrown: "#A88355 !important",
@@ -56,27 +62,27 @@ module.exports = {
       gh:'#6b522d !important'
      }),
     borderWidth: {
-      DEFAULT: "1px",
-      0: "0",
-      2: "2px",
-      3: "3px",
-      4: "4px",
-      6: "6px",
-      8: "8px",
+      DEFAULT: '1px',
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
+      8: '8px',
     },
     spacing: {
-      zero: "0",
-      sssm: ".5rem",
-      "2rm": "2rem ",
-      ssm: "1rem",
-      sm: "3rem ",
-      md: "9rem",
-      lg: "16rem",
-      xl: "22rem",
-      "34rm": "34rem !important",
-      xxl: "27rem",
-      60: "60rem",
-      "33rm": "33rem !important",
+      zero: '0',
+      sssm: '.5rem',
+      '2rm': '2rem ',
+      ssm: '1rem',
+      sm: '3rem ',
+      md: '9rem',
+      lg: '16rem',
+      xl: '22rem',
+      '34rm': '34rem !important',
+      xxl: '27rem',
+      60: '60rem',
+      '33rm': '33rem !important',
     },
     borderRadius: {
       none: "0",
@@ -94,4 +100,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-};
+}
