@@ -1,0 +1,20 @@
+.registerbtn-padding {
+  padding: 7px 16px 6px;
+}
+.register-input {
+  padding: 7px 16px 6px 583px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #b6b8bb;
+  background-color: #ffffcf;
+  outline: none;
+  color: #b6b8bb;
+  font-size: 16px;
+}
+.register-input::placeholder {
+  color: #b6b8bb;
+}
+.khat{
+    border-bottom: 1px solid #eec490;
+    padding-bottom: 2rem;
+}
