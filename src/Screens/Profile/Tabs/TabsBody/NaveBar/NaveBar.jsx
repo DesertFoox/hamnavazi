@@ -13,7 +13,7 @@ const NaveBar = ({ naveBarData }) => {
   };
   return (
     <Fragment>
-      <Nav className={`${style["navBar-bg"]} px-sssm py-ssm`}>
+      <Nav className={`${style["navBar-bg"]} px-sssm py-ssm `}>
         {naveBarData?.title.map((item, index) => (
           <NavItem className={`mr-ssm`}>
             <NavLink

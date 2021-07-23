@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
-import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
+import { TabContent, TabPane, Nav, NavItem, NavLink, Badge } from "reactstrap";
+import Event from "../../MyEvents/MyEvents";
+import Gallery from "../../Gallery/Gallery";
 import NaveBar from "./NaveBar/NaveBar";
 const TabsBody = ({ activeTab }) => {
   const NaveBarTitles = {
@@ -31,50 +33,107 @@ const TabsBody = ({ activeTab }) => {
       <TabContent className="py-50" activeTab={activeTab}>
         <TabPane tabId="1">
           <NaveBar naveBarData={NaveBarTitles.Tab1} />
-          <p>
-            Candy canes donut chupa chups candy canes lemon drops oat cake
-            wafer. Cotton candy candy canes marzipan carrot cake. Sesame snaps
-            lemon drops candy marzipan donut brownie tootsie roll. Icing
-            croissant bonbon biscuit gummi bears. Pudding candy canes sugar plum
-            cookie chocolate cake powder croissant.
-          </p>
-          <p>
-            Carrot cake tiramisu danish candy cake muffin croissant tart
-            dessert. Tiramisu caramels candy canes chocolate cake sweet roll
-            liquorice icing cupcake. Candy cookie sweet roll bear claw sweet
-            roll.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-3">
+            <div className="mb-sm ml-ssm py-4 px-5 rounded bg-white shadow-lg">
+              <div className="name mb-2rm">
+                <p className="text-textcolor text-13">نام | Name</p>
+                <p className="text-13">عارف طلوعی</p>
+              </div>
+              <div className="username mb-2rm">
+                <p className="text-textcolor text-13">نام کاربری | Username</p>
+                <p className="text-black text-13">Aref Too</p>
+              </div>
+              <div className="gender mb-2rm">
+                <p className="text-textcolor text-13"> جنسیت | Gender</p>
+                <p className="text-black text-13">مرد </p>
+              </div>
+              <div className="birthdate mb-2rm">
+                <p className="text-textcolor text-13">
+                  {" "}
+                  تاریخ تولد | Date Of Birth
+                </p>
+                <p className="text-black text-13">1983-25-02 </p>
+              </div>
+              <div className="languages mb-2rm">
+                <p className="text-textcolor text-13">
+                  تاریخ تولد | Languages{" "}
+                </p>
+                <p className="text-black text-13">فارس | انگلیسی | عربی</p>
+              </div>
+              <div className="location mb-2rm">
+                <p className="text-textcolor text-13">
+                  {" "}
+                  موقعیت مکانی | Location{" "}
+                </p>
+                <p className="text-black text-13">ایران | تهران | هفت تیر</p>
+              </div>
+            </div>
+            <div className="mb-sm ml-ssm py-4 px-5 rounded bg-white shadow-lg">
+              <div className="email">
+                <p className="text-textcolor text-13">ایمیل | Email</p>
+                <p className="text-black text-13">
+                  Email | پست الکترونیک areftoloei@gmail.com
+                </p>
+              </div>
+              <div className="website">
+                <p className="text-textcolor text-13">وبسایت | Website</p>
+                <p className="text-black text-13">www.chavoosh.info</p>
+              </div>
+              <div className="links">
+                <p className="text-textcolor text-13">
+                  لینک های ارتباطی | Links
+                </p>
+                <p className="text-black text-13">@areftoo</p>
+              </div>
+              <div className="links">
+                <p className="text-textcolor text-13">تلفن همراه | Cell</p>
+                <p className="text-black text-13">09123235676</p>
+              </div>
+              <div className="secgender">
+                <p className="text-textcolor text-13">جنسیت | Gender</p>
+                <p className="text-black text-13">مرد</p>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-4  gap-4 p-3">
+            <div className="instruments grid grid-cols-1 md:grid-cols-2 gap 4 mb-sm ml-ssm py-4 px-5 rounded bg-white shadow-lg">
+              <div className="saz mb-ssm">
+                <p className="text-textcolor text-13">
+                  ساز اصلی | Main instruments{" "}
+                  <Badge className="bg-572a47 rounded-full">
+                    حرفه ای | Pro
+                  </Badge>
+                </p>
+                <p className="text-black text-13"> _تار | Tar</p>
+                <p className="text-black text-13">_1988 | 1366</p>
+                <p className="text-black text-13">
+                  _بداهه نوازی | Improvisation
+                </p>
+                <p className="text-black text-13">_کلاسیک | Classic</p>
+                <p className="text-black text-13">_تلفیقی |Fusion</p>
+              </div>
+              <div className="saz-2">
+                <p className="text-textcolor text-13">
+                  ساز دوم | Second instruments
+                  <Badge className="rounded-full bg-gold">
+                    مبتدی | begginer
+                  </Badge>
+                </p>
+                <p className="text-black text-13"> _طبلا | Tabla</p>
+                <p className="text-black text-13">_1988 | 1366</p>
+                <p className="text-black text-13">_هندوستامی | Hindustani</p>
+              </div>
+            </div>
+          </div>
         </TabPane>
         <TabPane tabId="2">
           <NaveBar naveBarData={NaveBarTitles.Tab2} />
-          <p>
-            Dragée jujubes caramels tootsie roll gummies gummies icing bonbon.
-            Candy jujubes cake cotton candy. Jelly-o lollipop oat cake
-            marshmallow fruitcake candy canes toffee. Jelly oat cake pudding
-            jelly beans brownie lemon drops ice cream halvah muffin. Brownie
-            candy tiramisu macaroon tootsie roll danish.
-          </p>
-          <p>
-            Croissant pie cheesecake sweet roll. Gummi bears cotton candy tart
-            jelly-o caramels apple pie jelly danish marshmallow. Icing caramels
-            lollipop topping. Bear claw powder sesame snaps.
-          </p>
+          <Event />
         </TabPane>
         <TabPane tabId="3">
           <NaveBar naveBarData={NaveBarTitles.Tab3} />
 
-          <p>
-            Gingerbread cake cheesecake lollipop topping bonbon chocolate sesame
-            snaps. Dessert macaroon bonbon carrot cake biscuit. Lollipop lemon
-            drops cake gingerbread liquorice. Sweet gummies dragée. Donut bear
-            claw pie halvah oat cake cotton candy sweet roll. Cotton candy sweet
-            roll donut ice cream.
-          </p>
-          <p>
-            Halvah bonbon topping halvah ice cream cake candy. Wafer gummi bears
-            chocolate cake topping powder. Sweet marzipan cheesecake jelly-o
-            powder wafer lemon drops lollipop cotton candy.
-          </p>
+          <Gallery />
         </TabPane>
       </TabContent>
     </Fragment>
