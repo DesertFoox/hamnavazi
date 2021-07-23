@@ -6,7 +6,7 @@ import { Input, Label } from "reactstrap";
 
 const Header = () => {
   const accessToken = "nott found";
-  const profile = "mohsen";
+  const profile = false;
   const setting = null;
   return (
     <div className={` container-fluid ${style["nav-container"]} `}>
