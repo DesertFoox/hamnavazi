@@ -24,14 +24,17 @@ const Landing = () => {
             <div className="selectSection grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center">
               <div className="mr-ssm mt-ssm md:mt-zero">
                 <ButtonDropdown
-                  className=""
+                  className="bg-buttonbrown border-2 
+                  border-gh rounded-lg"
                   size="md"
                   isOpen={isOpen}
                   toggle={toggle}
                 >
                   <Button
                     id="caret"
-                    className="px-sm rounded-md selectbuttonWidth bg-buttonbrown"
+                    className="px-sm border-2 
+                    border-gh border-none border-2 
+                    border-gh rounded-md selectbuttonWidth bg-buttonbrown"
                   >
                     کشور | Country
                   </Button>
@@ -49,10 +52,17 @@ const Landing = () => {
                 </ButtonDropdown>
               </div>
               <div className="mr-ssm mt-ssm md:mt-zero">
-                <ButtonDropdown size="md" isOpen={isOpen} toggle={toggle}>
+                <ButtonDropdown
+                  className="bg-buttonbrown rounded-md border-2 
+                  border-gh"
+                  size="md"
+                  isOpen={isOpen}
+                  toggle={toggle}
+                >
                   <Button
                     id="caret"
-                    className="px-sm rounded-md selectbuttonWidth bg-buttonbrown"
+                    className="px-sm rounded-md border-2 
+                    border-gh border-none selectbuttonWidth bg-buttonbrown"
                   >
                     ساز | Instrument
                   </Button>
@@ -70,10 +80,17 @@ const Landing = () => {
                 </ButtonDropdown>
               </div>
               <div className="mr-ssm mt-ssm md:mt-zero">
-                <ButtonDropdown size="md" isOpen={isOpen} toggle={toggle}>
+                <ButtonDropdown
+                  className="bg-buttonbrown border-2 
+                  border-gh rounded-md"
+                  size="md"
+                  isOpen={isOpen}
+                  toggle={toggle}
+                >
                   <Button
                     id="caret"
-                    className="px-sm rounded-md selectbuttonWidth bg-buttonbrown"
+                    className="px-sm border-2 
+                    border-gh border-none rounded-md selectbuttonWidth bg-buttonbrown"
                   >
                     سبک | Style
                   </Button>
@@ -94,7 +111,7 @@ const Landing = () => {
                 <Button
                   size="md"
                   id="caret"
-                  className="px-sm rounded-md selectbuttonWidth bg-selectbrown"
+                  className="px-sm border-2 rounded-md border-gh  selectbuttonWidth bg-selectbrown"
                 >
                   جستجو | Search
                 </Button>
@@ -211,8 +228,8 @@ const Landing = () => {
       </div>
       <div className="about-us h-md">
         <section className="abt-us h-zero container">
-          <div className="flex flex-nowrap justify-content-center">
-            <div className="about-us-box md:mr-md text-black fs-5 text-center mt-ssm justify-content-center">
+          <div className="grid grid-cols-3">
+            <div className="about-us-box  text-black fs-5 text-center mt-ssm justify-content-center">
               <img
                 className={`about-us-icons `}
                 src={
@@ -222,7 +239,7 @@ const Landing = () => {
               />
               راهـنمــا | Instruction
             </div>
-            <div className="about-us-box md:mr-md text-black fs-5 text-center mt-ssm justify-content-center">
+            <div className="about-us-box  text-black fs-5 text-center mt-ssm justify-content-center">
               <img
                 className={`about-us-icons `}
                 src={require("../Assets/Images/landing/rules.png").default}
@@ -230,7 +247,7 @@ const Landing = () => {
               />
               قـوانیـن | Rules
             </div>
-            <div className="about-us-box md:mr-md text-black fs-5 text-center mt-ssm justify-content-center">
+            <div className="about-us-box  text-black fs-5 text-center mt-ssm justify-content-center">
               <img
                 className={`about-us-icons `}
                 src={require("../Assets/Images/landing/aboutUs.png").default}

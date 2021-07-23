@@ -1,0 +1,126 @@
+
+.fulloverlay {
+    position: fixed;
+    z-index: 999999999999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.32);
+
+    .modaloverlay {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        .infomodal {
+            animation: infomodalopen 0.1s linear;
+            box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+            background: #fff;
+            color: rgba(0,0,0,.87);
+            display: block;
+            padding: 24px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            overflow: auto;
+            outline: 0;
+            min-width: 80vw;
+            max-width: 80vw;
+
+            .infotitle {
+                margin-bottom: 6px!important;
+                font: 500 20px/32px Roboto,Helvetica Neue,sans-serif;
+                font-family: xero-bold,Roboto,Arial;
+                letter-spacing: normal;
+                direction: rtl;
+                text-align: right;
+            }
+
+        
+            .infoseparator {
+                display: block;
+                margin: 0;
+                border-top-width: 1px;
+                border-top-style: solid;
+                border-top-color: rgba(0,0,0,.12);
+            }
+
+            p,h4{
+                margin: 5px 0px 16px 0px;
+                font-family: xero-bold,Roboto,Arial !important;
+                text-align: right;
+            }
+
+            .infoentitle , .infofatitle {
+                font: 400 15px/24px Roboto,Helvetica Neue,sans-serif;
+                font-size: 16px;
+            }
+
+            .infoendescription , .infofadescription {
+                font: 400 14px/20px Roboto,Helvetica Neue,sans-serif;
+            }
+            
+            .infoendescription , .infoentitle {
+                direction: ltr;
+                text-align: left !important;
+            }
+
+
+            .infoactionbtn {
+                direction: ltr;
+                padding: 8px 0;
+                display: flex;
+                flex-wrap: wrap;
+                min-height: 52px;
+                align-items: center;
+                margin-bottom: -24px;
+                justify-content: flex-end;
+
+                button {
+                    box-shadow: 0 0 0 0 rgba(0,0,0,.2), 0 0 0 0 rgba(0,0,0,.14), 0 0 0 0 rgba(0,0,0,.12);
+                    background-color: #3f51b5;
+                    color: #fff;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                    display: inline-block;
+                    white-space: nowrap;
+                    text-decoration: none;
+                    vertical-align: baseline;
+                    text-align: center;
+                    margin: 0;
+                    min-width: 64px;
+                    line-height: 36px;
+                    padding: 0 16px;
+                    border-radius: 4px;
+                    font-family: xero-bold,Roboto,Arial;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+            }
+            
+        }
+
+    }
+}
+
+
+
+@keyframes infomodalopen {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}

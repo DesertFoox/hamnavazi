@@ -1,0 +1,286 @@
+.textinput-container {
+    width: 100%;
+    border: 3px solid transparent;
+    text-align: right;
+    min-height: unset !important;
+  
+    .textinput-title-container {
+      font-size: 19px;
+      margin-bottom: 10px;
+      color: #fff;
+      min-height: 34.4px;
+  
+      span {
+        font-family: xero-bold, Roboto, Arial;
+        outline: none;
+  
+        .show-hint {
+          top: 8px;
+          margin-right: 5px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          transition: opacity 0.3s;
+          content: "";
+          display: inline-block;
+          position: absolute;
+          left: -35px;
+          top: 5px;
+          background: url(../Images/landing/question-mark-icon.png) no-repeat
+            center center;
+          background-size: 100%;
+  
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  
+    .field-required {
+      position: relative;
+  
+      .is-required::before {
+        content: "*";
+        display: block;
+        position: absolute;
+        right: -10px;
+        top: 2px;
+        color: #da0b0b;
+      }
+    }
+  
+    .dotted-outline {
+      &::before {
+        content: "";
+        border: 2px dotted #da0b0b;
+        position: absolute;
+        bottom: -15px;
+        height: 0px;
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 3px;
+      }
+    }
+  
+    .selectoption-input-container {
+      width: 100%;
+      height: 35px;
+      border: 2px solid #b8b7b1;
+      border-radius: 7px;
+      background-color: #ffffcf;
+      position: relative;
+      font-size: 16px;
+      line-height: 32px;
+      color: #adaca9;
+      padding-right: 5px;
+      cursor: pointer;
+  
+      .icon {
+        display: block;
+        float: left;
+        width: 23px;
+        height: 100%;
+        padding: 0 3px;
+  
+        color: #666050;
+        border-right: 2px solid #b8b7b1;
+        border-radius: 7px;
+      }
+  
+      .up-arrow {
+        background: url(../Images/landing/chevron-up.png) no-repeat 50%;
+        background-color: rgba(0, 0, 0, 0);
+        background-size: auto;
+        background-size: 70% auto;
+        background-color: #f1e8c0;
+      }
+  
+      .down-arrow {
+        background: url(../Images/landing/chevron-down.png) no-repeat 50%;
+        background-color: rgba(0, 0, 0, 0);
+        background-size: auto;
+        background-size: 70% auto;
+        background-color: #f1e8c0;
+      }
+  
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        right: -2px;
+        z-index: 10;
+        width: 99%;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        background-color: #ffffcf;
+        border: none;
+        border-radius: 7px;
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        transition: opacity 0.5s;
+  
+        li.so-search-box {
+          padding: 5px !important;
+        }
+  
+        li {
+          padding: 4px 5px 4px 0;
+  
+          &:hover {
+            background-color: #e5e5be;
+          }
+  
+          input {
+            width: 100%;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 2px solid #757575;
+            color: #fff;
+            box-sizing: border-box;
+            font-size: 16px;
+            height: 30px;
+  
+            &::placeholder{
+                color: #fff;
+            }
+          }
+        }
+  
+        li.is-title {
+          background: #564934 !important;
+          text-decoration: underline !important;
+          -webkit-user-select: none !important;
+          -moz-user-select: none !important;
+          -ms-user-select: none !important;
+          user-select: none !important;
+          cursor: default !important;
+          font-size: 19px;
+          font-weight: 700;
+          direction: ltr !important;
+  
+          &:hover {
+            background-color: #565656;
+          }
+        }
+      }
+  
+      .dropdown.opened {
+        border: 2px solid #b8b7b1;
+        opacity: 1 !important;
+        height: auto !important;
+        max-height: 320px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 99%;
+        margin: 0 auto;
+      }
+    }
+  }
+  
+  .ti-ts {
+    background-color: #736d57;
+    border-radius: 7px;
+    border: 4px solid #585546 !important;
+    color: #ffffe0;
+    box-sizing: border-box !important;
+    opacity: 0.8;
+    transition: background-color 0.3s;
+    text-align: center !important;
+  
+    &:hover {
+      background-color: #585546;
+      opacity: 1;
+    }
+  
+    .selectoption-input-container {
+      box-sizing: border-box;
+      background-color: #736d57;
+      border: 1px solid transparent !important;
+      transition: background-color 0.3s;
+      border-radius: 7px !important;
+  
+      &:hover {
+        background-color: #585546;
+      }
+  
+      .title {
+        font-size: 17px;
+        color: #ffffe0;
+        font-weight: 700;
+        cursor: pointer;
+        font-family: xero-bold ,Roboto, Helvetica Neue, sans-serif;
+      }
+  
+      .dropdown {
+        border: 4px solid #585546 !important;
+        background-color: #a19e89;
+        width: 100%;
+        right: -4px;
+        top: 100%;
+        border-radius: 5px;
+  
+        .so-search-box {
+          &:hover {
+            background: #efefef;
+          }
+        }
+  
+        li {
+          color: #ffffe0;
+  
+          &:hover {
+            background-color: #7e7c6f;
+          }
+        }
+      }
+  
+      .icon {
+        background-color: #a19e89;
+        border: unset;
+      }
+  
+      .down-arrow {
+        background-image: url(../Images/landing/chevron-down.052d169d7b4660e08c60.png) !important;
+      }
+  
+      .up-arrow {
+        background-image: url(../Images/landing/chevron-down.052d169d7b4660e08c60.png) !important;
+        transform: rotatez(180deg) !important;
+      }
+    }
+  }
+  
+  // @media screen and(max-width: 1024px){
+  //   .textinput-container{
+  //     border: 1px red solid ;
+  //     float: left !important;
+  //     width: 70% !important;
+  
+  //   }
+  
+  
+  
+  // }
+  
+  
+  
+  @media screen and(max-width: 768px) {
+    .so-search-box {
+      visibility: visible !important;
+      opacity: 1 !important;
+      height: 42px !important;
+      background-color: #e5e5be !important;
+      input {
+        margin-left: 15px !important;
+        width: 98% !important;
+      }
+    }
+    .selectoption-input-container{
+      .up-arrow{
+        width: 13px;
+      }
+    }
+  }
+  
