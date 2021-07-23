@@ -36,7 +36,7 @@ const Header = () => {
               </div>
               <div className={`${style["header-auth-box"]}`}>
                 <Link
-                  to="/auth/registration"
+                  to="/register"
                   className={`${style["header-auth-icon"]} `}
                 >
                   <img
@@ -48,7 +48,7 @@ const Header = () => {
                   />
                 </Link>
                 <Link
-                  to="/auth/login"
+                  to="/login"
                   className={`ml-1 mr-ssm ${style["header-auth-icon"]} `}
                 >
                   <img

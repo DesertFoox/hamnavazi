@@ -23,6 +23,8 @@ module.exports = {
       b6b8bb: "#b6b8bb",
       "8a6b41": "#8a6b41",
       d48c8c: "#d48c8c",
+      ffffcf:'#ffffcf',
+      a88355:"#a88355",
       c79c69: "#c79c69",
       707070: "#707070",
     },
