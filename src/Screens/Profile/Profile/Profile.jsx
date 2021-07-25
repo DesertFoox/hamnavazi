@@ -14,6 +14,9 @@ const Profile = () => {
   // } else if (windowWidth > 990) {
   //   setsidebarOpen(true);
   // }
+  if (!sidebarOpen && windowWidth > 990) {
+    setsidebarOpen(true);
+  }
 
   const updateWidth = () => {
     setwindowWidth(window.innerWidth);
@@ -33,11 +36,17 @@ const Profile = () => {
   //     (windowWidth < 576
   //       ? style["profile-sideNave"] + " " + "col-6"
   //       : "col-4"));
+  // useEffect(() => {
+  //   resizeStyle2();
+  // }, [windowWidth]);
   const resizeStyle2 = () => {
+    // console.log(windowWidth);
+
     if (windowWidth > 990) {
+      // setsidebarOpen(true);
       return "col-4";
     } else if (windowWidth <= 990) {
-      return style["profile-sideNave"] + " " + "col-10";
+      return style["profile-sideNave"] + " " + "col-8";
     } else if (windowWidth < 576) {
       return style["profile-sideNave"] + " " + "col-8";
     } else if (windowWidth < 470) {
@@ -54,7 +63,7 @@ const Profile = () => {
           className={`${resizeStyle2()} SideNave  bg-white p-0`}
           style={sidebarOpen ? { display: "grid" } : { display: "none" }}
         >
-          <ProfileSideNave isOpen={setsidebarOpen} />
+          <ProfileSideNave isOpen={setsidebarOpen} windowWidth={windowWidth} />
         </div>
         <div className="col-lg-8 p-0">
           <TabsNave screenWidth={windowWidth} isOpen={setsidebarOpen} />

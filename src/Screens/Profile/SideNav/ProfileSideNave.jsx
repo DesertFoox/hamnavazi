@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Badge, Card, CardBody, CardImg, Button, Input } from "reactstrap";
 import style from "./ProfileSideNave.module.css";
 import { ChevronLeft } from "react-feather";
-const ProfileSideNave = ({ isOpen }) => {
+const ProfileSideNave = ({ isOpen, windowWidth }) => {
   return (
     <Fragment>
       <div
@@ -16,7 +16,7 @@ const ProfileSideNave = ({ isOpen }) => {
           <CardBody className={`${style["profile-personality"]}  `}>
             <div
               className={`${style["close-icon-box"]} grid justify-items-end`}
-              onClick={() => isOpen(false)}
+              onClick={() => isOpen(windowWidth > 990 ? true : false)}
             >
               <img
                 className={`${style["sideNave-close-icon"]} img-fluid`}
