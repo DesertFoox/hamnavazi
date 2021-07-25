@@ -1,0 +1,243 @@
+.top-SearchPage {
+    height: 30rem;
+    background: url(../../Assets/Images/search/search-bg-sm.png) no-repeat 50%;
+    background-size: cover;
+}
+
+.landingtopsection {
+    margin-top: 0;
+    border: 1px solid transparent;
+}
+
+.selectbuttonWidth {
+    width: 9.5rem;
+    /* border: 1px solid #67686a; */
+    outline: none;
+
+}
+
+.selectbuttonborder {
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+    /* border: 1px solid #67686a; */
+    padding: 0 0.8rem;
+    outline: none;
+    border-left: 0;
+}
+
+.Chosemsi {
+    background: url(../../Assets/Images/landing/ChoseMusician.jpg) no-repeat 50%;
+    background-size: 100% 100%;
+    position: relative;
+    min-height: 800px;
+    border: 1px solid transparent;
+}
+
+
+.filter-container {
+    height: 3.5rem;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.filter-title {
+    font-size: 14px;
+    line-height: 2;
+    color: #929396;
+    /* margin-top: 1rem; */
+
+}
+
+.collapse-button {
+    /* border: 1px solid red; */
+    height: 1.4rem;
+    width: 1.4rem;
+    /* width: 35px;
+    height: 35px; */
+    border-radius: 100%;
+    background: #fff;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.filter-card {
+    transition: 0.7s;
+    width: 25rem;
+    overflow: hidden;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fafafa;
+    /* border: 1px solid red; */
+    z-index: 8;
+    /* transform: rotatez(270deg);
+
+  position: relative;
+  right: 81.7%;
+  top: 6%; */
+    position: absolute;
+
+    /* transform-origin: top right; */
+}
+
+.filter-card-item {
+    border-bottom: 1px solid #e8e8e9;
+}
+
+.search-results {
+    border: 1px solid red;
+    /* min-height: 500px; */
+    /* background: rgba(255, 255, 255, 0.219); */
+}
+
+.search-results-top {
+    border: 1px solid red;
+    height: 60px;
+}
+
+.filter-badge {
+    color: #929396;
+    /* height: 30px; */
+    border-radius: 18px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.table-holder {
+    border: 1px solid red;
+    height: 200px;
+    background: url(../../Assets/Images/search/bg-table-search.png) no-repeat;
+    background-position: center 30%;
+    background-size: 40%;
+    min-height: 500px;
+}
+
+.table-box {
+    /* background: rgb(172, 134, 134); */
+    /* box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3); */
+    border-radius: 10px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+
+}
+
+.table-header {
+    /* border: 1px solid red; */
+    background-color: #e8e8e981 !important;
+    border-top-left-radius: 20px !important;
+    border-radius: 10% !important;
+}
+
+.table-header-tr {
+    font-size: medium;
+    font-weight: 600;
+    text-align: center;
+    color: #929396 !important;
+    font-size: 0.75rem;
+}
+
+.table-header-th {
+    border: none !important;
+
+}
+
+.table-body {
+    background: #ffffffa4 !important;
+    /* border-bottom-left-radius: 20px !important;
+    overflow: hidden; */
+    /* padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important; */
+}
+
+
+.table-body-tr {
+    text-align: center;
+    color: #4b4a4c;
+    font-size: 0.9rem;
+
+}
+
+.table-body-td {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    /* background: #ffffffa4; */
+}
+
+.table-body-td:first-child {
+    /* padding-right: 0.25rem !important; */
+    /* border-bottom-right-radius: 10px; */
+}
+
+/* 
+.table-body-td:last-child {
+    padding-right: 0.25rem !important;
+    border-bottom-left-radius: 10px;
+} */
+
+
+.table-body-pic-box {
+    /* border: 1px solid red; */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fefefe;
+    height: 4rem !important;
+    width: 4rem !important;
+
+
+}
+
+.table-body-icon-box {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fefefe;
+    height: 4rem !important;
+    width: 4rem !important;
+    padding: 1.1rem;
+
+}
+
+.table-body-pic {
+    border-radius: 10px;
+}
+
+.table-body-badge {
+    border-radius: 10px;
+    padding: 0.3rem 0.5rem;
+}
+
+.table-pagination {
+    border: 1px solid red;
+    height: 60px;
+}
+
+@media screen and (max-width:576px) {
+    .top-SearchPage {
+        height: 45rem
+    }
+
+    .search-TopCenter-option {
+        margin-top: 20rem;
+    }
+}
+
+@media screen and (max-width:470px) {
+    .search-results-title {
+        margin-top: 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .filter-card {
+        width: 20rem;
+    }
+
+    .filter-badge {
+        font-size: 0.7rem;
+        height: 25px !important;
+    }
+
+    .search-results-title {
+        font-size: 0.6rem;
+    }
+}
