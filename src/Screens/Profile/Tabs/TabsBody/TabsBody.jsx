@@ -34,7 +34,7 @@ const TabsBody = ({ activeTab }) => {
         <TabPane tabId="1">
           <NaveBar naveBarData={NaveBarTitles.Tab1} />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-3">
-            <div className="mb-sm ml-ssm py-4 px-5 rounded bg-white shadow-lg">
+            <div className="mb-sm ml-ssm py-4 px-5 rounded bg-white-profile shadow-lg">
               <div className="name mb-2rm">
                 <p className="text-textcolor text-13">نام | Name</p>
                 <p className="text-13">عارف طلوعی</p>
@@ -68,7 +68,7 @@ const TabsBody = ({ activeTab }) => {
                 <p className="text-black text-13">ایران | تهران | هفت تیر</p>
               </div>
             </div>
-            <div className="mb-sm ml-ssm py-4 px-5 rounded bg-white shadow-lg">
+            <div className="mb-sm ml-ssm py-4 px-5 rounded bg-white-profile shadow-lg">
               <div className="email">
                 <p className="text-textcolor text-13">ایمیل | Email</p>
                 <p className="text-black text-13">
@@ -96,11 +96,11 @@ const TabsBody = ({ activeTab }) => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4  gap-4 p-3">
-            <div className="instruments grid grid-cols-1 md:grid-cols-2 gap 4 mb-sm ml-ssm py-4 px-5 rounded bg-white shadow-lg">
+            <div className="instruments grid grid-cols-1 md:grid-cols-2 gap 4 mb-sm ml-ssm py-4 px-5 rounded bg-white-profile shadow-lg">
               <div className="saz mb-ssm">
                 <p className="text-textcolor text-13">
                   ساز اصلی | Main instruments{" "}
-                  <Badge className="bg-572a47 rounded-full">
+                  <Badge className="bg-572a47 mr-ssm rounded-full">
                     حرفه ای | Pro
                   </Badge>
                 </p>
@@ -115,7 +115,7 @@ const TabsBody = ({ activeTab }) => {
               <div className="saz-2">
                 <p className="text-textcolor text-13">
                   ساز دوم | Second instruments
-                  <Badge className="rounded-full bg-gold">
+                  <Badge className="rounded-full mr-ssm bg-gold">
                     مبتدی | begginer
                   </Badge>
                 </p>

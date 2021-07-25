@@ -100,6 +100,7 @@ module.exports = {
       '34rm': '34rem !important',
       xxl: '27rem',
       60: '60rem',
+      '100s':'69% !important',
       13: '13rem !important',
       '33rm': '33rem !important',
     },
