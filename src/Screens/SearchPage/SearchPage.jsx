@@ -1,8 +1,11 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import ReactPaginate from "react-paginate";
 import {
   ChevronUp,
   ChevronDown,
+  ChevronsLeft,
+  ChevronsRight,
   HelpCircle,
   XCircle,
   User,
@@ -23,6 +26,8 @@ const SearchPage = () => {
   const [isOpen, setOpen] = useState(null);
   const [filterButton, setfilterButton] = useState(false);
   const [filterItemId, setfilterItemId] = useState(null);
+  const [initialPage, setInitialPage] = useState(1);
+  const [currentData, setCurrentData] = useState([]);
   const history = useHistory();
   const testSelectOption = [
     {
@@ -103,6 +108,15 @@ const SearchPage = () => {
       Level: { title: "مبتدی  |  Beginner", LevelNumber: 3 },
       Style: "کـلاسیـک  |  Classical",
     },
+    {
+      UserId: 5,
+      UserImg: null,
+      UserName: "مهـرداد خضـریـان  |  Mehrdad Khezrian",
+      Location: "تهـران  |  Tehran",
+      MainInstrument: "گیـتـار  |  Guitar",
+      Level: { title: "مبتدی  |  Beginner", LevelNumber: 3 },
+      Style: "کـلاسیـک  |  Classical",
+    },
   ];
   const badgeColor = [
     "bg bg-warning",
@@ -110,6 +124,9 @@ const SearchPage = () => {
     "bg bg-advanced ",
     "bg bg-zereshki",
   ];
+  useEffect(() => {
+    onPageChanges(1);
+  }, []);
   const toggle = (id) => {
     if (id === isOpen) {
       setOpen(null);
@@ -123,6 +140,27 @@ const SearchPage = () => {
       return;
     }
     setfilterItemId(id);
+  };
+  const customPageSize = 4;
+  const pageCountList =
+    tableBodyData.length % 4 == 0
+      ? tableBodyData.length / 4
+      : parseInt(tableBodyData.length / 4) + 1;
+  console.log(pageCountList);
+  const onPageChanges = (page) => {
+    const pageSize = 4;
+    const currentDataList = [];
+    if (tableBodyData.length > 0) {
+      const data = tableBodyData.map((item, index) => {
+        if (
+          (page + 1) * pageSize - 1 >= index &&
+          (page + 1) * pageSize - pageSize <= index
+        ) {
+          currentDataList.push(item);
+        }
+      });
+      setCurrentData(currentDataList);
+    }
   };
   return (
     <React.Fragment>
@@ -386,7 +424,39 @@ const SearchPage = () => {
           </Table>
           <div
             className={`${style["table-pagination"]} d-flex justify-content-center`}
-          ></div>
+          >
+            <ReactPaginate
+              previousLabel={
+                <span className={`${style["page-prev"]}`}>
+                  <ChevronsRight
+                    className={`${style["page-prev"]} mr-sssm`}
+                    size={40}
+                  />
+                </span>
+              }
+              nextLabel={
+                <span className={`${style["page-prev"]}`}>
+                  <ChevronsLeft
+                    className={`${style["page-prev"]} mr-sssm`}
+                    size={40}
+                  />
+                </span>
+              }
+              breakLabel="..."
+              breakClassName="break-me"
+              pageClassName={`${style["page-button"]} mr-sssm`}
+              pageCount={pageCountList}
+              containerClassName={`disabled-pagination-btn d-flex ${style["pagination-holder"]}`}
+              activeClassName={`${style["page-active"]}`}
+              forcePage={initialPage}
+              pageRangeDisplayed={2}
+              marginPagesDisplayed={2}
+              onPageChange={(page) => {
+                setInitialPage(page.selected);
+                onPageChanges(page.selected + 1);
+              }}
+            />
+          </div>
         </div>
       </section>
     </React.Fragment>
