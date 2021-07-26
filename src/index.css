@@ -4,3 +4,10 @@
 .ltr{
     direction: ltr;
 }
+@font-face {
+    font-family: "XeroSans";
+    src: url("./Assets/Font/XeroSansBlack/XeroSansBlack.ttf");
+}
+*{
+    font-family: "XeroSans" !important;
+}

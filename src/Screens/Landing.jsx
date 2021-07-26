@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import {
   ButtonDropdown,
   DropdownToggle,
@@ -12,6 +12,40 @@ const Landing = () => {
   const [isOpen, setOpen] = useState(false);
 
   const toggle = () => setOpen(!isOpen);
+
+  const testSelectOption = [
+    {
+      title: "کشور | Country",
+      options: [
+        { id: 1, title: "Iran" },
+        { id: 2, title: "Us" },
+        { id: 3, title: "chine" },
+        { id: 4, title: "kjfvfv" },
+      ],
+    },
+    {
+      title: "ساز | Instrument",
+      options: [
+        { id: 1, title: "Iran" },
+        { id: 2, title: "Us" },
+        { id: 3, title: "chine" },
+        { id: 4, title: "kjfvfv" },
+      ],
+    },
+    {
+      title: "سبک | Style",
+      options: [
+        { id: 1, title: "Iran" },
+        { id: 2, title: "Us" },
+        { id: 3, title: "chine" },
+        { id: 4, title: "kjfvfv" },
+      ],
+    },
+    {
+      title: "جستجو  | Search",
+    },
+  ];
+
   return (
     <React.Fragment>
       <div className="top-landing h-60">
@@ -74,100 +108,43 @@ const Landing = () => {
               ! Here,the first language is music
             </h2>
             <div className="selectSection grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center">
-              <div className="mr-ssm mt-ssm md:mt-zero">
-                <ButtonDropdown
-                  className="bg-buttonbrown border-2 
-                  border-gh rounded-lg"
-                  size="md"
-                  isOpen={isOpen}
-                  toggle={toggle}
-                >
-                  <Button
-                    id="caret"
-                    className="px-sm border-2 
-                    border-gh border-none border-2 
-                    border-gh rounded-md selectbuttonWidth bg-buttonbrown"
+              {testSelectOption?.map((item, index) => (
+                <div className="mr-ssm mt-ssm md:mt-zero">
+                  <ButtonDropdown
+                    className="bg-buttonbrown border-2 border-a88355 rounded-md"
+                    size="md"
+                    isOpen={toggle}
+                    toggle={() => toggle(index)}
                   >
-                    کشور | Country
-                  </Button>
-                  <DropdownToggle
-                    split
-                    className="bg-selectbrown selectbuttonborder"
-                  />
-                  <DropdownMenu>
-                    <DropdownItem header>Header</DropdownItem>
-                    <DropdownItem disabled>Action</DropdownItem>
-                    <DropdownItem>Another Action</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Another Action</DropdownItem>
-                  </DropdownMenu>
-                </ButtonDropdown>
-              </div>
-              <div className="mr-ssm mt-ssm md:mt-zero">
-                <ButtonDropdown
-                  className="bg-buttonbrown rounded-md border-2 
-                  border-gh"
-                  size="md"
-                  isOpen={isOpen}
-                  toggle={toggle}
-                >
-                  <Button
-                    id="caret"
-                    className="px-sm rounded-md border-2 
-                    border-gh border-none selectbuttonWidth bg-buttonbrown"
-                  >
-                    ساز | Instrument
-                  </Button>
-                  <DropdownToggle
-                    split
-                    className="bg-selectbrown selectbuttonborder"
-                  />
-                  <DropdownMenu>
-                    <DropdownItem header>Header</DropdownItem>
-                    <DropdownItem disabled>Action</DropdownItem>
-                    <DropdownItem>Another Action</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Another Action</DropdownItem>
-                  </DropdownMenu>
-                </ButtonDropdown>
-              </div>
-              <div className="mr-ssm mt-ssm md:mt-zero">
-                <ButtonDropdown
-                  className="bg-buttonbrown border-2 
-                  border-gh rounded-md"
-                  size="md"
-                  isOpen={isOpen}
-                  toggle={toggle}
-                >
-                  <Button
-                    id="caret"
-                    className="px-sm border-2 
-                    border-gh border-none rounded-md selectbuttonWidth bg-buttonbrown"
-                  >
-                    سبک | Style
-                  </Button>
-                  <DropdownToggle
-                    split
-                    className="bg-selectbrown selectbuttonborder"
-                  />
-                  <DropdownMenu>
-                    <DropdownItem header>Header</DropdownItem>
-                    <DropdownItem disabled>Action</DropdownItem>
-                    <DropdownItem>Another Action</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Another Action</DropdownItem>
-                  </DropdownMenu>
-                </ButtonDropdown>
-              </div>
-              <div className="mr-ssm mt-ssm md:mt-zero">
-                <Button
-                  size="md"
-                  id="caret"
-                  className="px-sm border-2 rounded-md border-gh  selectbuttonWidth bg-selectbrown"
-                >
-                  جستجو | Search
-                </Button>
-              </div>
+                    <Button
+                      id="caret"
+                      className={`px-sm border-2 border-a88355 border-none border-2 border-a88355 rounded-md selectbuttonWidth bg-buttonbrown`}
+                    >
+                      {item.title}
+                    </Button>
+                    {item.options && (
+                      <>
+                        <DropdownToggle
+                          split
+                          className={`bg-selectbrown  selectbuttonborder`}
+                        />
+                        <DropdownMenu>
+                          <DropdownItem header>search</DropdownItem>
+                          {item?.options?.map((option) => (
+                            <Fragment>
+                              {" "}
+                              <DropdownItem key={option.id}>
+                                {option.title}
+                              </DropdownItem>
+                              <DropdownItem divider />
+                            </Fragment>
+                          ))}
+                        </DropdownMenu>
+                      </>
+                    )}
+                  </ButtonDropdown>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -192,7 +169,7 @@ const Landing = () => {
               />
             </div>
             <div className="col-lg-3 col-3 col-sm-3 firstcol shape  grid justify-items-center">
-              <div className="grid justify-items-center services ">
+              <div className="grid justify-items-center ">
                 <div className="projects ">
                   <img
                     src={
@@ -201,7 +178,7 @@ const Landing = () => {
                     alt=""
                   />
                 </div>
-                <div className="text-center text-white projectss">
+                <div className="text-center text-white services">
                   <h4>پـروژه‌هــا</h4>
                   <h4>Projects</h4>
                 </div>
@@ -217,7 +194,7 @@ const Landing = () => {
               />
             </div>
             <div className="col-lg-3 col-sm-3 col-3  secondcol  grid justify-items-center">
-              <div className=" grid justify-items-center services">
+              <div className=" grid justify-items-center ">
                 <div className="jobs">
                   <img
                     src={require("../Assets/Images/landing/job.svg").default}
@@ -240,7 +217,7 @@ const Landing = () => {
               />
             </div>
             <div className="col-lg-3 col-3 col-sm-3 thirdcol shape ">
-              <div className=" grid justify-items-center">
+              <div className=" grid justify-items-center lg:mt-sm">
                 <div className="markte">
                   <img
                     src={require("../Assets/Images/landing/market.svg").default}
@@ -266,7 +243,7 @@ const Landing = () => {
               />
             </div>
             <div className="col-lg-3  col-3 col-sm-3 col-3 fourthcol ">
-              <div className="grid justify-items-center ">
+              <div className="grid justify-items-center lg:mt-sm ">
                 <div className="servs">
                   <img
                     src={require("../Assets/Images/landing/serv.svg").default}
