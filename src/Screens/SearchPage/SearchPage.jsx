@@ -1,6 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import ReactPaginate from "react-paginate";
 import {
   ChevronUp,
   ChevronDown,
@@ -20,6 +19,9 @@ import {
   Badge,
   Table,
 } from "reactstrap";
+import SearchTop from "./Top/SearchTop";
+import SearchTable from "./Table/SearchTable";
+import SiteBaner from "../../Components/SiteBaner/SiteBaner";
 import style from "./SearchPage.module.css";
 import "../../Assets/Style/Landing.css";
 const SearchPage = () => {
@@ -167,116 +169,12 @@ const SearchPage = () => {
       <div className={`${style["top-SearchPage"]}`}>
         {/* <div className="d-flex justify-content-end p-0 ">
         </div> */}
-        <div className={`baner-box m-0`}>
-          <div
-            className={`baner-box-item baner-musice-box d-flex justify-content-between`}
-          >
-            <div className={`text-white px-3 py-1`}>
-              <h6>موسیـقی‌دان‌هـا</h6>
-              <h6>Musicians</h6>
-            </div>
-            <img
-              className={`img-fluid `}
-              src={
-                require("../../Assets/Images/header/favorite-baner.png").default
-              }
-              alt=""
-            />
-          </div>
-
-          <div
-            className={`baner-box-item baner-service-box d-flex justify-content-between`}
-          >
-            <div className={`text-white px-3 py-1`}>
-              <h6>پیـراموسیـقی</h6>
-              <h6>Service Providers</h6>
-            </div>
-            <img
-              className={`img-fluid`}
-              src={
-                require("../../Assets/Images/header/favorite-baner.png").default
-              }
-              alt=""
-            />
-          </div>
-
-          <div
-            className={`baner-box-item baner-bands-box d-flex justify-content-between`}
-          >
-            <div className={`text-white px-3 py-1`}>
-              <h6>گــروه‌هـا</h6>
-              <h6>Bands</h6>
-            </div>
-            <img
-              className={`img-fluid`}
-              src={
-                require("../../Assets/Images/header/favorite-baner.png").default
-              }
-              alt=""
-            />
-          </div>
-        </div>
-
-        <section className={`${style["landingtopsection"]} container `}>
-          <div
-            className={`${style["search-TopCenter-option"]} grid justify-items-center mt-md2 `}
-          >
-            <h2 className="text-white ">اینجا زبان نخست موسیقی است !</h2>
-            <h2 className="opacity-75 text-white">
-              ! Here,the first language is music
-            </h2>
-            <div className="selectSection grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center">
-              {testSelectOption?.map((item, index) => (
-                <div className="mr-ssm mt-ssm md:mt-zero">
-                  <ButtonDropdown
-                    className="bg-dark_buttonbrown border-2 
-                  border-dark_gh rounded-md"
-                    size="md"
-                    isOpen={isOpen == index ? true : false}
-                    toggle={() => toggle(index)}
-                  >
-                    <Button
-                      id="caret"
-                      className={`px-sm border-2 
-                    border-dark_gh border-none border-2 
-                    border-dark_gh rounded-md ${style["selectbuttonWidth"]} bg-dark_buttonbrown`}
-                    >
-                      {item.title}
-                    </Button>
-                    <DropdownToggle
-                      split
-                      className={`bg-dark_selectbrown   ${style["selectbuttonborder"]}`}
-                    />
-                    <DropdownMenu>
-                      <DropdownItem header>search</DropdownItem>
-                      {item?.options?.map((option) => (
-                        <Fragment>
-                          {" "}
-                          <DropdownItem key={option.id}>
-                            {option.title}
-                          </DropdownItem>
-                          <DropdownItem divider />
-                        </Fragment>
-                      ))}
-                    </DropdownMenu>
-                  </ButtonDropdown>
-                </div>
-              ))}
-              <div className="mr-ssm mt-ssm md:mt-zero">
-                <Button
-                  size="md"
-                  id="caret"
-                  className={`px-sm border-2 
-                    border-dark_gh  
-                     rounded-md ${style["selectbuttonWidth"]} bg-dark_buttonbrown`}
-                >
-                  {" "}
-                  جستجو | Search
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <SiteBaner />
+        <SearchTop
+          selectOptionData={testSelectOption}
+          toggle={toggle}
+          isOpen={isOpen}
+        />
       </div>
       <section className={`${style["Chosemsi"]} h-md`}>
         <div
@@ -355,109 +253,16 @@ const SearchPage = () => {
             </div>
           </div>
         </div>
-        <div className={`${style["table-holder"]} container mt-2  `}>
-          <Table responsive className={`${style["table-box"]} my-3`}>
-            <thead className={`${style["table-header"]} `}>
-              <tr className={`${style["table-header-tr"]} `}>
-                <th className="text-transparent py-3">userImageProfile</th>
-                {tableHeadTitles?.map((item, index) => (
-                  <th
-                    className={`${style["table-header-th"]}  font-black py-3`}
-                    key={index}
-                  >
-                    {item}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className={`${style["table-body"]} `}>
-              {tableBodyData?.map((item, index) => (
-                <tr
-                  className={`${style["table-body-tr"]} font-black `}
-                  key={index}
-                >
-                  <td
-                    className={`${style["table-body-td"]} d-flex justify-content-center py-4`}
-                  >
-                    {item?.UserImg ? (
-                      <div className={`${style["table-body-pic-box"]}`}>
-                        <img
-                          className={`img-fluid ${style["table-body-pic"]}`}
-                          src={
-                            require("../../Assets/Images/profile/user/small/1.jpg")
-                              .default
-                          }
-                          alt=""
-                        />
-                      </div>
-                    ) : (
-                      <div className={`${style["table-body-icon-box"]}`}>
-                        <User size={30} />
-                      </div>
-                    )}
-                  </td>
-                  <td className={`${style["table-body-td"]} py-4 leading-13`}>
-                    {item.UserName}
-                  </td>
-                  <td className={`${style["table-body-td"]} py-4 leading-13`}>
-                    {item.Location}
-                  </td>
-                  <td className={`${style["table-body-td"]} py-4 leading-13`}>
-                    {item.MainInstrument}
-                  </td>
-                  <td className={`${style["table-body-td"]} py-4 leading-13`}>
-                    <Badge
-                      className={`${style["table-body-badge"]} text-md ${
-                        badgeColor[item?.Level?.LevelNumber]
-                      }`}
-                      color="warning"
-                    >
-                      {item?.Level?.title}
-                    </Badge>
-                  </td>
-                  <td className={`${style["table-body-td"]} py-4 leading-13`}>
-                    {item.Style}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-          <div
-            className={`${style["table-pagination"]} d-flex justify-content-center`}
-          >
-            <ReactPaginate
-              previousLabel={
-                <span className={`${style["page-prev"]}`}>
-                  <ChevronsRight
-                    className={`${style["page-prev"]} mr-sssm`}
-                    size={40}
-                  />
-                </span>
-              }
-              nextLabel={
-                <span className={`${style["page-prev"]}`}>
-                  <ChevronsLeft
-                    className={`${style["page-prev"]} mr-sssm`}
-                    size={40}
-                  />
-                </span>
-              }
-              breakLabel="..."
-              breakClassName="break-me"
-              pageClassName={`${style["page-button"]} mr-sssm`}
-              pageCount={pageCountList}
-              containerClassName={`disabled-pagination-btn d-flex ${style["pagination-holder"]}`}
-              activeClassName={`${style["page-active"]}`}
-              forcePage={initialPage}
-              pageRangeDisplayed={2}
-              marginPagesDisplayed={2}
-              onPageChange={(page) => {
-                setInitialPage(page.selected);
-                onPageChanges(page.selected + 1);
-              }}
-            />
-          </div>
-        </div>
+        <SearchTable
+          tableHeadTitles={tableHeadTitles}
+          tableBodyData={tableBodyData}
+          badgeColor={badgeColor}
+          customPageSize={customPageSize}
+          pageCountList={pageCountList}
+          onPageChanges={onPageChanges}
+          setInitialPage={setInitialPage}
+          initialPage={initialPage}
+        />
       </section>
     </React.Fragment>
   );
