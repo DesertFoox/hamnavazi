@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Badge, Card, CardBody, CardImg, Button, Input } from "reactstrap";
 import style from "./ProfileSideNave.module.css";
 import { ChevronLeft } from "react-feather";
