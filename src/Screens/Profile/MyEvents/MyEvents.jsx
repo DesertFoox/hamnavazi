@@ -8,7 +8,7 @@ import "./event.css";
 const MyEvents = () => {
   return (
     <>
-      <div className="event   grid grid-cols-1 bg-white rounded border-r-6 border-textcolor mt-ssm mx-sssm">
+      <div className="event   grid grid-cols-1 bg-white-profile rounded border-r-6 border-textcolor mt-ssm mx-sssm">
         <div className="grid py-4 px-4 grid-cols-1 md:mx-auto lg:grid-cols-2">
           <div className="right-side-event">
             <div className="flex flex-row flex-wrap">
