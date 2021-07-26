@@ -21,7 +21,7 @@ import {
   Table,
 } from "reactstrap";
 import style from "./SearchPage.module.css";
-import "../../Assets/Style/Landing.css";
+import "../../Assets/Style/Landing.module.css";
 const SearchPage = () => {
   const [isOpen, setOpen] = useState(null);
   const [filterButton, setfilterButton] = useState(false);
