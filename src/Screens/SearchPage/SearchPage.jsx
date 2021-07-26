@@ -24,7 +24,6 @@ import SearchTop from "./Top/SearchTop";
 import SearchTable from "./Table/SearchTable";
 import Filter from "./Filter/Filter";
 import style from "./SearchPage.module.css";
-
 const SearchPage = () => {
   const [isOpen, setOpen] = useState(null);
   const [filterButton, setfilterButton] = useState(false);

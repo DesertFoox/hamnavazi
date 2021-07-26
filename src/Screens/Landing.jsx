@@ -7,7 +7,7 @@ import {
   Button,
 } from "reactstrap";
 
-import "../Assets/Style/Landing.css";
+import LandingStyle from "../Assets/Style/Landing.module.css";
 const Landing = () => {
   const [isOpen, setOpen] = useState(false);
 
@@ -48,12 +48,10 @@ const Landing = () => {
 
   return (
     <React.Fragment>
-      <div className="top-landing h-60">
-        {/* <div className="d-flex justify-content-end p-0 ">
-        </div> */}
-        <div className={`baner-box m-0`}>
+      <div className={`${LandingStyle["top-landing"]} h-60`}>
+        <div className={`${LandingStyle["baner-box"]} m-0`}>
           <div
-            className={`baner-box-item baner-musice-box d-flex justify-content-between`}
+            className={`p-1 ${LandingStyle["baner-box-item"]} ${LandingStyle["baner-musice-box"]} d-flex justify-content-between`}
           >
             <div className={`text-white px-3 py-1`}>
               <h6>موسیـقی‌دان‌هـا</h6>
@@ -69,7 +67,7 @@ const Landing = () => {
           </div>
 
           <div
-            className={`baner-box-item baner-service-box d-flex justify-content-between`}
+            className={`${LandingStyle["baner-box-item"]} ${LandingStyle["baner-service-box"]} d-flex justify-content-between`}
           >
             <div className={`text-white px-3 py-1`}>
               <h6>پیـراموسیـقی</h6>
@@ -85,7 +83,7 @@ const Landing = () => {
           </div>
 
           <div
-            className={`baner-box-item baner-bands-box d-flex justify-content-between`}
+            className={`${LandingStyle["baner-box-item"]} ${LandingStyle["baner-bands-box"]} d-flex justify-content-between`}
           >
             <div className={`text-white px-3 py-1`}>
               <h6>گــروه‌هـا</h6>
@@ -101,13 +99,15 @@ const Landing = () => {
           </div>
         </div>
 
-        <section className="landingtopsection container">
+        <section className={`${LandingStyle.landingtopsection} container`}>
           <div className="grid justify-items-center ">
             <h2 className="text-white mt-xl">اینجا زبان نخست موسیقی است !</h2>
             <h2 className="opacity-75 text-white">
               ! Here,the first language is music
             </h2>
-            <div className="selectSection grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center">
+            <div
+              className={`${LandingStyle.selectSection} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center`}
+            >
               {testSelectOption?.map((item, index) => (
                 <div className="mr-ssm mt-ssm md:mt-zero">
                   <ButtonDropdown
@@ -118,7 +118,7 @@ const Landing = () => {
                   >
                     <Button
                       id="caret"
-                      className={`px-sm border-2 border-a88355 border-none border-2 border-a88355 rounded-md selectbuttonWidth bg-buttonbrown`}
+                      className={`px-sm border-2 border-a88355 border-none border-2 border-a88355 rounded-md ${LandingStyle.selectbuttonWidth} bg-buttonbrown`}
                     >
                       {item.title}
                     </Button>
@@ -126,7 +126,7 @@ const Landing = () => {
                       <>
                         <DropdownToggle
                           split
-                          className={`bg-selectbrown  selectbuttonborder`}
+                          className={`bg-selectbrown  ${LandingStyle.selectbuttonborder}`}
                         />
                         <DropdownMenu>
                           <DropdownItem header>search</DropdownItem>
@@ -149,8 +149,8 @@ const Landing = () => {
           </div>
         </section>
       </div>
-      <div className="Chosemsi h-md">
-        <section className="choseyourmusi h-zero container">
+      <div className={`${LandingStyle.Chosemsi} h-md`}>
+        <section className={`${LandingStyle.choseyourmusi} h-zero container`}>
           <div className="grid justify-items-center">
             <h2 className="text-797a7c  mt-sm text-md md:text-lg">
               موزیسین مورد علاقه خود را پیدا کنید | Find your desired musician
@@ -160,17 +160,21 @@ const Landing = () => {
       </div>
       <div className="main-content">
         <section className="content container-fluid ">
-          <div className="category-holder shadow-img_shadow row">
-            <div className="col-lg-9 col-9  col-sm-9 secol">
+          <div
+            className={`${LandingStyle["category-holder"]} shadow-img_shadow row`}
+          >
+            <div className={`col-lg-9 col-9  col-sm-9 ${LandingStyle.secol}`}>
               <img
                 className="fullimage"
                 src={require("../Assets/Images/landing/melodi.jpg").default}
                 alt=""
               />
             </div>
-            <div className="col-lg-3 col-3 col-sm-3 firstcol shape  grid justify-items-center">
+            <div
+              className={`col-lg-3 col-3 col-sm-3 ${LandingStyle.firstcol} shape grid justify-items-center`}
+            >
               <div className="grid justify-items-center ">
-                <div className="projects ">
+                <div className={`${LandingStyle.projects}`}>
                   <img
                     src={
                       require("../Assets/Images/landing/projects.svg").default
@@ -178,79 +182,99 @@ const Landing = () => {
                     alt=""
                   />
                 </div>
-                <div className="text-center text-white services">
+                <div
+                  className={`text-center text-white ${LandingStyle.services}`}
+                >
                   <h4>پـروژه‌هــا</h4>
                   <h4>Projects</h4>
                 </div>
               </div>
             </div>
           </div>
-          <div className="category-holder shadow-img_shadow row">
-            <div className="col-lg-9 col-9 col-sm-9 secol">
+          <div
+            className={`${LandingStyle["category-holder"]} shadow-img_shadow row`}
+          >
+            <div className={`col-lg-9 col-9 col-sm-9 ${LandingStyle.secol}`}>
               <img
                 className="fullimage"
                 src={require("../Assets/Images/landing/mic.jpg").default}
                 alt=""
               />
             </div>
-            <div className="col-lg-3 col-sm-3 col-3  secondcol  grid justify-items-center">
+            <div
+              className={`col-lg-3 col-sm-3 col-3  ${LandingStyle.secondcol}  grid justify-items-center`}
+            >
               <div className=" grid justify-items-center ">
-                <div className="jobs">
+                <div className={`${LandingStyle.jobs}`}>
                   <img
                     src={require("../Assets/Images/landing/job.svg").default}
                     alt=""
                   />
                 </div>
-                <div className="text-center  text-white  services">
+                <div
+                  className={`text-center text-white ${LandingStyle.services}`}
+                >
                   <h4>فـرصت‌هـای شغـلی </h4>
                   <h4> Job Opportunities</h4>
                 </div>
               </div>
             </div>
           </div>
-          <div className="category-holder shadow-img_shadow row">
-            <div className="col-lg-9 col-9  col-sm-9 secol">
+          <div
+            className={`${LandingStyle["category-holder"]} shadow-img_shadow row`}
+          >
+            <div className={`col-lg-9 col-9  col-sm-9 ${LandingStyle.secol}`}>
               <img
                 className="fullimage"
                 src={require("../Assets/Images/landing/band.jpg").default}
                 alt=""
               />
             </div>
-            <div className="col-lg-3 col-3 col-sm-3 thirdcol shape ">
+            <div
+              className={`"col-lg-3 col-3 col-sm-3 ${LandingStyle.thirdcol} ${LandingStyle.shape}`}
+            >
               <div className=" grid justify-items-center lg:mt-sm">
-                <div className="markte">
+                <div className={`${LandingStyle.markte}`}>
                   <img
                     src={require("../Assets/Images/landing/market.svg").default}
                     alt=""
                   />
                 </div>
-                <h4 className="text-center services text-white">
+                <h4
+                  className={`text-center ${LandingStyle.services} text-white`}
+                >
                   <h4>بازار</h4>
                   <h4>Market</h4>
                 </h4>
               </div>
             </div>
           </div>
-          <div className="category-holder shadow-img_shadow row">
+          <div
+            className={`${LandingStyle["category-holder"]} shadow-img_shadow row`}
+          >
             <div
-              className="col-lg-9  
-            col-9 col-sm-9 secol"
+              className={`col-lg-9  
+            col-9 col-sm-9 ${LandingStyle.secol}`}
             >
               <img
-                className="fullimage"
+                className={`${LandingStyle.fullimage}`}
                 src={require("../Assets/Images/landing/saz.jpg").default}
                 alt=""
               />
             </div>
-            <div className="col-lg-3  col-3 col-sm-3 col-3 fourthcol ">
+            <div
+              className={`col-lg-3  col-3 col-sm-3 col-3 ${LandingStyle.fourthcol}`}
+            >
               <div className="grid justify-items-center lg:mt-sm ">
-                <div className="servs">
+                <div className={`${LandingStyle.servs}`}>
                   <img
                     src={require("../Assets/Images/landing/serv.svg").default}
                     alt=""
                   />
                 </div>
-                <h4 className="text-white text-center services ">
+                <h4
+                  className={`text-white text-center ${LandingStyle.services}`}
+                >
                   <h4> خـدمـات ویــژه</h4>
                   <h4>Special Services</h4>
                 </h4>
@@ -259,12 +283,14 @@ const Landing = () => {
           </div>
         </section>
       </div>
-      <div className="about-us h-md">
-        <section className="abt-us h-zero container">
+      <div className={`${LandingStyle["about-us"]} h-md`}>
+        <section className={`${LandingStyle["abt-us"]} h-zero container`}>
           <div className="grid grid-cols-3">
-            <div className="about-us-box sh  text-black fs-5 text-center mt-ssm justify-content-center">
+            <div
+              className={`${LandingStyle["about-us-box"]} ${LandingStyle.sh}  text-black fs-5 text-center mt-ssm justify-content-center`}
+            >
               <img
-                className={`about-us-icons `}
+                className={`${LandingStyle["about-us-icons"]} `}
                 src={
                   require("../Assets/Images/landing/instruction.png").default
                 }
@@ -272,17 +298,21 @@ const Landing = () => {
               />
               راهـنمــا | Instruction
             </div>
-            <div className="about-us-box  text-black fs-5 text-center mt-ssm justify-content-center">
+            <div
+              className={`${LandingStyle["about-us-box"]}  text-black fs-5 text-center mt-ssm justify-content-center`}
+            >
               <img
-                className={`about-us-icons `}
+                className={`${LandingStyle["about-us-icons"]}`}
                 src={require("../Assets/Images/landing/rules.png").default}
                 alt=""
               />
               قـوانیـن | Rules
             </div>
-            <div className="about-us-box  text-black fs-5 text-center mt-ssm justify-content-center">
+            <div
+              className={`${LandingStyle["about-us-box"]}  text-black fs-5 text-center mt-ssm justify-content-center`}
+            >
               <img
-                className={`about-us-icons `}
+                className={`${LandingStyle["about-us-icons"]}`}
                 src={require("../Assets/Images/landing/aboutUs.png").default}
                 alt=""
               />
