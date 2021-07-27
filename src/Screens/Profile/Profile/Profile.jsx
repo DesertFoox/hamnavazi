@@ -4,7 +4,7 @@ import { Badge } from "reactstrap";
 import ProfileSideNave from "../SideNav/ProfileSideNave";
 import TabsNave from "../Tabs/TabsNaves/TabsNave";
 import style from "../SideNav/ProfileSideNave.module.css";
-import "../../../Assets/Style/profile.css";
+import ProfileStyle from "../../../Assets/Style/profile.module.scss";
 const Profile = () => {
   const [windowWidth, setwindowWidth] = useState(null);
   const [sidebarOpen, setsidebarOpen] = useState(true);
@@ -57,7 +57,9 @@ const Profile = () => {
   };
 
   return (
-    <section className="profile container-fluid profile-bg">
+    <section
+      className={`${ProfileStyle.profile} container-fluid ${ProfileStyle["profile-bg"]}`}
+    >
       <div className={`${style[""]} row h-100`}>
         {" "}
         <div
