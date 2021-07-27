@@ -7,7 +7,8 @@ import {
   Button,
 } from "reactstrap";
 
-import LandingStyle from "../Assets/Style/Landing.module.css";
+import LandingStyle from "../Assets/Style/Landing.module.scss";
+
 const Landing = () => {
   const [isOpen, setOpen] = useState(false);
 

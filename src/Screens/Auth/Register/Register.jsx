@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RegisterStyle from "../../../Assets/Style/Register.module.css";
+import RegisterStyle from "../../../Assets/Style/Register.module.scss";
 import "../../../Assets/Style/SelectOption.scss";
 import Select from "react-select";
 import Input from "../../../Components/Input/Input";
