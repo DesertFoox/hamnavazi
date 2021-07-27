@@ -19,7 +19,7 @@ import {
 } from "react-feather";
 import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
 import TabsBody from "../TabsBody/TabsBody";
-import style from "./TabsNave.module.css";
+import style from "./TabsNave.module.scss";
 const TabsNave = ({ isOpen, screenWidth }) => {
   const [active, setActive] = useState("1");
 

@@ -23,7 +23,7 @@ import SiteBaner from "../../Components/SiteBaner/SiteBaner";
 import SearchTop from "./Top/SearchTop";
 import SearchTable from "./Table/SearchTable";
 import Filter from "./Filter/Filter";
-import style from "./SearchPage.module.css";
+import style from "./SearchPage.module.scss";
 const SearchPage = () => {
   const [isOpen, setOpen] = useState(null);
   const [filterButton, setfilterButton] = useState(false);

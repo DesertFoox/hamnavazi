@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import { Badge, Card, CardBody, CardImg, Button, Input } from "reactstrap";
-import style from "./ProfileSideNave.module.css";
+import style from "./ProfileSideNave.module.scss";
 import { ChevronLeft } from "react-feather";
 const ProfileSideNave = ({ isOpen, windowWidth }) => {
   return (

@@ -33,9 +33,7 @@ const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
                 >
                   <Button
                     id="caret"
-                    className={`px-sm border-2 
-                    border-dark_gh border-none border-2 
-                    border-dark_gh rounded-md ${style["selectbuttonWidth"]} bg-dark_buttonbrown`}
+                    className={`px-sm  border-0 rounded-md ${style["selectbuttonWidth"]} bg-dark_buttonbrown`}
                   >
                     {item.title}
                   </Button>
