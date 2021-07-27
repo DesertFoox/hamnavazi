@@ -19,7 +19,9 @@ const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
           <h2 className="opacity-75 text-white">
             ! Here,the first language is music
           </h2>
-          <div className="selectSection grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center">
+          <div
+            className={`${style["selectSection"]} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center`}
+          >
             {selectOptionData?.map((item, index) => (
               <div className="mr-ssm mt-ssm md:mt-zero">
                 <ButtonDropdown
@@ -31,9 +33,7 @@ const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
                 >
                   <Button
                     id="caret"
-                    className={`px-sm border-2 
-                    border-dark_gh border-none border-2 
-                    border-dark_gh rounded-md ${style["selectbuttonWidth"]} bg-dark_buttonbrown`}
+                    className={`px-sm  border-0 rounded-md ${style["selectbuttonWidth"]} bg-dark_buttonbrown`}
                   >
                     {item.title}
                   </Button>

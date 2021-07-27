@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { BarChart2 } from "react-feather";
 import { Nav, NavItem, NavLink } from "reactstrap";
-import style from "./NaveBar.module.css";
+import style from "./NaveBar.module.scss";
 const NaveBar = ({ naveBarData }) => {
   const [active, setActive] = useState(0);
   const sortStartLentgh = naveBarData?.title?.lentgh + 1;

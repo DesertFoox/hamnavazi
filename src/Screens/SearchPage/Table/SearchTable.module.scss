@@ -119,12 +119,22 @@
 }
 
 .page-button {
+    transition: 0.5s;
     border: 2px solid #929396;
     border-radius: 5px;
     background: #ffffff;
-    padding: 1rem;
+    // padding: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
     text-align: center;
     font-weight: bold;
     font-size: large;
-    line-height: 0.3rem;
+    line-height: 2.2rem;
+    cursor: pointer;
+
+    &:hover{
+        transition: 0.5s;
+        color: #ffffff;
+        background:#929396;
+    }
 }

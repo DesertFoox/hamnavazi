@@ -1,39 +1,3 @@
-.top-SearchPage {
-    height: 30rem;
-    background: url(../../Assets/Images/search/search-bg-sm.png) no-repeat 50%;
-    background-size: cover;
-}
-
-.landingtopsection {
-    margin-top: 0;
-    border: 1px solid transparent;
-}
-
-.selectbuttonWidth {
-    width: 9.5rem;
-    /* border: 1px solid #67686a; */
-    outline: none;
-
-}
-
-.selectbuttonborder {
-    border-top-right-radius: 6px !important;
-    border-bottom-right-radius: 6px !important;
-    /* border: 1px solid #67686a; */
-    padding: 0 0.8rem;
-    outline: none;
-    border-left: 0;
-}
-
-.Chosemsi {
-    background: url(../../Assets/Images/landing/ChoseMusician.jpg) no-repeat 50%;
-    background-size: 100% 100%;
-    position: relative;
-    min-height: 800px;
-    border: 1px solid transparent;
-}
-
-
 .filter-container {
     height: 3.5rem;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
@@ -99,18 +63,6 @@
     /* height: 30px; */
     border-radius: 18px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-}
-
-
-
-@media screen and (max-width:576px) {
-    .top-SearchPage {
-        height: 45rem
-    }
-
-    .search-TopCenter-option {
-        margin-top: 20rem;
-    }
 }
 
 @media screen and (max-width:470px) {

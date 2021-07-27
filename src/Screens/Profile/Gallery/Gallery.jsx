@@ -4,7 +4,7 @@ import { Badge } from "reactstrap";
 import ProfileSideNave from "../SideNav/ProfileSideNave";
 import Slider from "../../../Components/Slider/Slider";
 
-import style from "../SideNav/ProfileSideNave.module.css";
+import style from "../SideNav/ProfileSideNave.module.scss";
 import "../MyEvents/event.css";
 
 const Gallery = () => {
