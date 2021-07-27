@@ -3,13 +3,8 @@ import { Badge } from "reactstrap";
 
 import ProfileSideNave from "../SideNav/ProfileSideNave";
 import TabsNave from "../Tabs/TabsNaves/TabsNave";
-<<<<<<< HEAD
-import style from "../SideNav/ProfileSideNave.module.css";
 import ProfileStyle from "../../../Assets/Style/profile.module.scss";
-=======
 import style from "../SideNav/ProfileSideNave.module.scss";
-import "../../../Assets/Style/profile.css";
->>>>>>> cbe5e59ea5e9d62bb6617361e09450b058686cf3
 const Profile = () => {
   const [windowWidth, setwindowWidth] = useState(null);
   const [sidebarOpen, setsidebarOpen] = useState(true);
