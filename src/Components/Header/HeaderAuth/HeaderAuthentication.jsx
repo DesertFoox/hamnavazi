@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import styled from "./HeaderAuthentication.module.scss";
-const HeaderAuthentication = () => {
+const HeaderAuthentication = ({ history }) => {
   return (
     <Fragment>
       <div className={`${styled["header-auth-box"]}`}>
@@ -29,7 +29,10 @@ const HeaderAuthentication = () => {
           />
         </Link>
 
-        <h6 className={`ml-1 mr-ssm ${styled["header-auth-userName"]} `}>
+        <h6
+          className={`ml-1 mr-ssm ${styled["header-auth-userName"]} cursor-pointer`}
+          onClick={() => history.push("/profile")}
+        >
           Aref Too
         </h6>
       </div>
