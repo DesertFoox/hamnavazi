@@ -10,11 +10,7 @@ import "../MyEvents/event.css";
 const Gallery = () => {
   return (
     <>
-    <div className='container'>
-    <Slider/>
-      
-    </div>
-      <div className="absolute event grid grid-cols-1 bg-white rounded border-r-6 border-textcolor">
+      <div className=" event grid grid-cols-1 bg-white rounded border-r-6 border-textcolor">
         <div className="grid py-4 px-4 grid-cols-1 md:mx-auto lg:grid-cols-2">
           <div className="right-side-event">
             <div className="flex flex-row flex-wrap">
@@ -56,6 +52,9 @@ const Gallery = () => {
             </p>
           </div>
           <div className="left-side-event">
+            <div className="container p-5">
+              <Slider />
+            </div>
             <div className="grid sm:grid-cols-1 md:grid-cols-2">
               <div className="ltr">
                 <div className="mb-ssm">
