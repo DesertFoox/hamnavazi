@@ -68,9 +68,7 @@ const ProfileSideNave = ({ isOpen, windowWidth }) => {
                 </sapn>
               </div>
             </div>
-            <div
-              className={`${style["proflie-options-box"]} mt-2 mx-3 row d-flex`}
-            >
+            <div className={`${style["proflie-options-box"]} mt-2  row d-flex`}>
               <div
                 className={`${style["proflie-options-col"]} col-lg-3 col-3 `}
               >
