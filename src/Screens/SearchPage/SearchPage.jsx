@@ -22,14 +22,8 @@ import {
 import SiteBaner from "../../Components/SiteBaner/SiteBaner";
 import SearchTop from "./Top/SearchTop";
 import SearchTable from "./Table/SearchTable";
-<<<<<<< HEAD
-import SiteBaner from "../../Components/SiteBaner/SiteBaner";
-import style from "./SearchPage.module.css";
-import "../../Assets/Style/Landing.module.scss";
-=======
-import Filter from "./Filter/Filter";
 import style from "./SearchPage.module.scss";
->>>>>>> cbe5e59ea5e9d62bb6617361e09450b058686cf3
+import "../../Assets/Style/Landing.module.scss";
 const SearchPage = () => {
   const [isOpen, setOpen] = useState(null);
   const [filterButton, setfilterButton] = useState(false);
