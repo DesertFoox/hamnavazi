@@ -5,14 +5,21 @@ import {
   DropdownMenu,
   DropdownItem,
   Button,
+  Input,
 } from "reactstrap";
 
 import LandingStyle from "../Assets/Style/Landing.module.scss";
 
 const Landing = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(null);
 
-  const toggle = () => setOpen(!isOpen);
+  const toggle = (id) => {
+    if (id === isOpen) {
+      setOpen(null);
+      return;
+    }
+    setOpen(id);
+  };
 
   const testSelectOption = [
     {
@@ -114,7 +121,7 @@ const Landing = () => {
                   <ButtonDropdown
                     className="bg-buttonbrown border-2 border-a88355 rounded-md"
                     size="md"
-                    isOpen={toggle}
+                    isOpen={isOpen == index ? true : false}
                     toggle={() => toggle(index)}
                   >
                     <Button
@@ -129,15 +136,23 @@ const Landing = () => {
                           split
                           className={`bg-selectbrown  ${LandingStyle.selectbuttonborder}`}
                         />
-                        <DropdownMenu>
-                          <DropdownItem header>search</DropdownItem>
+                        <DropdownMenu
+                          className={`${LandingStyle["landing-top-drop-down-menu"]}`}
+                        >
+                          <DropdownItem header>
+                            {" "}
+                            <Input
+                              type="text"
+                              className={`${LandingStyle["landing-top-drop-down-input"]}`}
+                              placeholder="search"
+                            />{" "}
+                          </DropdownItem>
                           {item?.options?.map((option) => (
                             <Fragment>
                               {" "}
                               <DropdownItem key={option.id}>
                                 {option.title}
                               </DropdownItem>
-                              <DropdownItem divider />
                             </Fragment>
                           ))}
                         </DropdownMenu>
