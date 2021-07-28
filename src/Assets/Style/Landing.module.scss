@@ -336,3 +336,33 @@
   position: absolute;
   margin: 207px -31px;
 }
+
+
+.landing-top-drop-down-menu{
+    width:100% !important;
+    border: 1px solid #6b522d;
+    background:#8A6B41;
+    text-align: left;
+     button{
+        
+         color:#ffffff;
+        border-bottom: 1px solid #6b522d ;
+         &:hover{
+             background: #d0d0d1;
+         }
+         &:last-child{
+                     border-bottom: none ;
+
+         }
+     }
+     .landing-top-drop-down-input{
+         height:30px;
+         border: 1px solid #67686a;
+         padding: 10px 5px;
+         font-size: medium;
+         &:focus{
+             outline: none;
+             box-shadow: none;
+         }
+     }
+}
