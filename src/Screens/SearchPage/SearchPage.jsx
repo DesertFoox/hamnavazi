@@ -119,6 +119,15 @@ const SearchPage = () => {
       Level: { title: "مبتدی  |  Beginner", LevelNumber: 3 },
       Style: "کـلاسیـک  |  Classical",
     },
+    {
+      UserId: 6,
+      UserImg: null,
+      UserName: "مهـرداد خضـریـان  |  Mehrdad Khezrian",
+      MainInstrument: "گیـتـار  |  Guitar",
+      Location: "تهـران  |  Tehran",
+      Level: { title: "مبتدی  |  Beginner", LevelNumber: 1 },
+      Style: "کـلاسیـک  |  Classical",
+    },
   ];
   const badgeColor = [
     "bg bg-warning",
@@ -162,6 +171,7 @@ const SearchPage = () => {
         }
       });
       setCurrentData(currentDataList);
+      console.log(currentDataList);
     }
   };
   return (
@@ -186,7 +196,7 @@ const SearchPage = () => {
         />
         <SearchTable
           tableHeadTitles={tableHeadTitles}
-          tableBodyData={tableBodyData}
+          tableBodyData={currentData}
           badgeColor={badgeColor}
           customPageSize={customPageSize}
           pageCountList={pageCountList}

@@ -114,7 +114,7 @@ const SearchTable = ({
               <span className={`${style["page-prev"]}`}>
                 <ChevronsRight
                   className={`${style["page-prev"]} mr-sssm`}
-                  size={40}
+                  size={30}
                 />
               </span>
             }
@@ -122,7 +122,7 @@ const SearchTable = ({
               <span className={`${style["page-prev"]}`}>
                 <ChevronsLeft
                   className={`${style["page-prev"]} mr-sssm`}
-                  size={40}
+                  size={30}
                 />
               </span>
             }
