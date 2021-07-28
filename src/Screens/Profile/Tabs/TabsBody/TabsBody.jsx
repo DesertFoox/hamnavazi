@@ -147,7 +147,7 @@ const TabsBody = ({ activeTab }) => {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4  gap-4 p-3">
-            <div className="instruments grid grid-cols-1 md:grid-cols-12 gap 4 mb-sm ml-ssm  rounded bg-white-profile shadow-lg">
+            <div className="instruments grid xl:grid-cols-12 sm:grid-cols-12 gap-5 mb-sm ml-ssm  rounded bg-white-profile shadow-lg">
               <div className="flex align-items-center ">
                 <div
                   className={`${ProfileStyle.identity} text-center shadow-md bg-white	transform float-right `}
@@ -156,7 +156,7 @@ const TabsBody = ({ activeTab }) => {
                 </div>
               </div>
 
-              <div className="col-span-4 py-4">
+              <div className="col-span-4 sm:col-span-6 py-4">
                 <div className="saz mb-ssm">
                   <p className="text-textcolor text-13">
                     ساز اصلی | Main instruments{" "}
@@ -173,7 +173,7 @@ const TabsBody = ({ activeTab }) => {
                   <p className="text-black text-13">_تلفیقی |Fusion</p>
                 </div>
               </div>
-              <div className="col-span-7 py-4 px-5">
+              <div className="col-span-7 sm:mr-sm sm:col-span-5 py-4 xl:px-2 px-5 xl:mr-zero">
                 <div className="saz-2">
                   <div className="grid grid-cols-12">
                     <div className="col-span-11">
