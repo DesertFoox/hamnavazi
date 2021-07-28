@@ -229,6 +229,17 @@
 
 }
 
+
+@media (max-width: 440px) {
+    .search-box {
+        width: 60%;
+    }
+
+    .search-box-input {
+        width: 65%;
+    }
+}
+
 @media (max-width: 375px) {
     .header-options {
         margin: 2% 4%;

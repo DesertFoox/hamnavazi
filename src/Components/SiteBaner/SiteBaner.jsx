@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-// import style from "."
 import BanerStyle from "./Baner.module.scss";
 const SiteBaner = () => {
   return (
