@@ -209,7 +209,7 @@ const TabsBody = ({ activeTab }) => {
         </TabPane>
         <TabPane tabId="3">
           <NaveBar naveBarData={NaveBarTitles.Tab3} />
-          <div className="container mt-ssm">
+          <div className={`container ${ProfileStyle.modoalbg}`}>
             <Gallery />
           </div>
         </TabPane>
