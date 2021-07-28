@@ -1,4 +1,6 @@
 import React, { useState, Fragment } from "react";
+import { useHistory } from "react-router-dom";
+
 import {
   ButtonDropdown,
   DropdownToggle,
@@ -12,7 +14,7 @@ import LandingStyle from "../Assets/Style/Landing.module.scss";
 
 const Landing = () => {
   const [isOpen, setOpen] = useState(null);
-
+  const history = useHistory();
   const toggle = (id) => {
     if (id === isOpen) {
       setOpen(null);
@@ -127,6 +129,7 @@ const Landing = () => {
                     <Button
                       id="caret"
                       className={`px-sm border-2 border-a88355 border-none border-2 border-a88355 rounded-md ${LandingStyle.selectbuttonWidth} bg-buttonbrown`}
+                      onClick={() => history.push("/search")}
                     >
                       {item.title}
                     </Button>
