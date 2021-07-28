@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
 // import style from "."
-import "./Baner.scss";
+import BanerStyle from "./Baner.module.scss";
 const SiteBaner = () => {
   return (
     <Fragment>
-      <div className={`baner-box m-0`}>
+      <div className={`${BanerStyle["baner-box"]} m-0`}>
         <div
-          className={`baner-box-item baner-musice-box d-flex justify-content-between`}
+          className={`${BanerStyle["baner-box-item"]} ${BanerStyle["baner-musice-box"]} d-flex justify-content-between`}
         >
           <div className={`text-white px-3 py-1`}>
             <h6>موسیـقی‌دان‌هـا</h6>
@@ -22,7 +22,7 @@ const SiteBaner = () => {
         </div>
 
         <div
-          className={`baner-box-item baner-service-box d-flex justify-content-between`}
+          className={`${BanerStyle["baner-box-item"]} ${BanerStyle["baner-service-box"]} d-flex justify-content-between`}
         >
           <div className={`text-white px-3 py-1`}>
             <h6>پیـراموسیـقی</h6>
@@ -38,7 +38,7 @@ const SiteBaner = () => {
         </div>
 
         <div
-          className={`baner-box-item baner-bands-box d-flex justify-content-between`}
+          className={`${BanerStyle["baner-box-item"]} ${BanerStyle["baner-bands-box"]} d-flex justify-content-between`}
         >
           <div className={`text-white px-3 py-1`}>
             <h6>گــروه‌هـا</h6>

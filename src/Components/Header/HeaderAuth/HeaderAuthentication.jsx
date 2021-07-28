@@ -5,7 +5,7 @@ const HeaderAuthentication = ({ history }) => {
   return (
     <Fragment>
       <div className={`${styled["header-auth-box"]}`}>
-        <Link to="/" className={`${styled["header-auth-icon"]} `}>
+        <Link to="/profile" className={`${styled["header-auth-icon"]} `}>
           <img
             className={`${styled.img}`}
             src={require("../../../Assets/Images/header/tar-icon.png").default}

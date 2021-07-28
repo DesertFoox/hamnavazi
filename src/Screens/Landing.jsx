@@ -11,6 +11,7 @@ import {
 } from "reactstrap";
 
 import LandingStyle from "../Assets/Style/Landing.module.scss";
+import SiteBaner from "../Components/SiteBaner/SiteBaner";
 
 const Landing = () => {
   const [isOpen, setOpen] = useState(null);
@@ -59,56 +60,7 @@ const Landing = () => {
   return (
     <React.Fragment>
       <div className={`${LandingStyle["top-landing"]} h-60`}>
-        <div className={`${LandingStyle["baner-box"]} m-0`}>
-          <div
-            className={`p-1 ${LandingStyle["baner-box-item"]} ${LandingStyle["baner-musice-box"]} d-flex justify-content-between`}
-          >
-            <div className={`text-white px-3 py-1`}>
-              <h6>موسیـقی‌دان‌هـا</h6>
-              <h6>Musicians</h6>
-            </div>
-            <img
-              className={`img-fluid `}
-              src={
-                require("../Assets/Images/header/favorite-baner.png").default
-              }
-              alt=""
-            />
-          </div>
-
-          <div
-            className={`${LandingStyle["baner-box-item"]} ${LandingStyle["baner-service-box"]} d-flex justify-content-between`}
-          >
-            <div className={`text-white px-3 py-1`}>
-              <h6>پیـراموسیـقی</h6>
-              <h6>Service Providers</h6>
-            </div>
-            <img
-              className={`img-fluid`}
-              src={
-                require("../Assets/Images/header/favorite-baner.png").default
-              }
-              alt=""
-            />
-          </div>
-
-          <div
-            className={`${LandingStyle["baner-box-item"]} ${LandingStyle["baner-bands-box"]} d-flex justify-content-between`}
-          >
-            <div className={`text-white px-3 py-1`}>
-              <h6>گــروه‌هـا</h6>
-              <h6>Bands</h6>
-            </div>
-            <img
-              className={`img-fluid`}
-              src={
-                require("../Assets/Images/header/favorite-baner.png").default
-              }
-              alt=""
-            />
-          </div>
-        </div>
-
+        <SiteBaner />
         <section className={`${LandingStyle.landingtopsection} container`}>
           <div className="grid justify-items-center ">
             <h2 className="text-white mt-xl">اینجا زبان نخست موسیقی است !</h2>
