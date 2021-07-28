@@ -20,10 +20,10 @@ import {
   Table,
 } from "reactstrap";
 import SiteBaner from "../../Components/SiteBaner/SiteBaner";
-import SearchTop from "./Top/SearchTop";
-import SearchTable from "./Table/SearchTable";
+import SearchTop from "../../Components/SearchPage/Top/SearchTop";
+import SearchTable from "../../Components/SearchPage/Table/SearchTable";
+import Filter from "../../Components/SearchPage/Filter/Filter";
 import style from "./SearchPage.module.scss";
-import "../../Assets/Style/Landing.module.scss";
 const SearchPage = () => {
   const [isOpen, setOpen] = useState(null);
   const [filterButton, setfilterButton] = useState(false);

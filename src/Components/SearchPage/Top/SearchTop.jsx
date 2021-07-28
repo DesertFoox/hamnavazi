@@ -41,7 +41,7 @@ const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
                     split
                     className={`bg-dark_selectbrown   ${style["selectbuttonborder"]}`}
                   />
-                  <DropdownMenu>
+                  <DropdownMenu className={`${style["top-drop-down-menu"]}`}>
                     <DropdownItem header>search</DropdownItem>
                     {item?.options?.map((option) => (
                       <Fragment>

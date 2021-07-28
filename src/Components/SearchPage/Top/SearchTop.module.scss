@@ -2,6 +2,7 @@
     height: 30rem;
     background: url(../../../Assets/Images/search/search-bg-sm.png) no-repeat 50%;
     background-size: cover;
+    padding-bottom: 30px;
 }
 
 .landingtopsection {
@@ -25,12 +26,36 @@
     border-left: 0;
 }
 
+.top-drop-down-menu{
+    width:100% !important;
+    border: 1px solid #67686a;
+    background:#818385;
+     button{
+
+         color:#ffffff;
+
+         &:hover{
+             background: #793737;
+         }
+     }
+}
+
+
 @media screen and (max-width:576px) {
     .top-SearchPage {
         height: 45rem
     }
 
+    // .search-TopCenter-option {
+    //     margin-top: 20rem;
+    // }
+}
+@media screen and (max-width:470px) {
     .search-TopCenter-option {
         margin-top: 20rem;
     }
+
+    // .search-TopCenter-option {
+    //     
+    // }
 }

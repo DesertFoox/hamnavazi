@@ -1,5 +1,7 @@
 .profile-sideNave {
-    /* z-index: 222 !important; */
+    z-index: 18 !important; 
+      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
     position: absolute;
 }
 
@@ -55,6 +57,7 @@
 }
 
 .sideNave-close-icon {
+    cursor: pointer;
     width: 25px;
     height: 25px;
 }
@@ -104,7 +107,16 @@
     /* border: 1px solid red; */
 }
 
-.proflie-options-icon {}
+.proflie-options-icon {  
+    cursor: pointer;  
+    width: 30px;
+    height: 30px;
+    &:hover{
+                box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
+                border-radius: 100%;
+
+    }
+}
 
 .profile-Collapse-icon {
     width: 25px;
@@ -121,6 +133,7 @@
 
 .Collapse-chevron-position {
     /* border: 1px solid red; */
+    cursor: pointer;
     position: relative;
     top: 45%;
 }
@@ -138,6 +151,8 @@
     padding: 3px 100px 4px 16px;
     border-radius: 15px;
     background-color: #ffffff;
+      color: #8a6b41;
+
 
 }
 
@@ -153,7 +168,7 @@
     height: 60%;
     width: 90%;
     background: url(../../../Assets//Images//profile//bg-spider.png) no-repeat;
-    background-position: 20% right;
+    background-position: right top;
     background-size: cover;
 }
 
@@ -163,6 +178,13 @@
         width: 25px;
         height: 25px;
     }
+    .bg-sideNave {
+    height: 500px;
+}
+.bg-spider {
+    height: 80%;
+    background-size: 70%;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -170,4 +192,15 @@
         height: 100%;
         background-size: 100%;
     }
+}
+@media screen and (max-width: 575px) {
+   .bg-sideNave {
+    min-height: 600px;
+}
+}
+@media screen and (max-width: 375px) {
+   .proflie-options-box {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
 }

@@ -28,11 +28,20 @@ const TabsNave = ({ isOpen, screenWidth }) => {
       setActive(tab);
     }
   };
+  const tabNavBg = ["bg-green", "bg-898989", "bg-276e95"];
   return (
     <Fragment>
-      <Nav tabs className={` ${style["tabs-box"]}  pt-sssm`}>
+      <Nav
+        tabs
+        className={` ${style["tabs-box"]} ${
+          style[tabNavBg[parseInt(active / 3)]]
+        } pt-sssm`}
+      >
         {screenWidth < 991 && (
-          <NavItem onClick={() => isOpen(true)}>
+          <NavItem
+            className={`${style["sideNav-open"]} mr-ssm mt-1`}
+            onClick={() => isOpen(true)}
+          >
             <Grid size={18} />
           </NavItem>
         )}
