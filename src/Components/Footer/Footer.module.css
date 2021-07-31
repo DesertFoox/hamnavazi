@@ -1,7 +1,8 @@
 .footer {
     padding: 20px 10px;
 
-    background-color: #c79c69;
+    background: linear-gradient(to right, #fcbe4a -39%, #a88355 63%);
+    box-shadow: 10px 0 6px 0 rgba(0, 0, 0, 0.16);
     text-align: center;
     z-index: 100;
     position: relative;

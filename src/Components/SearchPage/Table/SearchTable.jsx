@@ -16,11 +16,11 @@ const SearchTable = ({
 }) => {
   return (
     <Fragment>
-      <div className={`${style["table-holder"]} container mt-2  `}>
+      <div className={`${style["table-holder"]}   `}>
         <Table responsive className={`${style["table-box"]} my-3`}>
           <thead className={`${style["table-header"]} `}>
             <tr className={`${style["table-header-tr"]} `}>
-              <th className="text-transparent py-3">userImageProfile</th>
+              <th className="text-transparent py-3"></th>
               {tableHeadTitles?.map((item, index) => (
                 <th
                   className={`${style["table-header-th"]}  font-black py-3`}
@@ -38,7 +38,7 @@ const SearchTable = ({
                 key={index}
               >
                 <td
-                  className={`${style["table-body-td"]} d-flex justify-content-center py-4`}
+                  className={`${style["table-body-td"]} d-flex justify-content-center py-4 `}
                 >
                   {item?.UserImg ? (
                     <div className={`${style["table-body-pic-box"]}`}>
@@ -57,14 +57,29 @@ const SearchTable = ({
                     </div>
                   )}
                 </td>
-                <td className={`${style["table-body-td"]} py-4 leading-13`}>
-                  {item.UserName}
+                <td
+                  className={`${style["table-body-td"]} py-4 leading-13`}
+                  title={item?.UserName}
+                >
+                  {item.UserName?.length > 23
+                    ? item.UserName.substr(0, 23) + " " + "..."
+                    : item.UserName}
                 </td>
-                <td className={`${style["table-body-td"]} py-4 leading-13`}>
-                  {item.Location}
+                <td
+                  className={`${style["table-body-td"]} py-4 leading-13`}
+                  title={item?.Location}
+                >
+                  {item.Location?.length > 15
+                    ? item.Location.substr(0, 15) + " " + "..."
+                    : item.Location}
                 </td>
-                <td className={`${style["table-body-td"]} py-4 leading-13`}>
-                  {item.MainInstrument}
+                <td
+                  className={`${style["table-body-td"]} py-4 leading-13`}
+                  title={item?.MainInstrument}
+                >
+                  {item.MainInstrument.length > 15
+                    ? item.MainInstrument.substr(0, 15) + " " + "..."
+                    : item.MainInstrument}
                 </td>
                 <td className={`${style["table-body-td"]} py-4 leading-13`}>
                   <Badge
@@ -72,12 +87,20 @@ const SearchTable = ({
                       badgeColor[item?.Level?.LevelNumber]
                     }`}
                     color="warning"
+                    title={item?.Leve?.title}
                   >
-                    {item?.Level?.title}
+                    {item?.Level?.title?.length > 15
+                      ? item.Level.title.substr(0, 15) + " " + "..."
+                      : item.Level.title}
                   </Badge>
                 </td>
-                <td className={`${style["table-body-td"]} py-4 leading-13`}>
-                  {item.Style}
+                <td
+                  className={`${style["table-body-td"]} py-4 leading-13`}
+                  title={item?.Style}
+                >
+                  {item?.Style?.length > 15
+                    ? item?.Style.substr(0, 15) + " " + "..."
+                    : item?.Style}
                 </td>
               </tr>
             ))}
@@ -91,7 +114,7 @@ const SearchTable = ({
               <span className={`${style["page-prev"]}`}>
                 <ChevronsRight
                   className={`${style["page-prev"]} mr-sssm`}
-                  size={40}
+                  size={30}
                 />
               </span>
             }
@@ -99,7 +122,7 @@ const SearchTable = ({
               <span className={`${style["page-prev"]}`}>
                 <ChevronsLeft
                   className={`${style["page-prev"]} mr-sssm`}
-                  size={40}
+                  size={30}
                 />
               </span>
             }

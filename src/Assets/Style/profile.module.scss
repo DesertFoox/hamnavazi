@@ -1,14 +1,16 @@
 .profile {
   min-height: 800px;
+  overflow: hidden;
 }
 
 .SideNave {
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
-  box-sizing: border-box;
+
   z-index: 15;
   /* position: relative; */
 }
-
+.modoalbg{
+  background: #5e5f61f0;
+}
 .profile-bg {
   background: url("../Images/profile/background.webp") no-repeat 50%;
   background-size: 100% 100%;
@@ -34,4 +36,9 @@
 }
 .bg_opa_white{
   background: #f5f6f69c  ;
+}
+@media screen and (max-width:990px){
+  .profile {
+  min-height: 1900px;
+}
 }

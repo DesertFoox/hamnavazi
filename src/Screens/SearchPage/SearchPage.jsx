@@ -20,10 +20,10 @@ import {
   Table,
 } from "reactstrap";
 import SiteBaner from "../../Components/SiteBaner/SiteBaner";
-import SearchTop from "./Top/SearchTop";
-import SearchTable from "./Table/SearchTable";
-import style from "./SearchPage.module.css";
-import "../../Assets/Style/Landing.module.scss";
+import SearchTop from "../../Components/SearchPage/Top/SearchTop";
+import SearchTable from "../../Components/SearchPage/Table/SearchTable";
+import Filter from "../../Components/SearchPage/Filter/Filter";
+import style from "./SearchPage.module.scss";
 const SearchPage = () => {
   const [isOpen, setOpen] = useState(null);
   const [filterButton, setfilterButton] = useState(false);
@@ -162,6 +162,7 @@ const SearchPage = () => {
         }
       });
       setCurrentData(currentDataList);
+      console.log(currentDataList);
     }
   };
   return (

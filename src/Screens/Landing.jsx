@@ -1,18 +1,28 @@
 import React, { useState, Fragment } from "react";
+import { useHistory } from "react-router-dom";
+
 import {
   ButtonDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
   Button,
+  Input,
 } from "reactstrap";
 
 import LandingStyle from "../Assets/Style/Landing.module.scss";
+import SiteBaner from "../Components/SiteBaner/SiteBaner";
 
 const Landing = () => {
-  const [isOpen, setOpen] = useState(false);
-
-  const toggle = () => setOpen(!isOpen);
+  const [isOpen, setOpen] = useState(null);
+  const history = useHistory();
+  const toggle = (id) => {
+    if (id === isOpen) {
+      setOpen(null);
+      return;
+    }
+    setOpen(id);
+  };
 
   const testSelectOption = [
     {
@@ -50,56 +60,7 @@ const Landing = () => {
   return (
     <React.Fragment>
       <div className={`${LandingStyle["top-landing"]} h-60`}>
-        <div className={`${LandingStyle["baner-box"]} m-0`}>
-          <div
-            className={`p-1 ${LandingStyle["baner-box-item"]} ${LandingStyle["baner-musice-box"]} d-flex justify-content-between`}
-          >
-            <div className={`text-white px-3 py-1`}>
-              <h6>موسیـقی‌دان‌هـا</h6>
-              <h6>Musicians</h6>
-            </div>
-            <img
-              className={`img-fluid `}
-              src={
-                require("../Assets/Images/header/favorite-baner.png").default
-              }
-              alt=""
-            />
-          </div>
-
-          <div
-            className={`${LandingStyle["baner-box-item"]} ${LandingStyle["baner-service-box"]} d-flex justify-content-between`}
-          >
-            <div className={`text-white px-3 py-1`}>
-              <h6>پیـراموسیـقی</h6>
-              <h6>Service Providers</h6>
-            </div>
-            <img
-              className={`img-fluid`}
-              src={
-                require("../Assets/Images/header/favorite-baner.png").default
-              }
-              alt=""
-            />
-          </div>
-
-          <div
-            className={`${LandingStyle["baner-box-item"]} ${LandingStyle["baner-bands-box"]} d-flex justify-content-between`}
-          >
-            <div className={`text-white px-3 py-1`}>
-              <h6>گــروه‌هـا</h6>
-              <h6>Bands</h6>
-            </div>
-            <img
-              className={`img-fluid`}
-              src={
-                require("../Assets/Images/header/favorite-baner.png").default
-              }
-              alt=""
-            />
-          </div>
-        </div>
-
+        <SiteBaner />
         <section className={`${LandingStyle.landingtopsection} container`}>
           <div className="grid justify-items-center ">
             <h2 className="text-white mt-xl">اینجا زبان نخست موسیقی است !</h2>
@@ -114,12 +75,13 @@ const Landing = () => {
                   <ButtonDropdown
                     className="bg-buttonbrown border-2 border-a88355 rounded-md"
                     size="md"
-                    isOpen={toggle}
+                    isOpen={isOpen == index ? true : false}
                     toggle={() => toggle(index)}
                   >
                     <Button
                       id="caret"
                       className={`px-sm border-2 border-a88355 border-none border-2 border-a88355 rounded-md ${LandingStyle.selectbuttonWidth} bg-buttonbrown`}
+                      onClick={() => history.push("/search")}
                     >
                       {item.title}
                     </Button>
@@ -129,15 +91,23 @@ const Landing = () => {
                           split
                           className={`bg-selectbrown  ${LandingStyle.selectbuttonborder}`}
                         />
-                        <DropdownMenu>
-                          <DropdownItem header>search</DropdownItem>
+                        <DropdownMenu
+                          className={`${LandingStyle["landing-top-drop-down-menu"]}`}
+                        >
+                          <DropdownItem header>
+                            {" "}
+                            <Input
+                              type="text"
+                              className={`${LandingStyle["landing-top-drop-down-input"]}`}
+                              placeholder="search"
+                            />{" "}
+                          </DropdownItem>
                           {item?.options?.map((option) => (
                             <Fragment>
                               {" "}
                               <DropdownItem key={option.id}>
                                 {option.title}
                               </DropdownItem>
-                              <DropdownItem divider />
                             </Fragment>
                           ))}
                         </DropdownMenu>

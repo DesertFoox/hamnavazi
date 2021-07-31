@@ -3,11 +3,12 @@ import { Badge } from "reactstrap";
 
 import ProfileSideNave from "../SideNav/ProfileSideNave";
 import TabsNave from "../Tabs/TabsNaves/TabsNave";
-import style from "../SideNav/ProfileSideNave.module.css";
 import ProfileStyle from "../../../Assets/Style/profile.module.scss";
+import style from "../SideNav/ProfileSideNave.module.scss";
 const Profile = () => {
   const [windowWidth, setwindowWidth] = useState(null);
   const [sidebarOpen, setsidebarOpen] = useState(true);
+  const [styledSideNav, setstyledSideNav] = useState(null);
 
   // if (sidebarOpen && windowWidth < 990) {
   //   setsidebarOpen(false);
@@ -45,14 +46,16 @@ const Profile = () => {
     if (windowWidth > 990) {
       // setsidebarOpen(true);
       return "col-4";
-    } else if (windowWidth <= 990) {
+    } else if (windowWidth <= 990 && windowWidth > 768) {
+      return style["profile-sideNave"] + " " + "col-6";
+    } else if (windowWidth <= 768 && windowWidth > 576) {
       return style["profile-sideNave"] + " " + "col-8";
-    } else if (windowWidth < 576) {
-      return style["profile-sideNave"] + " " + "col-8";
-    } else if (windowWidth < 470) {
-      return style["profile-sideNave"] + " " + "col-10";
-    } else if (windowWidth < 375) {
-      return style["profile-sideNave"] + " " + "col-10";
+    } else if (windowWidth <= 576 && windowWidth > 470) {
+      return style["profile-sideNave"] + " " + "col-9";
+    } else if (windowWidth <= 470 && windowWidth > 375) {
+      return style["profile-sideNave"] + " " + "col-11";
+    } else if (windowWidth <= 375) {
+      return style["profile-sideNave"] + " " + "col-12";
     }
   };
 

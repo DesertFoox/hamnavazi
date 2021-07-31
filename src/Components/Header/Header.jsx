@@ -1,12 +1,17 @@
-import React, { Fragment } from "react";
-import style from "./Header.module.css";
+import React, { Fragment, useState } from "react";
+import { useHistory } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 import { List } from "react-feather";
 import { Input, Label } from "reactstrap";
-
+import HeaderUnAuthentication from "./HeaderUnAuth/HeaderUnAuthentication";
+import HeaderAuthentication from "./HeaderAuth/HeaderAuthentication";
+import style from "./Header.module.css";
 const Header = () => {
+  const [logged, setlogged] = useState(false);
+  const history = useHistory();
   const accessToken = "nott found";
-  const profile = false;
+  // const profile = true;
   const setting = null;
   return (
     <div className={` container-fluid ${style["nav-container"]} `}>
@@ -26,7 +31,8 @@ const Header = () => {
 
             <div className={style["header-options"]}>
               <div
-                className={`${style["menu-iconBox"]} grid text-center justify-items-center`}
+                className={`${style["menu-iconBox"]} grid text-center justify-items-center cursor-pointer`}
+                onClick={() => setlogged(!logged)}
               >
                 <img
                   className={style["menu-icon"]}
@@ -34,35 +40,14 @@ const Header = () => {
                   alt=""
                 />
               </div>
-              <div className={`${style["header-auth-box"]}`}>
-                <Link
-                  to="/register"
-                  className={`${style["header-auth-icon"]} `}
-                >
-                  <img
-                    className={`${style.img}`}
-                    src={
-                      require("../../Assets/Images/header/signUp.PNG").default
-                    }
-                    alt="logo"
-                  />
-                </Link>
-                <Link
-                  to="/login"
-                  className={`ml-1 mr-ssm ${style["header-auth-icon"]} `}
-                >
-                  <img
-                    alt="logo"
-                    className={style.img}
-                    src={
-                      require("../../Assets/Images/header/login-icon.png")
-                        .default
-                    }
-                  />
-                </Link>
-              </div>
+              {logged == true ? (
+                <HeaderAuthentication history={history} />
+              ) : (
+                <HeaderUnAuthentication />
+              )}
+
               <div className={`${style["search-box"]}`}>
-                <Label className={`${style["search-box-icon"]}`}>
+                <Link to="/search" className={`${style["search-box-icon"]}`}>
                   <img
                     className={`${style.img}`}
                     src={
@@ -71,7 +56,7 @@ const Header = () => {
                     }
                     alt=""
                   />
-                </Label>
+                </Link>
                 <Input
                   className={`form-control form-control-sm  mr-ssm  ${style["search-box-input"]}`}
                   placeholder={"جست‌وجو سریع"}

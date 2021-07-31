@@ -32,3 +32,34 @@
     min-height: 800px;
     border: 1px solid transparent;
 }
+
+@media screen and (max-width: 990px){
+    .Chosemsi {
+        min-height:1000px;
+    }
+
+}
+@media screen and (max-width: 576px){
+    .Chosemsi {
+        min-height:1300px;
+    }
+    .top-SearchPage{
+        height: 38rem;
+    }
+
+}
+@media screen and (max-width: 470px){
+    .Chosemsi {
+        min-height:1600px;
+    }
+        .top-SearchPage{
+        height: 44rem;
+    }
+
+}
+// @media screen and (max-width: 375px){
+//     .Chosemsi {
+//         min-height:1600px;
+//     }
+
+// }

@@ -1,15 +1,17 @@
 
 .table-holder {
-    /* border: 1px solid red; */
-    height: 200px;
+    // border: 1px solid red; 
+    // height: 200px;
     background: url(../../../Assets/Images/search/bg-table-search.png) no-repeat;
     background-position: center 30%;
     background-size: 40%;
-    min-height: 500px;
+    // min-height: 500px;
+    width:90%;
+    margin: 2rem auto;
 }
 
 .table-box {
-    /* background: rgb(172, 134, 134); */
+/* background: rgb(172, 134, 134); */
     /* box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3); */
     border-radius: 10px;
     overflow: hidden;
@@ -50,12 +52,18 @@
     text-align: center;
     color: #4b4a4c;
     font-size: 0.9rem;
+    border-bottom: 1px solid #929396  !important;
+
+    &:last-child{
+        border-bottom: none !important;
+    }
 
 }
 
 .table-body-td {
     padding-top: 0.75rem !important;
     padding-bottom: 0.75rem !important;
+    border:none!important;
     /* background: #ffffffa4; */
 }
 
@@ -124,12 +132,12 @@
     border-radius: 5px;
     background: #ffffff;
     // padding: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     text-align: center;
     font-weight: bold;
-    font-size: large;
-    line-height: 2.2rem;
+    font-size: medium;
+    line-height: 1.8rem;
     cursor: pointer;
 
     &:hover{
@@ -137,4 +145,50 @@
         color: #ffffff;
         background:#929396;
     }
+
+    a{
+        display: block;
+        width: 100%;
+    }
+}
+.page-active{
+            color: #ffffff;
+        background:#929396;
+}
+
+@media screen and (max-width:990px){
+    .table-header-tr{
+            font-size: 12px !important;
+    font-weight: 400;
+    }
+.table-body-tr{
+    font-size: small;
+    font-weight: 400;
+}
+}
+@media screen and (max-width:768px){
+    .table-header-tr{
+            font-size: 12px !important;
+    font-weight: 400;
+    }
+.table-body-tr{
+    font-size: small;
+    font-weight: 400;
+}
+.table-body-pic-box {
+    border-radius: 10px;
+    height: 3rem !important;
+    width: 3rem !important;
+
+
+}
+
+.table-body-icon-box {
+    border-radius: 10px;
+    height: 3rem !important;
+    width: 3rem !important;
+    padding: 0.6rem;
+    
+
+}
 }

@@ -6,6 +6,7 @@ import {
   DropdownMenu,
   DropdownItem,
   Button,
+  Input,
 } from "reactstrap";
 import style from "./SearchTop.module.scss";
 const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
@@ -41,15 +42,22 @@ const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
                     split
                     className={`bg-dark_selectbrown   ${style["selectbuttonborder"]}`}
                   />
-                  <DropdownMenu>
-                    <DropdownItem header>search</DropdownItem>
+                  <DropdownMenu className={`${style["top-drop-down-menu"]}`}>
+                    <DropdownItem header>
+                      {" "}
+                      <Input
+                        type="text"
+                        className={`${style["top-drop-down-input"]}`}
+                        placeholder="search"
+                      />{" "}
+                    </DropdownItem>
                     {item?.options?.map((option) => (
                       <Fragment>
                         {" "}
-                        <DropdownItem key={option.id}>
+                        <DropdownItem key={option.id} className={`py-2`}>
                           {option.title}
                         </DropdownItem>
-                        <DropdownItem divider />
+                        {/* <DropdownItem divider className={`m-0`} /> */}
                       </Fragment>
                     ))}
                   </DropdownMenu>
