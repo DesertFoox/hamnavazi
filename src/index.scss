@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.ltr{
+    direction: ltr;
+}
+@font-face {
+    font-family: "XeroSans";
+    src: url("./Assets/Font/XeroSansBlack/XeroSansBlack.ttf");
+}
+*{
+    font-family: "XeroSans" !important;
+}
+
+
+.App{
+  overflow: hidden;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.fade-enter,
+.fade-exit {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.fade-enter {
+  transform: translateX(100%);
+}
+.fade-exit-active {
+  transform: translateX(-100%);
+}
+.fade-enter-active {
+  transform: translateX(0%);
+  z-index: 1;
+}

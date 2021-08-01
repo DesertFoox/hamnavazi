@@ -16,7 +16,7 @@ module.exports = {
       buttonbrown: "#8A6B41 !important",
       selectbrown: "#A88355 !important",
       a88355: "#a88355 !important",
-      '6b522d':'#6b522d !important',
+      C6b522d:'#6b522d !important',
       dark_buttonbrown: "#818385 !important",
       dark_selectbrown: "#9b9d9f !important",
       black: "black !important",
