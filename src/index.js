@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import "./index.scss";
+import "./index.css";
 import 'bootstrap/dist/css/bootstrap.rtl.min.css'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";

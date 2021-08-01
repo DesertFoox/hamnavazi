@@ -1,7 +1,8 @@
 // tailwind.config.js
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  purge: { content: ["src/**/*.js", "src/**/*.jsx", "public/**/*.html"] },
   darkMode: false, // or 'media' or 'class'
+  enabled: process.env.NODE_ENV === "production",
   theme: {
     backgroundColor: (theme) => ({
       ...theme("colors"),
