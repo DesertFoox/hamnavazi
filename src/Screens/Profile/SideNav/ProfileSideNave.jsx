@@ -131,7 +131,7 @@ const ProfileSideNave = ({ isOpen, windowWidth }) => {
             <span className="mt-sssm font-bold">
               تار | Tar{" "}
               <Badge
-                className={`${style["badge-radius"]} mr-sssm p-ssm bg bg-zereshki`}
+                className={`${style["badge-radius"]} mr-sssm p-sssm bg bg-zereshki`}
                 color="warning"
               >
                 حرفه ای | Pro
@@ -153,7 +153,7 @@ const ProfileSideNave = ({ isOpen, windowWidth }) => {
             <span className="mt-sssm font-bold text-xs">
               طبلا | Tabla{" "}
               <Badge
-                className={`${style["badge-radius"]} text-xs mr-sssm p-ssm bg bg-warning`}
+                className={`${style["badge-radius"]} text-xs mr-sssm p-sssm bg bg-warning`}
                 color="warning"
               >
                 مبتدی | Beginner
