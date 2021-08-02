@@ -1,39 +1,71 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { TabContent, TabPane, Nav, NavItem, NavLink, Badge } from "reactstrap";
 import Event from "../../MyEvents/MyEvents";
 import Gallery from "../../Gallery/Gallery";
 import NaveBar from "./NaveBar/NaveBar";
 import ProfileStyle from "../../../../Assets/Style/profile.module.scss";
+import { useLocation } from "react-router-dom";
 
 const TabsBody = ({ activeTab }) => {
+  const [showbg, setShowbg] = useState(false);
+  const location = useLocation();
+
   const NaveBarTitles = {
     Tab1: {
       title: [
-        "هـویت",
-        "اطلاعـات تمـاس",
-        "سـازهـا",
-        "تحصیـلات",
-        "دستـاوردهـا",
-        "اهـداف",
+        { title: "هـویت", link: "#profile" },
+        { title: " اطلاعـات تمـاس", link: "#callinfo" },
+        { title: "سـازهـا", link: "#saz" },
+        { title: "تحصیـلات", link: "#education" },
+        { title: "دستـاوردهـا", link: "#dastavard" },
+        { title: "اهـداف", link: "#target" },
       ],
       copyLink: "http/..",
     },
     Tab2: {
-      title: ["همه رویدادهـا | All Events", "رویدادهـای من | My Events"],
+      title: [
+        { title: "همه رویدادهـا | All Events", link: "#allevents" },
+        { title: "رویدادهـای من | My Events", link: "#myevents" },
+      ],
     },
     Tab3: {
       title: [
-        "تصـاویـر  | Pictures",
-        " موسیقی‌هـا | Musics",
-        " ویـدیـوهـا | Videos",
+        {
+          title: "تصـاویـر  | Pictures",
+          link: "picture",
+        },
+        {
+          title: " موسیقی‌هـا | Musics",
+          link: "musics",
+        },
+        {
+          title: " ویـدیـوهـا | Videos",
+          link: "#videos",
+        },
       ],
       sorting: ["قدیمی‌ترین  |  Oldest", " جدیدترین  |  Newest"],
     },
   };
+
+  const checkUrl = () => {
+    console.log(location.pathname);
+    if (
+      location.pathname.toLowerCase() == "/profile#profile"
+    ) {
+      setShowbg(true);
+    } else {
+      setShowbg(false);
+    }
+  };
+
+  useEffect(() => {
+    checkUrl();
+  }, []);
+
   return (
     <Fragment>
       <TabContent
-        className={`py-50 ${ProfileStyle.bg_opa_white}`}
+        className={`py-50  ${showbg && ProfileStyle.bg_opa_white}`}
         activeTab={activeTab}
       >
         <TabPane tabId="1">
