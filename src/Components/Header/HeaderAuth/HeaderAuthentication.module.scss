@@ -26,6 +26,22 @@
       color: #373435;
 
 }
+@media (max-width: 915px) {
+    .header-auth-box {
+        width: 40%;
+        border: 1px solid red;
+    }
+}
+@media (max-width: 768px) {
+    .header-auth-box {
+        width: 28%;
+        border: 1px solid red;
+    }
+        .header-auth-userName {
+        display:none;
+    }
+}
+
 @media (max-width: 576px) {
 
     .header-auth-userName {
@@ -33,7 +49,7 @@
     }
 
     .header-auth-box {
-        margin-right: 10px;
+        margin-right: 8px;
     }
     .header-auth-icon {  
                 box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
@@ -50,6 +66,11 @@
         height: 30px;
     }
 
+}
+@media (max-width: 404px) {
+        .header-auth-box {
+        width:32%;
+    }
 }
 @media (max-width: 375px) {
 

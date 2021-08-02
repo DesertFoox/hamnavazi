@@ -134,127 +134,117 @@ const Landing = () => {
           </div>
         </section>
       </div>
-      <div className="main-content">
-        <section className="content container-fluid ">
+      <div className={`${LandingStyle["main-content"]}`}>
+        <section className={`${LandingStyle["content"]} container-fluid p-0`}>
           <div
-            className={`${LandingStyle["category-holder"]} shadow-img_shadow row`}
+            className={`${LandingStyle["category-holder"]}  shadow-img_shadow `}
           >
-            <div className={`col-lg-9 col-9  col-sm-9 ${LandingStyle.secol}`}>
+            <div
+              className={` ${LandingStyle.firstcol} ${LandingStyle["ssssss"]} shape grid justify-items-center`}
+            >
+              <div className={`${LandingStyle["firstcol-img-box"]}`}>
+                <img
+                  src={require("../Assets/Images/landing/projects.svg").default}
+                  alt=""
+                />
+              </div>
+              <div
+                className={`text-center text-white ${LandingStyle.services}`}
+              >
+                <h4>پـروژه‌هــا</h4>
+                <h4>Projects</h4>
+              </div>
+            </div>
+
+            <div className={` ${LandingStyle.secol} p-0`}>
               <img
-                className="fullimage"
+                className={`${LandingStyle["fullimage"]}`}
                 src={require("../Assets/Images/landing/melodi.jpg").default}
                 alt=""
               />
             </div>
+          </div>
+
+          <div
+            className={`${LandingStyle["category-holder"]}  shadow-img_shadow `}
+          >
             <div
-              className={`col-lg-3 col-3 col-sm-3 ${LandingStyle.firstcol} shape grid justify-items-center`}
+              className={` ${LandingStyle.firstcol} ${LandingStyle["jobss"]} shape grid justify-items-center`}
             >
-              <div className="grid justify-items-center ">
-                <div className={`${LandingStyle.projects}`}>
-                  <img
-                    src={
-                      require("../Assets/Images/landing/projects.svg").default
-                    }
-                    alt=""
-                  />
-                </div>
-                <div
-                  className={`text-center text-white ${LandingStyle.services}`}
-                >
-                  <h4>پـروژه‌هــا</h4>
-                  <h4>Projects</h4>
-                </div>
+              <div className={`${LandingStyle["firstcol-img-box"]}`}>
+                <img
+                  src={require("../Assets/Images/landing/job.svg").default}
+                  alt=""
+                />
+              </div>
+              <div
+                className={`text-center text-white ${LandingStyle.services}`}
+              >
+                <h4>فـرصت‌هـای شغـلی </h4>
+                <h4> Job Opportunities</h4>
               </div>
             </div>
-          </div>
-          <div
-            className={`${LandingStyle["category-holder"]} shadow-img_shadow row`}
-          >
-            <div className={`col-lg-9 col-9 col-sm-9 ${LandingStyle.secol}`}>
+
+            <div className={` ${LandingStyle.secol} p-0`}>
               <img
-                className="fullimage"
-                src={require("../Assets/Images/landing/mic.jpg").default}
+                className={`${LandingStyle["fullimage"]}`}
+                src={require("../Assets/Images/landing/job.png").default}
                 alt=""
               />
             </div>
-            <div
-              className={`col-lg-3 col-sm-3 col-3  ${LandingStyle.secondcol}  grid justify-items-center`}
-            >
-              <div className=" grid justify-items-center ">
-                <div className={`${LandingStyle.jobs}`}>
-                  <img
-                    src={require("../Assets/Images/landing/job.svg").default}
-                    alt=""
-                  />
-                </div>
-                <div
-                  className={`text-center text-white ${LandingStyle.services}`}
-                >
-                  <h4>فـرصت‌هـای شغـلی </h4>
-                  <h4> Job Opportunities</h4>
-                </div>
-              </div>
-            </div>
           </div>
           <div
-            className={`${LandingStyle["category-holder"]} shadow-img_shadow row`}
+            className={`${LandingStyle["category-holder"]}  shadow-img_shadow `}
           >
-            <div className={`col-lg-9 col-9  col-sm-9 ${LandingStyle.secol}`}>
+            <div
+              className={` ${LandingStyle.firstcol} ${LandingStyle["jobss"]} shape grid justify-items-center`}
+            >
+              <div className={`${LandingStyle["firstcol-img-box"]}`}>
+                <img
+                  src={require("../Assets/Images/landing/market.svg").default}
+                  alt=""
+                />
+              </div>
+              <div
+                className={`text-center text-white ${LandingStyle.services}`}
+              >
+                <h4>بازار</h4>
+                <h4>Market</h4>
+              </div>
+            </div>
+            <div className={` ${LandingStyle.secol} p-0`}>
               <img
-                className="fullimage"
+                className={`${LandingStyle["fullimage"]}`}
                 src={require("../Assets/Images/landing/band.jpg").default}
                 alt=""
               />
             </div>
-            <div
-              className={`"col-lg-3 col-3 col-sm-3 ${LandingStyle.thirdcol} ${LandingStyle.shape}`}
-            >
-              <div className=" grid justify-items-center lg:mt-sm">
-                <div className={`${LandingStyle.markte}`}>
-                  <img
-                    src={require("../Assets/Images/landing/market.svg").default}
-                    alt=""
-                  />
-                </div>
-                <h4
-                  className={`text-center ${LandingStyle.services} text-white`}
-                >
-                  <h4>بازار</h4>
-                  <h4>Market</h4>
-                </h4>
-              </div>
-            </div>
           </div>
           <div
-            className={`${LandingStyle["category-holder"]} shadow-img_shadow row`}
+            className={`${LandingStyle["category-holder"]}  shadow-img_shadow `}
           >
             <div
-              className={`col-lg-9  
-            col-9 col-sm-9 ${LandingStyle.secol}`}
+              className={` ${LandingStyle.firstcol} ${LandingStyle["jobss"]} shape grid justify-items-center`}
             >
+              <div className={`${LandingStyle["firstcol-img-box"]}`}>
+                <img
+                  src={require("../Assets/Images/landing/serv.svg").default}
+                  alt=""
+                />
+              </div>
+              <div
+                className={`text-center text-white ${LandingStyle.services}`}
+              >
+                <h4> خـدمـات ویــژه</h4>
+                <h4>Special Services</h4>
+              </div>
+            </div>
+            <div className={` ${LandingStyle.secol} p-0`}>
               <img
-                className={`${LandingStyle.fullimage}`}
+                className={`${LandingStyle["fullimage"]}`}
                 src={require("../Assets/Images/landing/saz.jpg").default}
                 alt=""
               />
-            </div>
-            <div
-              className={`col-lg-3  col-3 col-sm-3 col-3 ${LandingStyle.fourthcol}`}
-            >
-              <div className="grid justify-items-center lg:mt-sm ">
-                <div className={`${LandingStyle.servs}`}>
-                  <img
-                    src={require("../Assets/Images/landing/serv.svg").default}
-                    alt=""
-                  />
-                </div>
-                <h4
-                  className={`text-white text-center ${LandingStyle.services}`}
-                >
-                  <h4> خـدمـات ویــژه</h4>
-                  <h4>Special Services</h4>
-                </h4>
-              </div>
             </div>
           </div>
         </section>
@@ -263,10 +253,10 @@ const Landing = () => {
         <section className={`${LandingStyle["abt-us"]} h-zero container`}>
           <div className="grid grid-cols-3">
             <div
-              className={`${LandingStyle["about-us-box"]} ${LandingStyle.sh}  text-black fs-5 text-center mt-ssm justify-content-center`}
+              className={`${LandingStyle["about-us-box"]} ${LandingStyle.sh}   text-center mt-ssm justify-content-center`}
             >
               <img
-                className={`${LandingStyle["about-us-icons"]} `}
+                className={`${LandingStyle["about-us-icons"]} mb-3 `}
                 src={
                   require("../Assets/Images/landing/instruction.png").default
                 }
@@ -275,20 +265,20 @@ const Landing = () => {
               راهـنمــا | Instruction
             </div>
             <div
-              className={`${LandingStyle["about-us-box"]}  text-black fs-5 text-center mt-ssm justify-content-center`}
+              className={`${LandingStyle["about-us-box"]}   text-center mt-ssm justify-content-center`}
             >
               <img
-                className={`${LandingStyle["about-us-icons"]}`}
+                className={`${LandingStyle["about-us-icons"]} mb-3`}
                 src={require("../Assets/Images/landing/rules.png").default}
                 alt=""
               />
               قـوانیـن | Rules
             </div>
             <div
-              className={`${LandingStyle["about-us-box"]}  text-black fs-5 text-center mt-ssm justify-content-center`}
+              className={`${LandingStyle["about-us-box"]}   text-center mt-ssm justify-content-center`}
             >
               <img
-                className={`${LandingStyle["about-us-icons"]}`}
+                className={`${LandingStyle["about-us-icons"]} mb-3`}
                 src={require("../Assets/Images/landing/aboutUs.png").default}
                 alt=""
               />
