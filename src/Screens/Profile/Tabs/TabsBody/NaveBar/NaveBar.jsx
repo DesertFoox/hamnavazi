@@ -5,7 +5,6 @@ import style from "./NaveBar.module.scss";
 const NaveBar = ({ naveBarData }) => {
   const [active, setActive] = useState(0);
   const sortStartLentgh = naveBarData?.title?.lentgh + 1;
-  console.log(sortStartLentgh);
   const toggle = (tab) => {
     if (active !== tab) {
       setActive(tab);
@@ -17,11 +16,11 @@ const NaveBar = ({ naveBarData }) => {
         {naveBarData?.title.map((item, index) => (
           <NavItem className={`mr-ssm`}>
             <NavLink
-              href="#"
+              href={item.link}
               className={`${style.a} ${active === index && style["bang"]}`}
               onClick={() => toggle(index)}
             >
-              {item}
+              {item.title}
             </NavLink>
           </NavItem>
         ))}

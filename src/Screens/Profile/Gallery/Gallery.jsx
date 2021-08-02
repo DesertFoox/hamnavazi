@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Badge } from "reactstrap";
 
 import ProfileSideNave from "../SideNav/ProfileSideNave";
@@ -8,10 +8,43 @@ import style from "../SideNav/ProfileSideNave.module.scss";
 import "../MyEvents/event.css";
 
 const Gallery = () => {
+  const [modal, setModal] = useState(false);
+  const [showImage, setShowImage] = useState(false);
+  const toggle = () => setModal(!modal);
+
+  const checkWidth = () => {
+    console.log(window.innerWidth);
+    if (window.innerWidth < 400) {
+      setShowImage(true);
+    } else {
+      setShowImage(false);
+    }
+  };
+  useEffect(() => {
+    checkWidth();
+  },[]);
   return (
     <>
+      {" "}
+      <div className="container">
+        <Slider toggle={toggle} modal={modal} />
+      </div>
       <div className=" event grid grid-cols-1 bg-white rounded border-r-6 border-textcolor">
         <div className="grid py-4 px-4 grid-cols-1 md:mx-auto lg:grid-cols-2">
+          {showImage === false && (
+            <div
+              onClick={() => toggle()}
+              className="bg-white shadow-md mb-sm grid justify-items-center mx-auto  event-image-holder rounded"
+            >
+              <img
+                src={
+                  require("../../../Assets/Images/profile/Event.webp").default
+                }
+                alt="event"
+                className="object-contain event-image"
+              />
+            </div>
+          )}
           <div className="right-side-event">
             <div className="flex flex-row flex-wrap">
               <div className="title ml-ssm">
@@ -26,18 +59,6 @@ const Gallery = () => {
               <div className="time-miladi  ml-ssm text-center">
                 <p className="text-13">2021-05-10</p>
               </div>
-              {/* <div
-                  className={`${style["close-icon-box"]} grid justify-items-end`}
-                >
-                  <img
-                    className={`${style["sideNave-close-icon"]} img-fluid`}
-                    src={
-                      require("../../../Assets/Images/profile/close.png")
-                        .default
-                    }
-                    alt=""
-                  />
-                </div> */}
             </div>
             <p className="text-13 mt-ssm">
               طرح‌نما یا لورم ایپسوم به نوشتاری آزمایشی و بی‌معنی در صنعت چاپ،
@@ -52,9 +73,6 @@ const Gallery = () => {
             </p>
           </div>
           <div className="left-side-event">
-            <div className="container p-5">
-              <Slider />
-            </div>
             <div className="grid sm:grid-cols-1 md:grid-cols-2">
               <div className="ltr">
                 <div className="mb-ssm">
@@ -83,20 +101,26 @@ const Gallery = () => {
                   <p className="text-707070 text-12">Iran | ایـران </p>
                 </div>
               </div>
-              <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
-                <img
-                  src={
-                    require("../../../Assets/Images/profile/Event.webp").default
-                  }
-                  alt="event"
-                  className="object-contain event-image"
-                />
-              </div>
+              {showImage === true && (
+                <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
+                  <img
+                    src={
+                      require("../../../Assets/Images/profile/Event.webp")
+                        .default
+                    }
+                    alt="event"
+                    className="object-contain event-image"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
-        <div className="grid py-4 px-4 sm:grid-cols-1 justify-items-center  sm:justify-items-center md:grid-cols-2 lg:grid-cols-4">
-          <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
+        <div className="grid py-4 px-4 grid-cols-1 hidden sm:hidden md:grid  sm:grid-cols-2 justify-items-center  sm:justify-items-center s md:grid-cols-2 lg:grid-cols-4">
+          <div
+            onClick={() => toggle()}
+            className="bg-white shadow-md grid justify-items-center  event-image-holder rounded"
+          >
             <img
               src={require("../../../Assets/Images/profile/Event.webp").default}
               alt="event"

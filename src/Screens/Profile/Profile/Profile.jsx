@@ -58,10 +58,9 @@ const Profile = () => {
       return style["profile-sideNave"] + " " + "col-12";
     }
   };
-
   return (
     <section
-      className={`${ProfileStyle.profile} container-fluid ${ProfileStyle["profile-bg"]}`}
+      className={`${ProfileStyle.profile} container-fluid ${ ProfileStyle["profile-bg"]}`}
     >
       <div className={`${style[""]} row h-100`}>
         {" "}

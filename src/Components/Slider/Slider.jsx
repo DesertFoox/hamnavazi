@@ -7,9 +7,6 @@ import "../../Assets/Style/slider.scss";
 const Slide = (props) => {
   const { buttonLabel, className } = props;
 
-  const [modal, setModal] = useState(false);
-
-  const toggle = () => setModal(!modal);
   const settings = {
     dots: true,
     lazyLoad: true,
@@ -23,14 +20,11 @@ const Slide = (props) => {
   };
   return (
     <div>
-      <Button color="danger" onClick={toggle}>
-        {buttonLabel}
-      </Button>
       <Modal
         centered
         color="danger"
-        isOpen={modal}
-        toggle={toggle}
+        isOpen={props.modal}
+        toggle={props.toggle}
         className={className + " modall"}
       >
         <ModalBody className="body">
