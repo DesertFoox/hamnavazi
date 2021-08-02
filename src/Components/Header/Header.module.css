@@ -125,6 +125,14 @@
     }
 }
 
+@media (max-width: 915px) {
+    .header-options {
+        width: 80%;
+        border: 1px solid red;
+
+    }
+}
+
 @media (max-width: 768px) {
     .header {
         min-height: 70px !important;
@@ -199,7 +207,7 @@
         border-radius: 100%;
         background: #fff;
         box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
-        margin-top: 10px;
+        margin-top: 4px;
         text-align: center;
 
         float: right;
@@ -214,7 +222,7 @@
     }
 
     .search-box {
-        width: 55%;
+        width: 57%;
     }
 
     .header-profile-box {
@@ -232,11 +240,11 @@
 
 @media (max-width: 440px) {
     .search-box {
-        width: 60%;
+        width: 55%;
     }
 
     .search-box-input {
-        width: 65%;
+        width: 70%;
     }
 }
 

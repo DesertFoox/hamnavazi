@@ -15,7 +15,11 @@
     height: 35px;
 }
 
-
+@media (max-width: 915px) {
+    .header-unAuth-box {
+        width: 18%;
+    }
+}
 @media (max-width: 768px) {
     .header-unAuth-box {
         width: 16%;
@@ -68,7 +72,7 @@
         height: 28px;
     }
 }
-@media (max-width: 335px) {
+@media (max-width: 336px) {
 
     .header-unAuth-box {
         margin-top: 5px;
