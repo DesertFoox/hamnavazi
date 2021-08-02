@@ -22,7 +22,7 @@ const Gallery = () => {
   };
   useEffect(() => {
     checkWidth();
-  },[]);
+  });
   return (
     <>
       {" "}
