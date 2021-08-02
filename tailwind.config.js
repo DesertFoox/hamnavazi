@@ -40,6 +40,7 @@ module.exports = {
       C4b4a4c: "#4b4a4c",
     },
     fontSize: {
+      "1half":"1.5rem",
       1: "1rem",
       2: "2rem",
       12: "10px !important",

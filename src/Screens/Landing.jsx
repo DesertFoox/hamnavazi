@@ -63,10 +63,10 @@ const Landing = () => {
         <SiteBaner />
         <section className={`${LandingStyle.landingtopsection} container`}>
           <div className="grid justify-items-center ">
-            <h2 className="text-white mt-xl text-2">
+            <h2 className="text-white mt-xl text-1half sm:text-2">
               اینجا زبان نخست موسیقی است !
             </h2>
-            <h2 className="opacity-75 text-white text-2">
+            <h2 className="opacity-75 text-white text-1half sm:text-2">
               ! Here,the first language is music
             </h2>
             <div
