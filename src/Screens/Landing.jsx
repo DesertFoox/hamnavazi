@@ -82,8 +82,11 @@ const Landing = () => {
                   >
                     <Button
                       id="caret"
-                      className={`px-sm border-2 text-1 border-none border-2 rounded-md ${LandingStyle.selectbuttonWidth} bg-buttonbrown`}
-                      onClick={() => history.push("/search")}
+                      className={`px-sm  text-1 border-none rounded-md  ${
+                        item.options
+                          ? LandingStyle.selectbuttonWidth
+                          : LandingStyle.searchbuttonwidth
+                      }  ${item.options ? "" : "border-b522d"}  bg-buttonbrown`}
                     >
                       {item.title}
                     </Button>
@@ -100,7 +103,7 @@ const Landing = () => {
                             {" "}
                             <Input
                               type="text"
-                              className={`${LandingStyle["landing-top-drop-down-input"]} text-1`}
+                              className={`${LandingStyle["landing-top-drop-down-input"]} text-1 `}
                               placeholder="search"
                             />{" "}
                           </DropdownItem>
