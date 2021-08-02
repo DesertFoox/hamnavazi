@@ -63,24 +63,26 @@ const Landing = () => {
         <SiteBaner />
         <section className={`${LandingStyle.landingtopsection} container`}>
           <div className="grid justify-items-center ">
-            <h2 className="text-white mt-xl">اینجا زبان نخست موسیقی است !</h2>
-            <h2 className="opacity-75 text-white">
+            <h2 className="text-white mt-xl text-2">
+              اینجا زبان نخست موسیقی است !
+            </h2>
+            <h2 className="opacity-75 text-white text-2">
               ! Here,the first language is music
             </h2>
             <div
               className={`${LandingStyle.selectSection} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center`}
             >
               {testSelectOption?.map((item, index) => (
-                <div className="mr-ssm mt-ssm md:mt-zero">
+                <div className="mr-ssm  mt-ssm md:mt-zero">
                   <ButtonDropdown
-                    className="bg-buttonbrown border-2 border-a88355 rounded-md"
+                    className="bg-buttonbrown border-b522d border-2  rounded-md"
                     size="md"
                     isOpen={isOpen == index ? true : false}
                     toggle={() => toggle(index)}
                   >
                     <Button
                       id="caret"
-                      className={`px-sm border-2 border-a88355 border-none border-2 border-a88355 rounded-md ${LandingStyle.selectbuttonWidth} bg-buttonbrown`}
+                      className={`px-sm border-2 text-1 border-none border-2 rounded-md ${LandingStyle.selectbuttonWidth} bg-buttonbrown`}
                       onClick={() => history.push("/search")}
                     >
                       {item.title}
@@ -98,7 +100,7 @@ const Landing = () => {
                             {" "}
                             <Input
                               type="text"
-                              className={`${LandingStyle["landing-top-drop-down-input"]}`}
+                              className={`${LandingStyle["landing-top-drop-down-input"]} text-1`}
                               placeholder="search"
                             />{" "}
                           </DropdownItem>
