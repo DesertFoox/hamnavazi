@@ -3,7 +3,7 @@ import BanerStyle from "./Baner.module.scss";
 const SiteBaner = () => {
   return (
     <Fragment>
-      <div className={`${BanerStyle["baner-box"]} ml-ssm`}>
+      <div className={`${BanerStyle["baner-box"]} `}>
         <div
           className={`${BanerStyle["baner-box-item"]} ${BanerStyle["baner-musice-box"]} d-flex justify-content-between`}
         >
