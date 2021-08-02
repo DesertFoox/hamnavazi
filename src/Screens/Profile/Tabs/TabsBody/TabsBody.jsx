@@ -106,8 +106,8 @@ const TabsBody = ({ activeTab }) => {
                 </div>
               </div>
               <div className="col-span-11 py-4 px-5">
-                <div className="email">
-                  <div className="grid grid-cols-12">
+                <div className="email mb-2rm">
+                  <div className="grid grid-cols-12 ">
                     <div className="col-span-11">
                       <p className="text-textcolor text-13">ایمیل | Email</p>
                       <p className="text-black text-13">
@@ -125,21 +125,21 @@ const TabsBody = ({ activeTab }) => {
                     </div>
                   </div>
                 </div>
-                <div className="website">
+                <div className="website mb-2rm">
                   <p className="text-textcolor text-13">وبسایت | Website</p>
                   <p className="text-black text-13">www.chavoosh.info</p>
                 </div>
-                <div className="links">
+                <div className="links mb-2rm">
                   <p className="text-textcolor text-13">
                     لینک های ارتباطی | Links
                   </p>
                   <p className="text-black text-13">@areftoo</p>
                 </div>
-                <div className="links">
+                <div className="call mb-2rm">
                   <p className="text-textcolor text-13">تلفن همراه | Cell</p>
                   <p className="text-black text-13">09123235676</p>
                 </div>
-                <div className="secgender">
+                <div className="secgender mb-2rm">
                   <p className="text-textcolor text-13">جنسیت | Gender</p>
                   <p className="text-black text-13">مرد</p>
                 </div>
