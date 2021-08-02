@@ -1,7 +1,12 @@
 .selectbuttonWidth {
-  width: 9.5rem;
-  border: 1px solid #6b522d;
+  border: none;
   outline: none;
+  height: 2rem;
+  width: 13rem;
+}
+.searchbuttonwidth {
+  width: 14.8rem !important;
+  height: 2.4rem !important;
 }
 
 .selectbuttonborder {
@@ -10,8 +15,8 @@
   border: 1px solid #6b522d;
   outline: none;
   border-left: 0;
-  span{
-    display:none;
+  span {
+    display: none;
   }
 }
 .landingtopsection {
@@ -87,7 +92,7 @@
 }
 
 .secondcol {
-  background: #A88355;
+  background: #a88355;
 }
 
 .thirdcol {
@@ -95,7 +100,7 @@
 }
 
 .fourthcol {
-  background: #6B522D;
+  background: #6b522d;
 }
 
 /* .secondcol::after {
@@ -288,7 +293,7 @@
   height: 39px;
   /* margin: 13px -69px; */
   transform: rotate(45deg);
-  background: #A88355;
+  background: #a88355;
   position: absolute;
   margin: 208px -31px;
 }
@@ -299,40 +304,37 @@
   height: 39px;
   /* margin: 13px -69px; */
   transform: rotate(45deg);
-  background: #6B522D;
+  background: #6b522d;
   position: absolute;
   margin: -130px -31px;
 }
 
 
-
-.landing-top-drop-down-menu{
-    width:100% !important;
-    border: 1px solid #6b522d;
-    background:#8A6B41;
-    text-align: left;
-     button{
-        
-         color:#ffffff;
-        border-bottom: 1px solid #6b522d ;
-         &:hover{
-             background: #d0d0d1;
-         }
-         &:last-child{
-                     border-bottom: none ;
-
-         }
-     }
-     .landing-top-drop-down-input{
-         height:30px;
-         border: 1px solid #67686a;
-         padding: 10px 5px;
-         font-size: medium;
-         &:focus{
-             outline: none;
-             box-shadow: none;
-         }
-     }
+.landing-top-drop-down-menu {
+  width: 100% !important;
+  border: 1px solid #6b522d;
+  background: #8a6b41;
+  text-align: left;
+  button {
+    color: #ffffff;
+    border-bottom: 1px solid #6b522d;
+    &:hover {
+      background: #d0d0d1;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .landing-top-drop-down-input {
+    height: 30px;
+    border: 1px solid #67686a;
+    padding: 10px 5px;
+    font-size: medium;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
 }
 $bg-colorList:
     "first-bg" #c79c69,
