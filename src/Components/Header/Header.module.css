@@ -128,7 +128,7 @@
 @media (max-width: 915px) {
     .header-options {
         width: 80%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
 
     }
 }
