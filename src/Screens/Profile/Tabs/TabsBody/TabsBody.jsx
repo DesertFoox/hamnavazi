@@ -58,8 +58,7 @@ const TabsBody = ({ activeTab }) => {
   return (
     <Fragment>
       <TabContent
-        className={`${ProfileStyle.bg_opa_white}`}
-        className={`py-50  `}
+        className={`py-50  ${ProfileStyle.bg_opa_white}`}
         activeTab={activeTab}
       >
         <TabPane tabId="1">
@@ -247,19 +246,7 @@ const TabsBody = ({ activeTab }) => {
               </div>
             </div>
           </div>
-     
-        </TabPane>
-        <TabPane tabId="2">
-          <NaveBar naveBarData={NaveBarTitles.Tab2} />
-          <Event />
-        </TabPane>
-        <TabPane tabId="3">
-          <NaveBar naveBarData={NaveBarTitles.Tab3} />
-          <div className={`container mt-ssm`}>
-            <Gallery />
-          </div>
-        </TabPane>
-        <div className="flex justify-content-center">
+          <div className="flex justify-content-center">
             <img
               className="ml-ssm mb-ssm"
               src={
@@ -276,6 +263,31 @@ const TabsBody = ({ activeTab }) => {
               alt=""
             />
           </div>
+        </TabPane>
+        <TabPane tabId="2">
+          <NaveBar naveBarData={NaveBarTitles.Tab2} />
+          <Event />
+          <div className="flex mt-sm justify-content-center">
+            <img
+              className="ml-ssm mb-ssm"
+              src={require("../../../../Assets/Images/plus.svg").default}
+              alt=""
+            />
+          </div>
+        </TabPane>
+        <TabPane tabId="3">
+          <NaveBar naveBarData={NaveBarTitles.Tab3} />
+          <div className={`container mt-ssm`}>
+            <Gallery />
+          </div>
+          <div className="flex  mt-sm justify-content-center">
+            <img
+              className="ml-ssm mb-ssm"
+              src={require("../../../../Assets/Images/plus.svg").default}
+              alt=""
+            />
+          </div>
+        </TabPane>
       </TabContent>
     </Fragment>
   );
