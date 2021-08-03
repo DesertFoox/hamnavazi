@@ -70,7 +70,7 @@ const Landing = () => {
               ! Here,the first language is music
             </h2>
             <div
-              className={`${LandingStyle.selectSection} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 flex flex-row mt-5 justify-content-center`}
+              className={`${LandingStyle.selectSection} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 flex flex-row mt-5 justify-content-center`}
             >
               {testSelectOption?.map((item, index) => (
                 <div className="mr-ssm  mt-ssm md:mt-ssm">
