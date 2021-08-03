@@ -7,8 +7,16 @@ import ProfileStyle from "../../../../Assets/Style/profile.module.scss";
 import { useLocation } from "react-router-dom";
 
 const TabsBody = ({ activeTab }) => {
-  const [showbg, setShowbg] = useState(false);
   const location = useLocation();
+  const [showedit, setShowedit] = useState(false);
+
+  const checkWidth = () => {
+    window.innerWidth < 640 ? setShowedit(true) : setShowedit(false);
+  };
+
+  useEffect(() => {
+    checkWidth();
+  });
 
   const NaveBarTitles = {
     Tab1: {
@@ -47,25 +55,11 @@ const TabsBody = ({ activeTab }) => {
     },
   };
 
-  const checkUrl = () => {
-    console.log(location.pathname);
-    if (
-      location.pathname.toLowerCase() == "/profile#profile"
-    ) {
-      setShowbg(true);
-    } else {
-      setShowbg(false);
-    }
-  };
-
-  useEffect(() => {
-    checkUrl();
-  }, []);
-
   return (
     <Fragment>
       <TabContent
-        className={`py-50  ${showbg && ProfileStyle.bg_opa_white}`}
+        className={`${ProfileStyle.bg_opa_white}`}
+        className={`py-50  `}
         activeTab={activeTab}
       >
         <TabPane tabId="1">
@@ -137,7 +131,7 @@ const TabsBody = ({ activeTab }) => {
                   <p>Contact Info</p>
                 </div>
               </div>
-              <div className="col-span-11 py-4 px-5">
+              <div id="callinfo" className="col-span-11 py-4 px-5">
                 <div className="email mb-2rm">
                   <div className="grid grid-cols-12 ">
                     <div className="col-span-11">
@@ -188,14 +182,31 @@ const TabsBody = ({ activeTab }) => {
                 </div>
               </div>
 
-              <div className="col-span-4 sm:col-span-6 py-4">
+              <div className="col-span-5 sm:col-span-6 py-4">
                 <div className="saz mb-ssm">
-                  <p className="text-textcolor text-13">
-                    ساز اصلی | Main instruments{" "}
-                    <Badge className="bg-572a47 mr-ssm rounded-full">
-                      حرفه ای | Pro
-                    </Badge>
-                  </p>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-11">
+                      <div className="text-textcolor text-13">
+                        ساز اصلی | Main instruments{" "}
+                        <Badge className="bg-572a47 mr-ssm rounded-full">
+                          حرفه ای | Pro
+                        </Badge>
+                      </div>
+                    </div>
+                    <div className="col-span-1">
+                      {showedit && (
+                        <img
+                          className=""
+                          src={
+                            require("../../../../Assets/Images/profile/Edit.svg")
+                              .default
+                          }
+                          alt=""
+                        />
+                      )}
+                    </div>
+                  </div>
+
                   <p className="text-black text-13"> _تار | Tar</p>
                   <p className="text-black text-13">_1988 | 1366</p>
                   <p className="text-black text-13">
@@ -217,13 +228,15 @@ const TabsBody = ({ activeTab }) => {
                       </p>
                     </div>
                     <div className="col-span-1">
-                      <img
-                        src={
-                          require("../../../../Assets/Images/profile/Edit.svg")
-                            .default
-                        }
-                        alt=""
-                      />
+                      {showedit === false && (
+                        <img
+                          src={
+                            require("../../../../Assets/Images/profile/Edit.svg")
+                              .default
+                          }
+                          alt=""
+                        />
+                      )}
                     </div>
                   </div>
 
@@ -234,6 +247,7 @@ const TabsBody = ({ activeTab }) => {
               </div>
             </div>
           </div>
+     
         </TabPane>
         <TabPane tabId="2">
           <NaveBar naveBarData={NaveBarTitles.Tab2} />
@@ -246,19 +260,22 @@ const TabsBody = ({ activeTab }) => {
           </div>
         </TabPane>
         <div className="flex justify-content-center">
-          <img
-            className="ml-ssm mb-ssm"
-            src={require("../../../../Assets/Images/profile/share.svg").default}
-            alt=""
-          />
-          <img
-            className="mb-ssm"
-            src={
-              require("../../../../Assets/Images/profile/Download.svg").default
-            }
-            alt=""
-          />
-        </div>
+            <img
+              className="ml-ssm mb-ssm"
+              src={
+                require("../../../../Assets/Images/profile/share.svg").default
+              }
+              alt=""
+            />
+            <img
+              className="mb-ssm"
+              src={
+                require("../../../../Assets/Images/profile/Download.svg")
+                  .default
+              }
+              alt=""
+            />
+          </div>
       </TabContent>
     </Fragment>
   );

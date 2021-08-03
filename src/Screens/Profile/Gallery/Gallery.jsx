@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { Badge } from "reactstrap";
 
 import ProfileSideNave from "../SideNav/ProfileSideNave";
@@ -9,20 +9,22 @@ import "../MyEvents/event.css";
 
 const Gallery = () => {
   const [modal, setModal] = useState(false);
-  const [showImage, setShowImage] = useState(false);
+  const [showImage, setShowImage] = useState(true);
+  const [showGallery, setShowGallery] = useState(true);
+
   const toggle = () => setModal(!modal);
 
   const checkWidth = () => {
     console.log(window.innerWidth);
-    if (window.innerWidth < 400) {
-      setShowImage(true);
-    } else {
+    if (window.innerWidth <= 600) {
       setShowImage(false);
+    } else {
+      setShowImage(true);
     }
   };
   useEffect(() => {
     checkWidth();
-  },[]);
+  });
   return (
     <>
       {" "}
@@ -100,8 +102,23 @@ const Gallery = () => {
                   <p className="text-707070 text-12">Haft-e. | میدان .</p>
                   <p className="text-707070 text-12">Iran | ایـران </p>
                 </div>
+                <div
+                  className={`float-right`}
+                  onClick={() => setShowGallery(!showGallery)}
+                >
+                  <img
+                    className={` transition duration-500 transform ${
+                      showGallery && "rotate-180"
+                    }`}
+                    src={
+                      require("../../../Assets/Images/gallery/arrowup.svg")
+                        .default
+                    }
+                    alt=""
+                  />
+                </div>
               </div>
-              {showImage === true && (
+              {showImage && (
                 <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
                   <img
                     src={
@@ -117,37 +134,49 @@ const Gallery = () => {
           </div>
         </div>
         <div className="grid py-4 px-4 grid-cols-1 hidden sm:hidden md:grid  sm:grid-cols-2 justify-items-center  sm:justify-items-center s md:grid-cols-2 lg:grid-cols-4">
-          <div
-            onClick={() => toggle()}
-            className="bg-white shadow-md grid justify-items-center  event-image-holder rounded"
-          >
-            <img
-              src={require("../../../Assets/Images/profile/Event.webp").default}
-              alt="event"
-              className="object-contain event-image"
-            />
-          </div>
-          <div className="bg-white  shadow-md grid justify-items-center  event-image-holder rounded">
-            <img
-              src={require("../../../Assets/Images/profile/Event.webp").default}
-              alt="event"
-              className="object-contain event-image"
-            />
-          </div>
-          <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
-            <img
-              src={require("../../../Assets/Images/profile/Event.webp").default}
-              alt="event"
-              className="object-contain event-image"
-            />
-          </div>
-          <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
-            <img
-              src={require("../../../Assets/Images/profile/Event.webp").default}
-              alt="event"
-              className="object-contain event-image"
-            />
-          </div>
+          {showGallery && (
+            <Fragment>
+              <div
+                onClick={() => toggle()}
+                className="bg-white shadow-md grid justify-items-center  event-image-holder rounded"
+              >
+                <img
+                  src={
+                    require("../../../Assets/Images/profile/Event.webp").default
+                  }
+                  alt="event"
+                  className="object-contain event-image"
+                />
+              </div>
+              <div className="bg-white  shadow-md grid justify-items-center  event-image-holder rounded">
+                <img
+                  src={
+                    require("../../../Assets/Images/profile/Event.webp").default
+                  }
+                  alt="event"
+                  className="object-contain event-image"
+                />
+              </div>
+              <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
+                <img
+                  src={
+                    require("../../../Assets/Images/profile/Event.webp").default
+                  }
+                  alt="event"
+                  className="object-contain event-image"
+                />
+              </div>
+              <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
+                <img
+                  src={
+                    require("../../../Assets/Images/profile/Event.webp").default
+                  }
+                  alt="event"
+                  className="object-contain event-image"
+                />
+              </div>
+            </Fragment>
+          )}
         </div>
         <div className="eventdown bg-e8e8e9 py-2 px-4 flex justify-between">
           <div className="categories-event mt-2 mb-3">
@@ -165,7 +194,9 @@ const Gallery = () => {
             <div
               className={`${style["proflie-options-box"]} mt-2 mx-3 row d-flex`}
             >
-              <div className={`${style["proflie-options-col"]} col-3`}>
+              <div
+                className={`${style["proflie-options-col"]} p-zero sm:px-ssm col-6 col-md-3 col-lg-3`}
+              >
                 <img
                   className={`${style["proflie-options-icon"]} img-fluid `}
                   src={
@@ -175,7 +206,9 @@ const Gallery = () => {
                 />
               </div>
 
-              <div className={`${style["proflie-options-col"]} col-3`}>
+              <div
+                className={`${style["proflie-options-col"]} p-zero sm:px-ssm col-6 col-sm-3 col-md-3 col-lg-3`}
+              >
                 <img
                   className={`${style["proflie-options-icon"]} img-fluid `}
                   src={
@@ -186,7 +219,9 @@ const Gallery = () => {
                 />
               </div>
 
-              <div className={`${style["proflie-options-col"]} col-3`}>
+              <div
+                className={`${style["proflie-options-col"]} p-zero sm:px-ssm col-6 col-sm-3 col-md-3 col-lg-3`}
+              >
                 <img
                   className={`${style["proflie-options-icon"]} img-fluid `}
                   src={
@@ -195,7 +230,9 @@ const Gallery = () => {
                   alt=""
                 />
               </div>
-              <div className={`${style["proflie-options-col"]} col-3`}>
+              <div
+                className={`${style["proflie-options-col"]} p-zero sm:px-ssm col-6 col-sm-3 col-md-3 col-lg-3`}
+              >
                 <img
                   className={`${style["proflie-options-icon"]} img-fluid `}
                   src={

@@ -70,10 +70,10 @@ const Landing = () => {
               ! Here,the first language is music
             </h2>
             <div
-              className={`${LandingStyle.selectSection} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center`}
+              className={`${LandingStyle.selectSection} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 flex flex-row mt-5 justify-content-center`}
             >
               {testSelectOption?.map((item, index) => (
-                <div className="mr-ssm  mt-ssm md:mt-zero">
+                <div className="mr-ssm  mt-ssm md:mt-ssm">
                   <ButtonDropdown
                     className="bg-buttonbrown border-b522d border-2  rounded-md"
                     size="md"
@@ -128,7 +128,7 @@ const Landing = () => {
       <div className={`${LandingStyle.Chosemsi} h-md`}>
         <section className={`${LandingStyle.choseyourmusi} h-zero container`}>
           <div className="grid justify-items-center">
-            <h2 className="text-797a7c  mt-sm text-md md:text-lg">
+            <h2 className="text-797a7c  mt-sm text-md md:text-1half1">
               موزیسین مورد علاقه خود را پیدا کنید | Find your desired musician
             </h2>
           </div>

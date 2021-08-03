@@ -40,6 +40,7 @@ module.exports = {
       C4b4a4c: "#4b4a4c",
     },
     fontSize: {
+      "1half1":"1.6rem",
       "1half":"1.5rem",
       1: "1rem",
       2: "2rem",
@@ -92,10 +93,11 @@ module.exports = {
       8: "8px",
     },
     spacing: {
-      zero: "0",
+      zero: "0 !important",
       sssm: ".5rem",
       rem2: "2rem ",
-      ssm: "1rem",
+      ssm: "1rem !important",
+
       sm: "3rem ",
       md: "9rem",
       md2: "14rem",

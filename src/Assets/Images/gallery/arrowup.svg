@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <filter id="d3g1boor3a" width="48" height="48" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g>
+        <g>
+            <g filter="url(#d3g1boor3a)" transform="translate(9 6) matrix(1, 0, 0, 1, -9, -6)">
+                <path fill="#fff" fill-rule="evenodd" d="M15 0A15 15 0 1 1 0 15 15.005 15.005 0 0 1 15 0z" transform="translate(9 6)"/>
+            </g>
+            <path fill="#929396" d="M282.257 362.2l5.07-5.07 5.07 5.07a.891.891 0 0 0 1.26-1.26l-5.7-5.67a.87.87 0 0 0-1.26 0l-5.7 5.67a.891.891 0 1 0 1.26 1.26z" transform="translate(9 6) translate(-272.328 -344.35)"/>
+        </g>
+    </g>
+</svg>
