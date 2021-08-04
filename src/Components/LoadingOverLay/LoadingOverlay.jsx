@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Overlay.module.css";
+import styles from "./Overlay.module.scss";
 
 const LoadingOverlay = (props) => {
   return (
