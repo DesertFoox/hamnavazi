@@ -73,12 +73,9 @@ const SearchTable = ({
                 {...headerGroup.getHeaderGroupProps()}
               >
                 {headerGroup.headers.map((column, index) => (
-                  <th
-                    className="text-transparent py-3"
-                    {...column.getHeaderProps()}
-                  >
+                  <th className=" py-3" {...column.getHeaderProps()}>
                     <div className="d-flex justify-content-center align-items-center">
-                      {column.render("Header")} {index}
+                      {column.render("Header")}
                     </div>
                     {/* {column.canResize && (
                       <div

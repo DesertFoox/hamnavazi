@@ -69,9 +69,11 @@ const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
                     id="caret"
                     className={`px-sm  text-1 border-none rounded-md  ${
                       item.options
-                        ? LandingStyle.selectbuttonWidth
-                        : LandingStyle.searchbuttonwidth
-                    }  ${item.options ? "" : "border-dark_gh"}  bg-dark_buttonbrown`}
+                        ? style.selectbuttonWidth
+                        : style["search-buttonWidth"]
+                    }  ${
+                      item.options ? "" : "border-dark_gh"
+                    }  bg-dark_buttonbrown`}
                   >
                     {item.title}
                   </Button>
@@ -79,16 +81,16 @@ const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
                     <>
                       <DropdownToggle
                         split
-                        className={`bg-dark_selectbrown  border-dark_gh ${LandingStyle.selectbuttonborder}`}
+                        className={`bg-dark_selectbrown  border-dark_gh ${style.selectbuttonborder}`}
                       />
                       <DropdownMenu
-                        className={`${LandingStyle["landing-top-drop-down-menu"]}`}
+                        className={` ${style["top-drop-down-menu"]}`}
                       >
                         <DropdownItem header>
                           {" "}
                           <Input
                             type="text"
-                            className={`${LandingStyle["landing-top-drop-down-input"]} text-1 `}
+                            className={`${style["top-drop-down-input"]} text-1 `}
                             placeholder="search"
                           />{" "}
                         </DropdownItem>

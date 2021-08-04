@@ -12,14 +12,15 @@
     }
 
 .selectbuttonWidth {
-    width: 9.5rem;
-    /* border: 1px solid #67686a; */
+    border: none;
     outline: none;
+      height: 2rem;
+  width: 13rem;
 
 }
 .search-buttonWidth {
-    width: 12rem;
-    /* border: 1px solid #67686a; */
+  width: 14.8rem !important;
+  height: 2.4rem !important;
     outline: none;
 
 }
@@ -28,7 +29,7 @@
     border-top-right-radius: 6px !important;
     border-bottom-right-radius: 6px !important;
     /* border: 1px solid #67686a; */
-    padding: 0 0.8rem;
+    // padding: 0 0.8rem;
     outline: none;
     border-left: 0;
     span{
@@ -39,7 +40,7 @@
 .top-drop-down-menu{
     width:100% !important;
     border: 1px solid #67686a;
-    background:#818385;
+    background:#818385 !important;
     text-align: left;
      button{
         

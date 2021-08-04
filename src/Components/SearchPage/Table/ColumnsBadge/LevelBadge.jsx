@@ -19,7 +19,7 @@ const LevelBadge = ({
   return (
     <Fragment>
       <Badge
-        className={`${styled["table-body-badge"]} py-1 text-md ${
+        className={`${styled["table-body-badge"]} py-1 text-md  ${
           badgeColor[Level?.LevelNumber]
         }`}
         color="warning"
