@@ -1,3 +1,11 @@
+.register-bg{
+  height:auto;
+  background-image: url(../../Assets/Images/register/hamnavaz-logo.svg),url(../../Assets/Images/register/Layer-1.svg),url(../../Assets/Images/register/Layer-2.svg);
+  background-repeat: no-repeat;
+  background-position: 98% 40px,left -2px,100% 100%;
+  background-size: 324px auto,18% auto,14% auto;
+  border: 1px solid transparent;
+}
 .registerbtn-padding {
   padding: 7px 16px 6px;
 }
@@ -16,4 +24,93 @@
 .khat{
     border-bottom: 1px solid #eec490;
     padding-bottom: 2rem;
+  }
+.field-required{
+  border-bottom: 1px solid #eec490;
+  padding-bottom: 2rem;
+  position: relative;
+  
+  .is-required::before {
+    content: "*";
+    display: block;
+    position: absolute;
+    right: -2%;
+    color: #da0b0b;
+  }
 }
+
+
+.field-help{
+    border-bottom: 1px solid #eec490;
+    padding-bottom: 2rem;
+    position: relative;
+    
+    // .show-help::after {
+    //   content: "ss";
+    //   background-image: url(../../Assets/Images/register/help.svg);
+    //   background-repeat: no-repeat;
+    //   background-position: 50% 50%;
+    //   background-size: auto;
+    //   display: block;
+    //   position: absolute;
+    //   // right: -2%;
+    // }
+  }
+  .show-help{
+    width:25px;
+    height: 25px;
+    display:inline;
+    margin-right: 0.5rem;
+
+  }
+  .Completion-icon{
+    display:inline;
+    margin-right: 0.8rem;
+    background:#ffffff;
+    border-radius: 100%;
+    padding:1px;
+     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+     color:#b6b8bb;
+     width:25px;
+     height: 25px;
+
+  }
+
+  @media screen and (max-width: 1300px){
+    .register-bg{
+          background-size: 280px auto,15% auto,14% auto;
+    }
+  }
+  @media screen and (max-width: 1200px){
+    .register-bg{
+          background-size: 240px auto,15% auto,14% auto;
+    }
+  }
+  @media screen and (max-width: 1000px){
+    
+    .register-bg{
+      background-position: center 1% ,left -2px,100% 100%;
+      background-size: 241px auto,15% auto,14% auto;
+    }
+
+
+  }
+  @media screen and (max-width: 500px){
+    
+    .register-bg{
+    background-position: 38% 1% ,left -2px,100% 100%;
+    background-size: 195px auto,15% auto,14% auto;
+}
+
+
+  }
+  @media screen and (max-width: 400px){
+    
+    .register-bg{
+       background-image: url(../../Assets/Images/register/hamnavaz-logo.svg),url(../../Assets/Images/register/Layer-2.svg);
+    background-position: 4% 1% ,100% 100%;
+    background-size: 177px auto,14% auto;
+}
+
+
+  }
