@@ -1,5 +1,5 @@
 .top-SearchPage {
-    height: 30rem;
+    min-height: 30rem;
     background: url(../../Assets/Images/search/search-bg-sm.png) no-repeat 50%;
     background-size: cover;
 }
@@ -39,12 +39,18 @@
     }
 
 }
+@media screen and (max-width: 640px){
+    .top-SearchPage{
+        // min-height: 38rem;
+    }
+
+}
 @media screen and (max-width: 576px){
     .Chosemsi {
         min-height:1300px;
     }
     .top-SearchPage{
-        height: 38rem;
+        min-height: 48rem;
     }
 
 }

@@ -12,19 +12,19 @@ import style from "./SearchTop.module.scss";
 const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
   return (
     <Fragment>
-      <section className={`${style["landingtopsection"]} container `}>
+      <section className={`${style["top-section"]} container `}>
         <div
-          className={`${style["search-TopCenter-option"]} grid justify-items-center mt-md2 `}
+          className={`${style["search-TopCenter-option"]} grid justify-items-center  `}
         >
           <h2 className="text-white ">اینجا زبان نخست موسیقی است !</h2>
           <h2 className="opacity-75 text-white">
             ! Here,the first language is music
           </h2>
           <div
-            className={`${style["selectSection"]} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 flex flex-row mt-5 justify-content-center`}
+            className={`${style["select-Section"]} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 flex flex-row my-5 justify-content-center`}
           >
             {selectOptionData?.map((item, index) => (
-              <div className="mr-ssm mt-ssm md:mt-zero">
+              <div className="mr-ssm mt-ssm md:mt-ssm lg:mr-ssm">
                 <ButtonDropdown
                   className="bg-dark_buttonbrown border-2 
                   border-dark_gh rounded-md"
@@ -64,13 +64,13 @@ const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
                 </ButtonDropdown>
               </div>
             ))}
-            <div className="mr-ssm mt-ssm md:mt-zero">
+            <div className="mr-ssm mt-ssm md:mt-ssm">
               <Button
                 size="md"
                 id="caret"
                 className={`px-sm border-2 
                     border-dark_gh  
-                     rounded-md ${style["selectbuttonWidth"]} bg-dark_buttonbrown`}
+                     rounded-md ${style["search-buttonWidth"]} bg-dark_buttonbrown`}
               >
                 {" "}
                 جستجو | Search

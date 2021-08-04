@@ -1,17 +1,24 @@
-.top-SearchPage {
-    height: 30rem;
-    background: url(../../../Assets/Images/search/search-bg-sm.png) no-repeat 50%;
-    background-size: cover;
-    padding-bottom: 30px;
-}
 
-.landingtopsection {
+
+.top-section {
     margin-top: 0;
     border: 1px solid transparent;
 }
 
+    .search-TopCenter-option {
+        border: 1px solid transparent;
+        margin-top: 12rem;
+
+    }
+
 .selectbuttonWidth {
     width: 9.5rem;
+    /* border: 1px solid #67686a; */
+    outline: none;
+
+}
+.search-buttonWidth {
+    width: 12rem;
     /* border: 1px solid #67686a; */
     outline: none;
 
@@ -59,31 +66,47 @@
 }
 
 
-@media screen and (max-width:576px) {
-    .top-SearchPage {
-        height: 45rem
-    }
+@media screen and (max-width:768px) {
+ .search-TopCenter-option{
+     margin-top: 14rem;
+     h2{
+         font-size: large;
+         margin-bottom: 1rem;
+     }
+ }
+}
+@media screen and (max-width:640px) {
 
     // .search-TopCenter-option {
     //     margin-top: 20rem;
     // }
 }
-@media screen and (max-width:470px) {
+@media screen and (max-width:510px) {
+
+    // .top-SearchPage {
+    //     height: 45rem
+    // }
     .search-TopCenter-option {
         margin-top: 20rem;
     }
+        // .search-TopCenter-option {
+    //     margin-top: 20rem;
+    // }
+}
+@media screen and (max-width:470px) {
+    // .search-TopCenter-option {
+    //     margin-top: 20rem;
+    // }
 
     // .search-TopCenter-option {
     //     
     // }
 }
 @media screen and (max-width:470px) {
-    .search-TopCenter-option {
-        margin-top: 20rem;
-    }
-    .top-SearchPage {
-        height: 48rem
-    }
+    // .search-TopCenter-option {
+    //     margin-top: 20rem;
+    // }
+ 
     // .search-TopCenter-option {
     //     
     // }
