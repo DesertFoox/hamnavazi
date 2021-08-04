@@ -22,6 +22,8 @@ import {
 import SiteBaner from "../../Components/SiteBaner/SiteBaner";
 import SearchTop from "../../Components/SearchPage/Top/SearchTop";
 import SearchTable from "../../Components/SearchPage/Table/SearchTable";
+import { columns } from "../../Components/SearchPage/Table/tableListColumns";
+import { tableData } from "../../Components/SearchPage/Table/tableData";
 import Filter from "../../Components/SearchPage/Filter/Filter";
 import style from "./SearchPage.module.scss";
 const SearchPage = () => {
@@ -66,59 +68,13 @@ const SearchPage = () => {
     { id: 3, title: "دستـاوردهـا  |  Achievements" },
     { id: 4, title: "کلیـدهـا، زمیـنه‌هـا  |  Badges, Keywords", icon: true },
   ];
+
   const tableHeadTitles = [
     "نـام کـاربـری  |  Username",
     "مکـان  |  Location",
     "ســاز اصلی  |  Main Instrument",
     "سطـح  |  Level",
     "سـبـک  |  Style",
-  ];
-  const tableBodyData = [
-    {
-      UserId: 1,
-      UserImg: "../../Assets/Images/profile/user/small/1.jpg",
-      UserName: "مهـرداد خضـریـان  |  Mehrdad Khezrian",
-      Location: "تهـران  |  Tehran",
-      MainInstrument: "گیـتـار  |  Guitar",
-      Level: { title: "مبتدی  |  Beginner", LevelNumber: 0 },
-      Style: "کـلاسیـک  |  Classical",
-    },
-    {
-      UserId: 2,
-      UserImg: null,
-      UserName: "مهـرداد خضـریـان  |  Mehrdad Khezrian",
-      Location: "تهـران  |  Tehran",
-      MainInstrument: "گیـتـار  |  Guitar",
-      Level: { title: "مبتدی  |  Beginner", LevelNumber: 1 },
-      Style: "کـلاسیـک  |  Classical",
-    },
-    {
-      UserId: 3,
-      UserImg: null,
-      UserName: "مهـرداد خضـریـان  |  Mehrdad Khezrian",
-      Location: "تهـران  |  Tehran",
-      MainInstrument: "گیـتـار  |  Guitar",
-      Level: { title: "مبتدی  |  Beginner", LevelNumber: 2 },
-      Style: "کـلاسیـک  |  Classical",
-    },
-    {
-      UserId: 4,
-      UserImg: null,
-      UserName: "مهـرداد خضـریـان  |  Mehrdad Khezrian",
-      Location: "تهـران  |  Tehran",
-      MainInstrument: "گیـتـار  |  Guitar",
-      Level: { title: "مبتدی  |  Beginner", LevelNumber: 3 },
-      Style: "کـلاسیـک  |  Classical",
-    },
-    {
-      UserId: 5,
-      UserImg: null,
-      UserName: "مهـرداد خضـریـان  |  Mehrdad Khezrian",
-      Location: "تهـران  |  Tehran",
-      MainInstrument: "گیـتـار  |  Guitar",
-      Level: { title: "مبتدی  |  Beginner", LevelNumber: 3 },
-      Style: "کـلاسیـک  |  Classical",
-    },
   ];
   const badgeColor = [
     "bg bg-warning",
@@ -145,15 +101,15 @@ const SearchPage = () => {
   };
   const customPageSize = 4;
   const pageCountList =
-    tableBodyData.length % 4 == 0
-      ? tableBodyData.length / 4
-      : parseInt(tableBodyData.length / 4) + 1;
+    tableData.length % 4 == 0
+      ? tableData.length / 4
+      : parseInt(tableData.length / 4) + 1;
   console.log(pageCountList);
   const onPageChanges = (page) => {
     const pageSize = 4;
     const currentDataList = [];
-    if (tableBodyData.length > 0) {
-      const data = tableBodyData.map((item, index) => {
+    if (tableData.length > 0) {
+      const data = tableData.map((item, index) => {
         if (
           (page + 1) * pageSize - 1 >= index &&
           (page + 1) * pageSize - pageSize <= index
@@ -177,7 +133,7 @@ const SearchPage = () => {
           isOpen={isOpen}
         />
       </div>
-      <section className={`${style["Chosemsi"]} h-md`}>
+      <section className={`${style["Chosemsi"]} `}>
         <Filter
           filterButton={filterButton}
           setfilterButton={setfilterButton}
@@ -187,13 +143,15 @@ const SearchPage = () => {
         />
         <SearchTable
           tableHeadTitles={tableHeadTitles}
-          tableBodyData={tableBodyData}
+          tableData={tableData}
           badgeColor={badgeColor}
           customPageSize={customPageSize}
           pageCountList={pageCountList}
           onPageChanges={onPageChanges}
           setInitialPage={setInitialPage}
           initialPage={initialPage}
+          isLoading={false}
+          columns={columns}
         />
       </section>
     </React.Fragment>

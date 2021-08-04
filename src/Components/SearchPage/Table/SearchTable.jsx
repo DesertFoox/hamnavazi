@@ -1,26 +1,99 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useMemo } from "react";
 import ReactPaginate from "react-paginate";
 import { ChevronsLeft, ChevronsRight, User } from "react-feather";
-// import { Table } from "react-table";
+import {
+  useFilters,
+  useFlexLayout,
+  usePagination,
+  useResizeColumns,
+  useTable,
+} from "react-table";
 import { Badge, Table } from "reactstrap";
 import style from "./SearchTable.module.scss";
 
 const SearchTable = ({
   tableHeadTitles,
-  tableBodyData,
+  tableData,
   badgeColor,
   customPageSize,
   pageCountList,
   onPageChanges,
-  setInitialPage,
-  initialPage,
+
+  isLoading,
+  columns,
+  children,
+  setPageSize,
+  getCustomProps,
+  setPageCountList,
+  isSccess,
+  setInitialPage = (val) => {},
+  initialPage = 0,
 }) => {
+  const defaultColumn = useMemo(
+    () => ({
+      maxWidth: 400,
+    }),
+    []
+  );
+  const defaultData = useMemo(() => [], []);
+  const { getTableProps, getTableBodyProps, headerGroups, page, prepareRow } =
+    useTable(
+      {
+        columns,
+        data: isLoading ? defaultData : tableData,
+        defaultColumn,
+      },
+      useResizeColumns,
+      useFilters,
+      usePagination,
+      useFlexLayout
+    );
+  // useEffect(() => {
+  //   if (tableData.length > 0) {
+  //     onPageChanges(0);
+  //   }
+  // }, [tableData, customPageSize]);
+
+  // useEffect(() => {
+  //   setPageCountList(Math.ceil(tableData.length) / customPageSize);
+  // }, [customPageSize]);
   return (
     <Fragment>
       <div className={`${style["table-holder"]}   `}>
-        <Table responsive hover className={`${style["table-box"]} my-3`}>
+        <Table
+          responsive
+          hover
+          {...getTableProps()}
+          className={`${style["table-box"]} my-3 rounded position-relative overflow-hidden`}
+        >
           <thead className={`${style["table-header"]} `}>
-            <tr className={`${style["table-header-tr"]} `}>
+            {headerGroups.map((headerGroup) => (
+              <tr
+                className={`${style["table-header-tr"]} `}
+                {...headerGroup.getHeaderGroupProps()}
+              >
+                {headerGroup.headers.map((column, index) => (
+                  <th
+                    className="text-transparent py-3"
+                    {...column.getHeaderProps()}
+                  >
+                    <div className="d-flex justify-content-center align-items-center">
+                      {column.render("Header")} {index}
+                    </div>
+                    {/* {column.canResize && (
+                      <div
+                        {...column.getResizerProps()}
+                        className={`resizer ${
+                          column.isResizing ? "isResizing" : ""
+                        }`}
+                      />
+                    )} */}
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          {/* <tr className={`${style["table-header-tr"]} `}>
               <th className="text-transparent py-3"></th>
               {tableHeadTitles?.map((item, index) => (
                 <th
@@ -30,10 +103,36 @@ const SearchTable = ({
                   {item}
                 </th>
               ))}
-            </tr>
-          </thead>
-          <tbody className={`${style["table-body"]} `}>
-            {tableBodyData?.map((item, index) => (
+            </tr> */}
+          <tbody
+            className={`${style["table-body"]} position-relative overflow-hidden`}
+            {...getTableBodyProps()}
+          >
+            {page.map((row) => {
+              prepareRow(row);
+              return (
+                <tr
+                  {...row.getRowProps()}
+                  className={`${style["table-body-tr"]} font-black `}
+                >
+                  {row.cells.map((cell) => {
+                    return (
+                      <td
+                        {...cell.getCellProps()}
+                        className={`text-center ${style["table-body-td"]}  d-flex justify-content-center py-4 `}
+                      >
+                        {cell.render("Cell", {
+                          ...getCustomProps,
+                          setInitialPage: setInitialPage,
+                        })}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+          {/* {tableBodyData?.map((item, index) => (
               <tr
                 className={`${style["table-body-tr"]} font-black `}
                 key={index}
@@ -104,8 +203,7 @@ const SearchTable = ({
                     : item?.Style}
                 </td>
               </tr>
-            ))}
-          </tbody>
+            ))} */}
         </Table>
         <div
           className={`${style["table-pagination"]} d-flex justify-content-center`}

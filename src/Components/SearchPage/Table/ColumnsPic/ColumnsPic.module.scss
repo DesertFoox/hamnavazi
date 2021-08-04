@@ -1,0 +1,46 @@
+
+.table-body-pic-box {
+    /* border: 1px solid red; */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fefefe;
+    height: 4rem !important;
+    width: 4rem !important;
+
+
+}
+
+.table-body-icon-box {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fefefe;
+    height: 4rem !important;
+    width: 4rem !important;
+    padding: 1.1rem;
+
+}
+
+.table-body-pic {
+    border-radius: 10px;
+}
+
+@media screen and (max-width:768px){
+.table-body-pic-box {
+    border-radius: 10px;
+    height: 3rem !important;
+    width: 3rem !important;
+
+
+}
+
+.table-body-icon-box {
+    border-radius: 10px;
+    height: 3rem !important;
+    width: 3rem !important;
+    padding: 0.6rem;
+    
+
+}
+}

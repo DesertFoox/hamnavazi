@@ -29,13 +29,13 @@
     background: url(../../Assets/Images/landing/ChoseMusician.jpg) no-repeat 50%;
     background-size: 100% 100%;
     position: relative;
-    min-height: 800px;
+    // min-height: 1500px;
     border: 1px solid transparent;
 }
 
 @media screen and (max-width: 990px){
     .Chosemsi {
-        min-height:1000px;
+        // min-height:1000px;
     }
 
 }
@@ -47,7 +47,7 @@
 }
 @media screen and (max-width: 576px){
     .Chosemsi {
-        min-height:1300px;
+        // min-height:1300px;
     }
     .top-SearchPage{
         min-height: 48rem;
@@ -56,7 +56,7 @@
 }
 @media screen and (max-width: 470px){
     .Chosemsi {
-        min-height:1600px;
+        // min-height:1600px;
     }
         .top-SearchPage{
         height: 44rem;
