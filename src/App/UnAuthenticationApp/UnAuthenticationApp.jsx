@@ -1,16 +1,15 @@
-import React from "react";
+import React, { lazy } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+const Header = lazy(() => import("../../Components/Header/Header"));
+const Footer = lazy(() => import("../../Components/Footer/Footer"));
+const Landing = lazy(() => import("../../Screens/Landing"));
+const SearchPage = lazy(() => import("../../Screens/SearchPage/SearchPage"));
+const Profile = lazy(() => import("../../Screens/Profile/Profile"));
+const Register = lazy(() => import("../../Screens/Auth/Register/Register"));
 
-import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Header/Header";
-
-import Landing from "../../Screens/Landing";
-import SearchPage from "../../Screens/SearchPage/SearchPage";
-import Profile from "../../Screens/Profile/Profile/Profile";
-import MyEvents from "../../Screens/Profile/MyEvents/MyEvents";
-import Gallery from "../../Screens/Profile/Gallery/Gallery";
-import Register from "../../Screens/Auth/Register/Register";
+// import MyEvents from "../../Screens/Profile/MyEvents/MyEvents";
+// import Gallery from "../../Screens/Profile/Gallery/Gallery";
 const UnAuthenticationApp = () => {
   return (
     <Router>
@@ -30,8 +29,8 @@ const UnAuthenticationApp = () => {
                   <Route exact path="/register" component={Register} />
                   <Route exact path="/search" component={SearchPage} />
                   <Route exact path="/profile" component={Profile} />
-                  <Route exact path="/profile/myevents" component={MyEvents} />
-                  <Route exact path="/profile/gallery" component={Gallery} />
+                  {/* <Route exact path="/profile/myevents" component={MyEvents} />
+                  <Route exact path="/profile/gallery" component={Gallery} /> */}
                 </Switch>
                 <Footer />
               </div>
