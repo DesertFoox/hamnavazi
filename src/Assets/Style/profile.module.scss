@@ -17,7 +17,7 @@
   background-size: 100% 100%;
 }
 .bg-white-profile {
-  background: rgba(255, 255, 255, 0.878);
+  background: rgba(255, 255, 255, 0.589);
 }
 
 .identity {
@@ -38,8 +38,21 @@
 .bg_opa_white{
   background: #f5f6f69c  ;
 }
-@media screen and (max-width:990px){
-  .profile {
-  // min-height: 1900px;
+.profile-bg-scroll{
+
+  overflow: hidden scroll;
+    scrollbar-width: none;
+    max-height: 1990px;
+    border: 1px solid transparent;
+}
+  .profile-tab-content{
+    height:2060px;
+  }
+@media screen and (max-width:540px){
+  .profile-tab-content{
+    height:2000px;
+  }
+  .profile-bg-scroll {
+  max-height: 1900px;
 }
 }
