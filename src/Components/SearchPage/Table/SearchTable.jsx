@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { ChevronsLeft, ChevronsRight, User } from "react-feather";
+// import { Table } from "react-table";
 import { Badge, Table } from "reactstrap";
 import style from "./SearchTable.module.scss";
 
@@ -17,7 +18,7 @@ const SearchTable = ({
   return (
     <Fragment>
       <div className={`${style["table-holder"]}   `}>
-        <Table responsive className={`${style["table-box"]} my-3`}>
+        <Table responsive hover className={`${style["table-box"]} my-3`}>
           <thead className={`${style["table-header"]} `}>
             <tr className={`${style["table-header-tr"]} `}>
               <th className="text-transparent py-3"></th>

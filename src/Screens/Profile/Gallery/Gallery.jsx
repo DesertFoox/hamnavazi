@@ -5,7 +5,7 @@ import ProfileSideNave from "../SideNav/ProfileSideNave";
 import Slider from "../../../Components/Slider/Slider";
 
 import style from "../SideNav/ProfileSideNave.module.scss";
-import "../MyEvents/event.css";
+import "../MyEvents/event.module.scss";
 
 const Gallery = () => {
   const [modal, setModal] = useState(false);

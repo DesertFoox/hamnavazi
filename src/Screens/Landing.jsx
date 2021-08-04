@@ -56,6 +56,7 @@ const Landing = () => {
       title: "جستجو  | Search",
     },
   ];
+  const imgg = "melodi.jpg";
 
   return (
     <React.Fragment>
@@ -159,7 +160,7 @@ const Landing = () => {
             <div className={` ${LandingStyle.secol} p-0`}>
               <img
                 className={`${LandingStyle["fullimage"]}`}
-                src={require("../Assets/Images/landing/melodi.jpg").default}
+                src={require(`../Assets/Images/landing/${imgg}`).default}
                 alt=""
               />
             </div>

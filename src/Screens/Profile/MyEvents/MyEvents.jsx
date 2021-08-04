@@ -4,7 +4,7 @@ import { Badge } from "reactstrap";
 import ProfileSideNave from "../SideNav/ProfileSideNave";
 
 import style from "../SideNav/ProfileSideNave.module.scss";
-import "./event.css";
+import "./event.module.scss";
 const MyEvents = () => {
   return (
     <>
