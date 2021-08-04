@@ -12,8 +12,8 @@ const ProfileSideNave = ({ isOpen, windowWidth }) => {
           className={`${style["profile-image"]} img-fluid grid `}
           src={require("../../../Assets/Images/profile/profileImg.png").default}
         />
-        <Card className={`w-100 border-0 pb-sssm`}>
-          <CardBody className={`${style["profile-personality"]}  `}>
+        <Card className={`w-100 border-0 pb-sssm rounded-0`}>
+          <CardBody className={`${style["profile-personality"]} rounded-0 `}>
             <div
               className={`${style["close-icon-box"]} grid justify-items-end`}
               onClick={() => isOpen(windowWidth > 990 ? true : false)}
@@ -120,7 +120,7 @@ const ProfileSideNave = ({ isOpen, windowWidth }) => {
           </CardBody>
         </Card>
       </div>
-      <Card className={`px-ssm border-0 ${style["card-shadow"]}`}>
+      <Card className={`px-ssm border-0 ${style["card-shadow"]} rounded-0`}>
         <div className={` py-ssm row ${style["card-border-bottom"]} `}>
           <div className={`col-6 grid justify-items-start  `}>
             <img
@@ -258,7 +258,7 @@ const ProfileSideNave = ({ isOpen, windowWidth }) => {
       </Card>
       {/* {group-collapse2} */}
       <Card
-        className={`px-ssm border-0 ${style["card2-shadow"]} ${style["bg-fafafa"]} `}
+        className={`px-ssm border-0 ${style["card2-shadow"]} ${style["bg-fafafa"]} rounded-0 `}
       >
         <div className={` py-ssm row ${style["card-border-bottom"]}`}>
           <div className={`col-11 grid justify-items-start  `}>
@@ -335,7 +335,7 @@ const ProfileSideNave = ({ isOpen, windowWidth }) => {
           </div>
         </div>
       </Card>
-      <Card className={`p-ssm border-0  ${style["bg-f1f2f2"]}`}>
+      <Card className={`p-ssm border-0  ${style["bg-f1f2f2"]} rounded-0`}>
         <div className={`row grid justify-items-center  `}>
           <div className={`col-9 grid justify-items-center  px-sssm  `}>
             <input

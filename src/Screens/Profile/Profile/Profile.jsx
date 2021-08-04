@@ -60,15 +60,19 @@ const Profile = () => {
   };
   return (
     <section
-      className={`${ProfileStyle.profile} container-fluid ${ ProfileStyle["profile-bg"]}`}
+      className={`${ProfileStyle.profile} container-fluid ${ProfileStyle["profile-bg"]}`}
     >
-      <div className={`${style[""]} row h-100`}>
+      <div className={`${ProfileStyle["profile-row"]} row h-100`}>
         {" "}
         <div
-          className={`${resizeStyle2()} SideNave  bg-white p-0`}
+          className={`${resizeStyle2()} ${
+            ProfileStyle["SideNave"]
+          }  bg-white p-0`}
           style={sidebarOpen ? { display: "grid" } : { display: "none" }}
         >
           <ProfileSideNave isOpen={setsidebarOpen} windowWidth={windowWidth} />
+          {/* <div className={`${ProfileStyle["sideNave-holder"]}`}>
+          </div> */}
         </div>
         <div className="col-lg-8 p-0">
           <TabsNave screenWidth={windowWidth} isOpen={setsidebarOpen} />

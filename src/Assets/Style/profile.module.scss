@@ -1,5 +1,5 @@
 .profile {
-  min-height: 800px;
+  // min-height: 800px;
   overflow: hidden;
 }
 
@@ -7,6 +7,7 @@
 
   z-index: 15;
   /* position: relative; */
+  background: transparent !important;
 }
 .modoalbg{
   background: #5e5f61f0;
@@ -39,6 +40,6 @@
 }
 @media screen and (max-width:990px){
   .profile {
-  min-height: 1900px;
+  // min-height: 1900px;
 }
 }
