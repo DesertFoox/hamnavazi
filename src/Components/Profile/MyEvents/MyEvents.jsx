@@ -87,7 +87,7 @@ const MyEvents = ({ ProfileStyle }) => {
                     </div>
                   </div>
                   <div
-                    className={`bg-white shadow-md grid justify-items-center  ${EventStyle["event-image-holder"]} rounded`}
+                    className={`bg-white shadow-md grid mt-sm mx-auto justify-items-center ${EventStyle["event-image-holder"]} rounded`}
                   >
                     <img
                       src={
