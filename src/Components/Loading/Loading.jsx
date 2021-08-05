@@ -12,7 +12,7 @@ const Loading = ({ loading }) => {
   let [color, setColor] = useState("#C79C69");
 
   return (
-    <div className="flex justify-center mt-40">
+    <div className="flex justify-center items-center">
       <DotLoader
         color={color}
         loading={loading}
