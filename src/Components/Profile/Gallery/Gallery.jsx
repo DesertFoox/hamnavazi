@@ -40,7 +40,7 @@ const Gallery = ({ ProfileStyle }) => {
                 {showImage === false && (
                   <div
                     onClick={() => toggle()}
-                    className={`bg-white shadow-md grid justify-items-center ${EventStyle["event-image-holder"]} rounded`}
+                    className={`bg-white shadow-md mx-auto mb-ssm grid justify-items-center ${EventStyle["event-image-holder"]} rounded`}
                   >
                     <img
                       src={
