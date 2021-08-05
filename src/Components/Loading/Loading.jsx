@@ -12,15 +12,14 @@ const Loading = ({ loading }) => {
   let [color, setColor] = useState("#C79C69");
 
   return (
-    <div className="flex justify-center items-center">
-      <DotLoader
-        color={color}
-        loading={loading}
-        css={override}
-        width={500}
-        height={10}
-      />
-    </div>
+    <DotLoader
+      className="flex justify-center items-center"
+      color={color}
+      loading={loading}
+      css={override}
+      width={500}
+      height={10}
+    />
   );
 };
 
