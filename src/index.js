@@ -8,7 +8,7 @@ import App from "./App/App";
 import reportWebVitals from "./reportWebVitals";
 import Loading from "./Components/Loading/Loading";
 ReactDOM.render(
-  <Suspense fallback={Loading}>
+  <Suspense fallback={<Loading />}>
     <React.StrictMode>
       <App />
     </React.StrictMode>
