@@ -1,9 +1,9 @@
 import React from "react";
 
-import UnAuthenticationApp from "./UnAuthenticationApp/UnAuthenticationApp";
+import Loading from "../Components/Loading/Loading";
 function App() {
   return (
-    <UnAuthenticationApp />
+    <Loading />
     // <div className="App">
     // </div>
   );
