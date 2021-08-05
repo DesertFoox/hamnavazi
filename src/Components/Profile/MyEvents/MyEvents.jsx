@@ -2,7 +2,7 @@ import React from "react";
 import { Badge } from "reactstrap";
 
 import style from "../SideNav/ProfileSideNave.module.scss";
-import "./event.module.scss";
+import EventStyle from "./event.module.scss";
 const MyEvents = ({ ProfileStyle }) => {
   return (
     <>
@@ -86,14 +86,16 @@ const MyEvents = ({ ProfileStyle }) => {
                       <p className="text-707070 text-12">Iran | ایـران </p>
                     </div>
                   </div>
-                  <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
+                  <div
+                    className={`bg-white shadow-md grid justify-items-center  ${EventStyle["event-image-holder"]} rounded`}
+                  >
                     <img
                       src={
                         require("../../../Assets/Images/profile/Event.webp")
                           .default
                       }
                       alt="event"
-                      className="object-contain event-image"
+                      className={`object-contain ${EventStyle["event-image"]}`}
                     />
                   </div>
                 </div>
@@ -115,7 +117,9 @@ const MyEvents = ({ ProfileStyle }) => {
                 <div
                   className={`${style["proflie-options-box"]} mt-2 mx-3 row d-flex`}
                 >
-                  <div className={`${style["proflie-options-col"]} col-3`}>
+                  <div
+                    className={`${style["proflie-options-col"]} p-zero sm:px-ssm col-6 col-md-3 col-lg-3`}
+                  >
                     <img
                       className={`${style["proflie-options-icon"]} img-fluid `}
                       src={
@@ -126,7 +130,9 @@ const MyEvents = ({ ProfileStyle }) => {
                     />
                   </div>
 
-                  <div className={`${style["proflie-options-col"]} col-3`}>
+                  <div
+                    className={`${style["proflie-options-col"]} p-zero sm:px-ssm col-6 col-sm-3 col-md-3 col-lg-3`}
+                  >
                     <img
                       className={`${style["proflie-options-icon"]} img-fluid `}
                       src={
@@ -137,7 +143,9 @@ const MyEvents = ({ ProfileStyle }) => {
                     />
                   </div>
 
-                  <div className={`${style["proflie-options-col"]} col-3`}>
+                  <div
+                    className={`${style["proflie-options-col"]} p-zero sm:px-ssm col-6 col-sm-3 col-md-3 col-lg-3`}
+                  >
                     <img
                       className={`${style["proflie-options-icon"]} img-fluid `}
                       src={
@@ -147,7 +155,9 @@ const MyEvents = ({ ProfileStyle }) => {
                       alt=""
                     />
                   </div>
-                  <div className={`${style["proflie-options-col"]} col-3`}>
+                  <div
+                    className={`${style["proflie-options-col"]} p-zero sm:px-ssm col-6 col-sm-3 col-md-3 col-lg-3`}
+                  >
                     <img
                       className={`${style["proflie-options-icon"]} img-fluid `}
                       src={

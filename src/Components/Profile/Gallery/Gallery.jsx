@@ -4,7 +4,7 @@ import { Badge } from "reactstrap";
 import Slider from "../../Slider/Slider";
 
 import style from "../SideNav/ProfileSideNave.module.scss";
-import "../MyEvents/event.module.scss";
+import EventStyle from "../MyEvents/event.module.scss";
 
 const Gallery = ({ ProfileStyle }) => {
   const [modal, setModal] = useState(false);
@@ -40,7 +40,7 @@ const Gallery = ({ ProfileStyle }) => {
                 {showImage === false && (
                   <div
                     onClick={() => toggle()}
-                    className="bg-white shadow-md mb-sm grid justify-items-center mx-auto  event-image-holder rounded"
+                    className={`bg-white shadow-md grid justify-items-center ${EventStyle["event-image-holder"]} rounded`}
                   >
                     <img
                       src={
@@ -48,7 +48,7 @@ const Gallery = ({ ProfileStyle }) => {
                           .default
                       }
                       alt="event"
-                      className="object-contain event-image  mt-0 p-3"
+                      className={`object-contain ${EventStyle["event-image"]}`}
                     />
                   </div>
                 )}
@@ -111,15 +111,17 @@ const Gallery = ({ ProfileStyle }) => {
                       </div>
                     </div>
                     {showImage && (
-                      <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
+                      <div
+                        className={`bg-white shadow-md grid justify-items-center ${EventStyle["event-image-holder"]} rounded`}
+                      >
                         <img
                           src={
                             require("../../../Assets/Images/profile/Event.webp")
                               .default
                           }
                           alt="event"
-                          className="object-contain event-image  mt-0 p-3"
-                        />
+                          className={`object-contain ${EventStyle["event-image"]}`}
+                          />
                       </div>
                     )}
                   </div>
@@ -142,12 +144,12 @@ const Gallery = ({ ProfileStyle }) => {
                   />
                 </div>
               </div>
-              <div className="grid py-4 px-4 grid-cols-1 hidden sm:hidden md:grid  sm:grid-cols-2 justify-items-center  sm:justify-items-center s md:grid-cols-2 lg:grid-cols-4">
+              <div className="grid py-4 px-2 grid-cols-1 hidden sm:hidden md:grid  sm:grid-cols-2 justify-items-center  sm:justify-items-center s md:grid-cols-2 lg:grid-cols-4">
                 {showGallery && (
                   <Fragment>
                     <div
                       onClick={() => toggle()}
-                      className="bg-white shadow-md grid justify-items-center ml-ssm  event-image-holder rounded"
+                      className={`bg-white shadow-md grid justify-items-center ${EventStyle["event-image-holder"]} rounded`}
                     >
                       <img
                         src={
@@ -155,37 +157,43 @@ const Gallery = ({ ProfileStyle }) => {
                             .default
                         }
                         alt="event"
-                        className="object-contain event-image mt-2 p-2"
+                        className={`object-contain ${EventStyle["event-image"]}`}
                       />
                     </div>
-                    <div className="bg-white  shadow-md grid justify-items-center ml-ssm event-image-holder rounded">
+                    <div
+                      className={`bg-white shadow-md grid justify-items-center ${EventStyle["event-image-holder"]} rounded`}
+                    >
                       <img
                         src={
                           require("../../../Assets/Images/profile/Event.webp")
                             .default
                         }
                         alt="event"
-                        className="object-contain event-image  mt-2 p-2"
+                        className={`object-contain ${EventStyle["event-image"]}`}
                       />
                     </div>
-                    <div className="bg-white shadow-md grid justify-items-center ml-ssm event-image-holder rounded">
+                    <div
+                      className={`bg-white shadow-md grid justify-items-center ${EventStyle["event-image-holder"]} rounded`}
+                    >
                       <img
                         src={
                           require("../../../Assets/Images/profile/Event.webp")
                             .default
                         }
                         alt="event"
-                        className="object-contain event-image mt-2 p-2"
+                        className={`object-contain ${EventStyle["event-image"]}`}
                       />
                     </div>
-                    <div className="bg-white shadow-md grid justify-items-center  event-image-holder rounded">
+                    <div
+                      className={`bg-white shadow-md grid justify-items-center ${EventStyle["event-image-holder"]} rounded`}
+                    >
                       <img
                         src={
                           require("../../../Assets/Images/profile/Event.webp")
                             .default
                         }
                         alt="event"
-                        className="object-contain event-image  mt-0 p-3"
+                        className={`object-contain ${EventStyle["event-image"]}`}
                       />
                     </div>
                   </Fragment>
