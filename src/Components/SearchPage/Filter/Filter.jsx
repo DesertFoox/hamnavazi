@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { ChevronUp, ChevronDown, HelpCircle, XCircle } from "react-feather";
 import { Badge } from "reactstrap";
+
 import style from "./SearchFilter.module.scss";
 const Filter = ({
   filterButton,

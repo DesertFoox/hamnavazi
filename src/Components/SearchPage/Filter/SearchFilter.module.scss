@@ -10,16 +10,11 @@
     font-size: 14px;
     line-height: 2;
     color: #929396;
-    /* margin-top: 1rem; */
-
 }
 
 .collapse-button {
-    /* border: 1px solid red; */
     height: 1.4rem;
     width: 1.4rem;
-    /* width: 35px;
-    height: 35px; */
     border-radius: 100%;
     background: #fff;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
@@ -31,36 +26,22 @@
     overflow: hidden;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: #fafafa;
-    /* border: 1px solid red; */
     z-index: 8;
-    /* transform: rotatez(270deg);
-
-  position: relative;
-  right: 81.7%;
-  top: 6%; */
     position: absolute;
 
-    /* transform-origin: top right; */
 }
 
 .filter-card-item {
     border-bottom: 1px solid #e8e8e9;
 }
 
-.search-results {
-    /* border: 1px solid red; */
-    /* min-height: 500px; */
-    /* background: rgba(255, 255, 255, 0.219); */
-}
 
 .search-results-top {
-    /* border: 1px solid red; */
     height: 60px;
 }
 
 .filter-badge {
     color: #929396;
-    /* height: 30px; */
     border-radius: 18px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }

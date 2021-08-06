@@ -28,8 +28,6 @@
 .selectbuttonborder {
     border-top-right-radius: 6px !important;
     border-bottom-right-radius: 6px !important;
-    /* border: 1px solid #67686a; */
-    // padding: 0 0.8rem;
     outline: none;
     border-left: 0;
     span{
@@ -76,39 +74,10 @@
      }
  }
 }
-@media screen and (max-width:640px) {
-
-    // .search-TopCenter-option {
-    //     margin-top: 20rem;
-    // }
-}
 @media screen and (max-width:510px) {
 
-    // .top-SearchPage {
-    //     height: 45rem
-    // }
     .search-TopCenter-option {
         margin-top: 20rem;
     }
-        // .search-TopCenter-option {
-    //     margin-top: 20rem;
-    // }
 }
-@media screen and (max-width:470px) {
-    // .search-TopCenter-option {
-    //     margin-top: 20rem;
-    // }
 
-    // .search-TopCenter-option {
-    //     
-    // }
-}
-@media screen and (max-width:470px) {
-    // .search-TopCenter-option {
-    //     margin-top: 20rem;
-    // }
- 
-    // .search-TopCenter-option {
-    //     
-    // }
-}

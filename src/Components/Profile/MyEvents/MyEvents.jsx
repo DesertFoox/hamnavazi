@@ -29,18 +29,6 @@ const MyEvents = ({ ProfileStyle }) => {
                   <div className="time-miladi   ml-ssm text-center">
                     <p className="text-13">1400-02-20</p>
                   </div>
-                  {/* <div
-                      className={`${style["close-icon-box"]} grid justify-items-end`}
-                    >
-                      <img
-                        className={`${style["sideNave-close-icon"]} img-fluid`}
-                        src={
-                          require("../../../Assets/Images/profile/close.png")
-                            .default
-                        }
-                        alt=""
-                      />
-                    </div> */}
                 </div>
                 <p className="text-13 mt-ssm">
                   طرح‌نما یا لورم ایپسوم به نوشتاری آزمایشی و بی‌معنی در صنعت

@@ -6,7 +6,6 @@
 .SideNave {
 
   z-index: 15;
-  /* position: relative; */
   background: transparent !important;
 }
 .modoalbg{
@@ -44,6 +43,9 @@
     scrollbar-width: none;
     max-height: 1990px;
     border: 1px solid transparent;
+    &::-webkit-scrollbar {
+    display: none;
+}
 }
   .profile-tab-content{
     height:2060px;

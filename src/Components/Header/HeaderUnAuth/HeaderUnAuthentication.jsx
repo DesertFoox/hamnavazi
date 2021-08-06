@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import { Input, Label } from "reactstrap";
+import { Input } from "reactstrap";
 
 import { Tooltip } from "reactstrap";
 import styles from "./HeaderUnAuthentication.module.scss";
@@ -51,7 +51,7 @@ const HeaderUnAuthentication = ({ history, logged, setlogged }) => {
               </Link>
               <Tooltip
                 placement="bottom"
-                isOpen={tooltipOpen == "register" ? true : false}
+                isOpen={tooltipOpen === "register" ? true : false}
                 target="register"
                 toggle={() => toggle("register")}
                 className={`text-xs p-3`}
@@ -75,7 +75,7 @@ const HeaderUnAuthentication = ({ history, logged, setlogged }) => {
               </Link>
               <Tooltip
                 placement="bottom"
-                isOpen={tooltipOpen == "login" ? true : false}
+                isOpen={tooltipOpen === "login" ? true : false}
                 target="login"
                 toggle={() => toggle("login")}
                 className={`text-xs p-3`}

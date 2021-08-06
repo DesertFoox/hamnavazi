@@ -1,15 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { TabContent, TabPane, Nav, NavItem, NavLink, Badge } from "reactstrap";
+import { TabContent, TabPane } from "reactstrap";
 import Event from "../../MyEvents/MyEvents";
 import Gallery from "../../Gallery/Gallery";
 import NaveBar from "./NaveBar/NaveBar";
-import ProfileStyle from "../../../../Assets/Style/profile.module.scss";
-
-import { useLocation } from "react-router-dom";
 import Specifications from "../../Specifications/Specifications";
 
+import ProfileStyle from "../../../../Assets/Style/profile.module.scss";
+
 const TabsBody = ({ activeTab }) => {
-  const location = useLocation();
   const [showedit, setShowedit] = useState(false);
 
   const checkWidth = () => {
@@ -62,7 +60,6 @@ const TabsBody = ({ activeTab }) => {
       <TabContent
         className={`py-50 ${ProfileStyle["profile-tab-content"]} `}
         activeTab={activeTab}
-        // style={{ height: "2060px" }}
       >
         <TabPane tabId="1">
           <NaveBar naveBarData={NaveBarTitles.Tab1} />

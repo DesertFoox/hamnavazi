@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Badge } from "reactstrap";
 
 import ProfileSideNave from "../../Components/Profile/SideNav/ProfileSideNave";
 import TabsNave from "../../Components/Profile/Tabs/TabsNaves/TabsNave";
+
 import ProfileStyle from "../../Assets/Style/profile.module.scss";
 import style from "../../Components/Profile/SideNav/ProfileSideNave.module.scss";
 const Profile = () => {
   const [windowWidth, setwindowWidth] = useState(null);
   const [sidebarOpen, setsidebarOpen] = useState(true);
-  const [styledSideNav, setstyledSideNav] = useState(null);
 
-  // if (sidebarOpen && windowWidth < 990) {
-  //   setsidebarOpen(false);
-  // } else if (windowWidth > 990) {
-  //   setsidebarOpen(true);
-  // }
   if (!sidebarOpen && windowWidth > 990) {
     setsidebarOpen(true);
   }
@@ -28,23 +22,10 @@ const Profile = () => {
       updateWidth();
       window.addEventListener("resize", updateWidth);
     }
-  }, []);
-  // const resizeStyle =
-  //   windowWidth &&
-  //   ((windowWidth < 769
-  //     ? style["profile-sideNave"] + " " + "col-6"
-  //     : "col-4") ||
-  //     (windowWidth < 576
-  //       ? style["profile-sideNave"] + " " + "col-6"
-  //       : "col-4"));
-  // useEffect(() => {
-  //   resizeStyle2();
-  // }, [windowWidth]);
-  const resizeStyle2 = () => {
-    // console.log(windowWidth);
+  });
 
+  const resizeStyle2 = () => {
     if (windowWidth > 990) {
-      // setsidebarOpen(true);
       return "col-4";
     } else if (windowWidth <= 990 && windowWidth > 768) {
       return style["profile-sideNave"] + " " + "col-6";
@@ -71,8 +52,6 @@ const Profile = () => {
           style={sidebarOpen ? { display: "grid" } : { display: "none" }}
         >
           <ProfileSideNave isOpen={setsidebarOpen} windowWidth={windowWidth} />
-          {/* <div className={`${ProfileStyle["sideNave-holder"]}`}>
-          </div> */}
         </div>
         <div className="col-lg-8 p-0">
           <TabsNave screenWidth={windowWidth} isOpen={setsidebarOpen} />

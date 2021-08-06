@@ -1,24 +1,19 @@
 import { Fragment, useState } from "react";
 
 import {
-  Home,
-  Settings,
-  EyeOff,
-  User,
-  AlertCircle,
   Info,
   Calendar,
   Video,
   MessageSquare,
   Zap,
   Star,
-  VolumeX,
   Volume,
   Flag,
   Grid,
 } from "react-feather";
-import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
+import { Nav, NavItem, NavLink } from "reactstrap";
 import TabsBody from "../TabsBody/TabsBody";
+
 import style from "./TabsNave.module.scss";
 const TabsNave = ({ isOpen, screenWidth }) => {
   const [active, setActive] = useState("1");
@@ -82,19 +77,6 @@ const TabsNave = ({ isOpen, screenWidth }) => {
             }}
           >
             <Calendar size={26} />
-            {/* <img
-              className={`${style["tabs-naveItem-navLink-icon"]}`}
-              //   src={
-              //     require("../../../Assets/Images/profile/" +
-              //       (active === "12"
-              //         ? "callhistory-active.png"
-              //         : "callhistory.png")).default
-              //   }
-              src={
-                require("../../../Assets/Images/profile/callhistory.png")
-                  .default
-              }
-            /> */}
           </NavLink>
         </NavItem>
         <NavItem

@@ -1,26 +1,18 @@
 
 .table-holder {
-    // border: 1px solid red; 
-    // height: 200px;
     background: url(../../../Assets/Images/search/bg-table-search.png) no-repeat;
     background-position: center 30%;
     background-size: 40%;
-    // min-height: 500px;
     width:90%;
     margin: 2rem auto;
 }
 
 .table-box {
-/* background: rgb(172, 134, 134); */
-    /* box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3); */
     border-radius: 10px;
     overflow: hidden;
-    /* border: 1px solid red; */
-
 }
 
 .table-header {
-    /* border: 1px solid red; */
     background-color: #e8e8e981 !important;
     border-top-left-radius: 20px !important;
     border-radius: 10% !important;
@@ -41,10 +33,6 @@
 
 .table-body {
     background: #ffffffa4 !important;
-    /* border-bottom-left-radius: 20px !important;
-    overflow: hidden; */
-    /* padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important; */
 }
 
 
@@ -64,24 +52,11 @@
     padding-top: 0.75rem !important;
     padding-bottom: 0.75rem !important;
     border:none!important;
-    // line-height: 4rem;
-    /* background: #ffffffa4; */
 }
 
-.table-body-td:first-child {
-    /* padding-right: 0.25rem !important; */
-    /* border-bottom-right-radius: 10px; */
-}
-
-/* 
-.table-body-td:last-child {
-    padding-right: 0.25rem !important;
-    border-bottom-left-radius: 10px;
-} */
 
 
 .table-body-pic-box {
-    /* border: 1px solid red; */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -112,14 +87,10 @@
     padding: 0.3rem 0.5rem;
 }
 .table-pagination {
-    /* border: 1px solid red; */
     height: 60px;
     color: #929396;
 }
 
-.pagination-holder {
-    /* border: 1px solid red; */
-}
 
 .page-prev {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -132,7 +103,6 @@
     border: 2px solid #929396;
     border-radius: 5px;
     background: #ffffff;
-    // padding: 1rem;
     width: 2rem;
     height: 2rem;
     text-align: center;

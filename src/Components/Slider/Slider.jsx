@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
+import { Modal, ModalBody } from "reactstrap";
 import Slider from "react-slick";
 
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import "../../Assets/Style/slider.scss";
 const Slide = (props) => {
-  const { buttonLabel, className } = props;
+  const { className } = props;
 
   const settings = {
     dots: true,
@@ -36,6 +36,7 @@ const Slide = (props) => {
                     require("../../Assets/Images/profile/profileImg.png")
                       .default
                   }
+                  alt=""
                 />
               </div>
               <div>
@@ -44,6 +45,7 @@ const Slide = (props) => {
                     require("../../Assets/Images/profile/profileImg.png")
                       .default
                   }
+                  alt=""
                 />
               </div>
               <div>
@@ -52,6 +54,7 @@ const Slide = (props) => {
                     require("../../Assets/Images/profile/profileImg.png")
                       .default
                   }
+                  alt=""
                 />
               </div>
               <div>
@@ -60,6 +63,7 @@ const Slide = (props) => {
                     require("../../Assets/Images/profile/profileImg.png")
                       .default
                   }
+                  alt=""
                 />
               </div>
             </Slider>

@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { ChevronDown, HelpCircle } from "react-feather";
-
-import Loading from "../../../Components/Loading/Loading"
-
-import RegisterStyle from "../../../Assets/Style/Register.module.scss";
-import "../../../Assets/Style/SelectOption.scss";
 import Select from "react-select";
 import Input from "../../../Components/Input/Input";
 
+import RegisterStyle from "../../../Assets/Style/Register.module.scss";
+import "../../../Assets/Style/SelectOption.scss";
 const options = [
   { value: "مرد", label: "مرد" },
   { value: "زن", label: "زن" },

@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { User } from "react-feather";
+
 import styled from "./ColumnsPic.module.scss";
 const ColumnsPic = ({
   cell: {

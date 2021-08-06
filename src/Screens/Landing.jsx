@@ -1,6 +1,4 @@
 import React, { useState, Fragment } from "react";
-import { useHistory } from "react-router-dom";
-
 import {
   ButtonDropdown,
   DropdownToggle,
@@ -9,13 +7,12 @@ import {
   Button,
   Input,
 } from "reactstrap";
+import SiteBaner from "../Components/SiteBaner/SiteBaner";
 
 import LandingStyle from "../Assets/Style/Landing.module.scss";
-import SiteBaner from "../Components/SiteBaner/SiteBaner";
 
 const Landing = () => {
   const [isOpen, setOpen] = useState(null);
-  const history = useHistory();
   const toggle = (id) => {
     if (id === isOpen) {
       setOpen(null);
@@ -78,7 +75,7 @@ const Landing = () => {
                   <ButtonDropdown
                     className="bg-buttonbrown border-b522d border-2  rounded-md"
                     size="md"
-                    isOpen={isOpen == index ? true : false}
+                    isOpen={isOpen === index ? true : false}
                     toggle={() => toggle(index)}
                   >
                     <Button

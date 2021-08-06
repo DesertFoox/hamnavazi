@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { Input, Label } from "reactstrap";
+import { Input } from "reactstrap";
 
 import styled from "./HeaderAuthentication.module.scss";
 const HeaderAuthentication = ({ history, logged, setlogged }) => {

@@ -1,7 +1,8 @@
-import React, { Fragment, useEffect } from "react";
-import { Badge, Card, CardBody, CardImg, Button, Input } from "reactstrap";
-import style from "./ProfileSideNave.module.scss";
+import React, { Fragment } from "react";
+import { Badge, Card, CardBody } from "reactstrap";
 import { ChevronLeft } from "react-feather";
+
+import style from "./ProfileSideNave.module.scss";
 const ProfileSideNave = ({ isOpen, windowWidth }) => {
   return (
     <Fragment>
@@ -11,6 +12,7 @@ const ProfileSideNave = ({ isOpen, windowWidth }) => {
         <img
           className={`${style["profile-image"]} img-fluid grid `}
           src={require("../../../Assets/Images/profile/profileImg.png").default}
+          alt=""
         />
         <Card className={`w-100 border-0 pb-sssm rounded-0`}>
           <CardBody className={`${style["profile-personality"]} rounded-0 `}>

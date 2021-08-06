@@ -10,17 +10,14 @@
 }
 
 .header-container {
-    /* border: 1px solid red; */
     height: 40px;
     position: relative;
 }
 
 .header-options {
     width: 85%;
-    /* height: 100%; */
     float: right;
     box-sizing: border-box;
-    /* border: 1px solid rgb(25, 0, 255); */
 }
 
 .menu {
@@ -32,24 +29,18 @@
 }
 
 .menu-iconBox {
-    /* border: 1px solid rgb(0, 255, 34); */
     width: 35px;
     height: 35px;
     border-radius: 100%;
     background: #fff;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
-    /* margin-top: 1%; */
     text-align: center;
 
     float: right;
     padding: 11px 0;
 }
 
-.menu-icon {
-    /* margin-top: 1px; */
-}
 .header-auth-box {
-    // border: 1px solid red;
     margin-right: 15px;
 
     width: 30%;
@@ -57,7 +48,6 @@
 }
 
 .header-auth-icon {    
-    // border: 1px solid red;
     border-radius: 100%;
     overflow: hidden;
 
@@ -66,7 +56,6 @@
 }
 
 .header-auth-userName{
-    // border: 1px solid red;
     float: right;
     margin-top: 10px ;
       color: #373435;
@@ -78,7 +67,6 @@
 }
 
 .search-box {
-    /* border: 1px solid red; */
     float: right;
     width: 50%;
     margin-top: 2px;
@@ -111,7 +99,6 @@
 }
 
 .header-logo {
-    /* border: 1px solid red; */
     width: 132.5px;
     height: 40px;
     float: left;
@@ -129,12 +116,10 @@
 @media (max-width: 915px) {
     .header-options {
         width: 80%;
-        /* border: 1px solid red; */
 
     }
         .header-auth-box {
         width: 40%;
-        // border: 1px solid red;
     }
 }
 
@@ -166,7 +151,6 @@
 
     .header-options {
         margin: 2% 4%;
-        /* border: 1px solid red; */
         width: 95%;
     }
     .search-box {
@@ -253,95 +237,3 @@
 
 }
 
-
-// @media (max-width: 440px) {
-//     .search-box {
-//         width: 55%;
-//     }
-
-//     .search-box-input {
-//         width: 70%;
-//     }
-// }
-
-// @media (max-width: 375px) {
-//     .header-options {
-//         margin: 2% 0%;
-//         /* border: 1px solid red; */
-//         width: 100%;
-//     }
-//     .search-box {
-//         width: 55%;
-//     }
-
-//     .search-box-input {
-//         margin-right: 5px !important;
-//         width: 75%;
-//     }
-
-//     .search-box-icon {
-//         margin-top: 5px;
-//     }
-
-//     .image {
-
-//         width: 35px;
-//         height: 35px;
-//     }
-
-//     .img {
-//         width: 28px;
-//         height: 28px;
-//     }
-// }
-
-
-
-
-
-// @media (max-width: 479px) {
-//         .header-auth-box {
-//         width:32%;
-//     }
-// }
-// @media (max-width: 430px) {
-//         .header-auth-box {
-//         width:33%;
-//     }
-// }
-// @media (max-width: 406px) {
-//         .header-auth-box {
-//         width:35%;
-//     }
-// }
-// @media (max-width: 390px) {
-//         .header-auth-box {
-//         width:35%;
-//         margin-right: 5px;
-//     }    .header-auth-icon {  
-//         margin-right: 2px;
-//         margin-top: 2px;
-//     }
-
-// }
-// @media (max-width: 375px) {
-
-//     .header-auth-userName {
-//         display:none;
-//     }
-
-//     .header-auth-box {
-//         width:36%;
-//         margin-right: 4px;
-//         margin-top:5px;
-//     }
-//     // .header-auth-icon {  
-//     //     margin-right: 5px;
-//     //     margin-top: 7px;
-//     // }
-//     .img{
-//         width:25px;
-//         height: 25px;
-//     }
-
-// }

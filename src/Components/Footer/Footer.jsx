@@ -41,22 +41,22 @@ const Footer = () => {
           HOME
         </Link>
         |
-        <Link className={style.a} href="#">
+        <Link className={style.a} to="#">
           ABOUT US
         </Link>
         |
-        <Link className={style.a} href="#">
+        <Link className={style.a} to="#">
           GALLERY
         </Link>
-        <Link className={style.a} href="#">
+        <Link className={style.a} to="#">
           SHORT CODES
         </Link>
         |
-        <Link className={style.a} href="#">
+        <Link className={style.a} to="#">
           SERVICES
         </Link>
         |
-        <Link className={style.a} href="#">
+        <Link className={style.a} to="#">
           CONTACT
         </Link>
       </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { Badge } from "reactstrap";
-
 import Slider from "../../Slider/Slider";
 
 import style from "../SideNav/ProfileSideNave.module.scss";
@@ -121,7 +120,7 @@ const Gallery = ({ ProfileStyle }) => {
                           }
                           alt="event"
                           className={`object-contain ${EventStyle["event-image"]}`}
-                          />
+                        />
                       </div>
                     )}
                   </div>

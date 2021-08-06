@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import {
-  Card,
   ButtonDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -62,7 +61,7 @@ const SearchTop = ({ selectOptionData, isOpen, toggle }) => {
                 <ButtonDropdown
                   className="bg-dark_buttonbrown border-dark_gh border-2  rounded-md"
                   size="md"
-                  isOpen={isOpen == index ? true : false}
+                  isOpen={isOpen === index ? true : false}
                   toggle={() => toggle(index)}
                 >
                   <Button

@@ -1,30 +1,12 @@
-import React, { Fragment, useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import {
-  ChevronUp,
-  ChevronDown,
-  ChevronsLeft,
-  ChevronsRight,
-  HelpCircle,
-  XCircle,
-  User,
-} from "react-feather";
-import {
-  Card,
-  ButtonDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Button,
-  Badge,
-  Table,
-} from "reactstrap";
+import React, { useState, useEffect } from "react";
+
 import SiteBaner from "../../Components/SiteBaner/SiteBaner";
 import SearchTop from "../../Components/SearchPage/Top/SearchTop";
 import SearchTable from "../../Components/SearchPage/Table/SearchTable";
 import { columns } from "../../Components/SearchPage/Table/tableListColumns";
 import { tableData } from "../../Components/SearchPage/Table/tableData";
 import Filter from "../../Components/SearchPage/Filter/Filter";
+
 import style from "./SearchPage.module.scss";
 const SearchPage = () => {
   const [isOpen, setOpen] = useState(null);
@@ -32,7 +14,6 @@ const SearchPage = () => {
   const [filterItemId, setfilterItemId] = useState(null);
   const [initialPage, setInitialPage] = useState(1);
   const [currentData, setCurrentData] = useState([]);
-  const history = useHistory();
   const testSelectOption = [
     {
       title: "کشور | Country",
@@ -101,7 +82,7 @@ const SearchPage = () => {
   };
   const customPageSize = 4;
   const pageCountList =
-    tableData.length % 4 == 0
+    tableData.length % 4 === 0
       ? tableData.length / 4
       : parseInt(tableData.length / 4) + 1;
   console.log(pageCountList);
@@ -124,8 +105,6 @@ const SearchPage = () => {
   return (
     <React.Fragment>
       <div className={`${style["top-SearchPage"]}`}>
-        {/* <div className="d-flex justify-content-end p-0 ">
-        </div> */}
         <SiteBaner />
         <SearchTop
           selectOptionData={testSelectOption}

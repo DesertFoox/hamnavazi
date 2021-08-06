@@ -10,17 +10,14 @@
 }
 
 .header-container {
-    /* border: 1px solid red; */
     height: 40px;
     position: relative;
 }
 
 .header-options {
     width: 85%;
-    /* height: 100%; */
     float: right;
     box-sizing: border-box;
-    /* border: 1px solid rgb(25, 0, 255); */
 }
 
 .menu {
@@ -32,27 +29,19 @@
 }
 
 .menu-iconBox {
-    /* border: 1px solid rgb(0, 255, 34); */
     width: 35px;
     height: 35px;
     border-radius: 100%;
     background: #fff;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
-    /* margin-top: 1%; */
     text-align: center;
 
     float: right;
     padding: 11px 0;
 }
 
-.menu-icon {
-    /* margin-top: 1px; */
-}
-
-
 
 .header-unAuth-box {
-    /* border: 1px solid red; */
 
     margin-right: 15px;
     width: 12%;
@@ -70,7 +59,6 @@
 
 
 .search-box {
-    /* border: 1px solid red; */
     float: right;
     width: 50%;
     margin-top: 2px;
@@ -103,7 +91,6 @@
 }
 
 .header-logo {
-    /* border: 1px solid red; */
     width: 132.5px;
     height: 40px;
     float: left;
@@ -121,7 +108,6 @@
 @media (max-width: 915px) {
     .header-options {
         width: 80%;
-        /* border: 1px solid red; */
 
     }
         .header-unAuth-box {
@@ -157,7 +143,6 @@
 
     .header-options {
         margin: 2% 4%;
-        /* border: 1px solid red; */
         width: 95%;
     }
     .search-box {
@@ -183,7 +168,6 @@
         width: 60%;
     }
     .menu-iconBox {
-        /* border: 1px solid rgb(0, 255, 34); */
         width: 28px;
         height: 28px;
         border-radius: 100%;
@@ -251,7 +235,6 @@
 @media (max-width: 375px) {
     .header-options {
         margin: 2% 0%;
-        /* border: 1px solid red; */
         width: 100%;
     }
 

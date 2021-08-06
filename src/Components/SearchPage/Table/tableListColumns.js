@@ -1,12 +1,6 @@
 import { LevelBadge } from './ColumnsBadge/LevelBadge'
 import { ColumnsPic } from './ColumnsPic/ColumnsPic'
-const tableHeadTitles = [
-  'نـام کـاربـری  |  Username',
-  'مکـان  |  Location',
-  'ســاز اصلی  |  Main Instrument',
-  'سطـح  |  Level',
-  'سـبـک  |  Style',
-]
+
 export const columns = [
   {
     Header: ' ',
